@@ -20,7 +20,7 @@ return new class extends Migration
             $table->integer('price');
             $table->integer('quantity');
             $table->foreignId('location_id')->constrained();
-            $table->text('meta')->nullable();
+            $table->json('meta')->nullable();
             $table->authors();
             $table->timestamps();
         });
