@@ -16,11 +16,11 @@ return new class extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained();
-            $table->integer('amount')->default('1000');
-            $table->enum('delivery_type', ['pickup','delivery','pos'])->default('pickup');
+            $table->float('amount');
+            $table->enum('delivery_type', ['pickup', 'delivery', 'pos'])->default('pickup');
             $table->string('delivery_address')->nullable();
-            $table->string('notes')->nullable();
             $table->timestamp('delivered_at')->nullable();
+            $table->string('notes')->nullable();
             $table->authors();
             $table->timestamps();
             $table->softDeletes();
