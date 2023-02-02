@@ -15,12 +15,12 @@ return new class extends Migration
     {
         Schema::create('reviews', function (Blueprint $table) {
             $table->id();
-            $table->foreignId("item_id")->constrained();
-            $table->text("comment");
-            $table->enum('star', [1,2,3,4,5])->default(5);
-            $table->boolean('is_deleted')->default(false);
+            $table->foreignId('item_id')->constrained();
+            $table->text('comment');
+            $table->enum('star', [1, 2, 3, 4, 5])->default(5);
             $table->authors();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
