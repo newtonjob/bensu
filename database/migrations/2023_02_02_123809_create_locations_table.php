@@ -19,8 +19,7 @@ return new class extends Migration
             $table->string("slug")->unique();
             $table->integer("address")->nullable();
             $table->timestamp("featured_at")->nullable();
-            $table->foreignId("created_by")->nullable()->constrained("users");
-            $table->foreignId("updated_by")->nullable()->constrained("users");
+            $table->authors();
             $table->timestamps();
         });
     }
