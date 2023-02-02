@@ -25,7 +25,7 @@ return new class extends Migration
             $table->string('photo')->nullable();
             $table->text('address')->nullable();
             $table->enum('type', ['admin', 'customer'])->default('customer');
-            $table->foreignId('role_id')->nullable()->constrained();
+//            $table->foreignId('role_id')->nullable()->constrained();
             $table->boolean('notifiable')->default(false);
             $table->integer('login_count')->default(0);
             $table->timestamp('last_login')->nullable();
