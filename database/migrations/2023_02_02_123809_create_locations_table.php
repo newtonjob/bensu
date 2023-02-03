@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name')->unique();
             $table->string('slug')->unique();
-            $table->integer('address')->nullable();
+            $table->string('address')->nullable();
             $table->timestamp('featured_at')->nullable();
             $table->authors();
             $table->timestamps();
