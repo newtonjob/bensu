@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('reference', 45)->unique();
             $table->float('amount');
             $table->enum('channel', ['paystack', 'cash', 'transfer']);
-            $table->timestamp('paid_at')->nullable();
+            $table->timestamp('paid_at')->nullable()->index();
             $table->authors();
             $table->timestamps();
         });
