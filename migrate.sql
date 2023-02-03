@@ -17,6 +17,12 @@ SELECT `user_id`, `email`, IF(_email_verified, created, NULL), `password`, `phon
 INSERT INTO `brands`(`id`, `name`, `image`, `slug`, `created_by`, `updated_by`, `created_at`, `updated_at`)
 SELECT `brand_id`, `brand_name`, `brand_img`, `slug`, `created_by`, `updated_by`, `created`, `updated` FROM `bensu-ci`.`brand`;
 
+/**
+  MIGRATE categories
+ */
+INSERT INTO `categories`(`id`, `name`, `image`, `slug`, `relevance`, `featured_at`, `created_by`, `updated_by`, `created_at`, `updated_at`)
+SELECT `cat_id`, `cat_name`, `cat_img`, `slug`, IFNULL(`_order`, 0), IF(`featured`, `updated`, NULL), `created_by`, `updated_by`, `created`, `updated` FROM `bensu-ci`.`category`
+
 
 /**
   MIGRATE colors
@@ -26,7 +32,7 @@ SELECT `color_id`, `color_name`, `slug`,  `created_by`, `updated_by`, `created`,
 
 
 /**
-  MIGRATE categories
+  MIGRATE locations
  */
-INSERT INTO `categories`(`id`, `name`, `image`, `slug`, `relevance`, `featured_at`, `created_by`, `updated_by`, `created_at`, `updated_at`)
-SELECT `cat_id`, `cat_name`, `cat_img`, `slug`, IFNULL(`_order`, 0), IF(`featured`, `updated`, NULL), `created_by`, `updated_by`, `created`, `updated` FROM `bensu-ci`.`category`
+INSERT INTO `locations`(`id`, `name`, `slug`, `address`, `featured_at`, `created_by`, `updated_by`, `created_at`, `updated_at`)
+SELECT `location_id`, `location_name`, `slug`, `location_address`, IF(featured, updated, NULL), `created_by`, `updated_by`, `created`, `updated` FROM `bensu-ci`.`location`;
