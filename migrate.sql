@@ -65,3 +65,10 @@ SELECT `item_id`, `product_id`, `brand_id`, `color_id`, `item_name`, `item_desc`
  */
 INSERT INTO `order_product`(`id`, `order_id`, `product_id`, `price`, `quantity`, `location_id`, `meta`, `updated_by`, `created_at`, `updated_at`)
 SELECT `id`, `order_id`, `item_id`, `price`, `quantity`, `location_id`, `meta`, `updated_by`, `created`, `updated` FROM `bensu-ci`.`order_item`;
+
+/**
+  MIGRATE stocks
+ */
+
+INSERT INTO `stocks`(`id`, `product_id`, `location_id`, `quantity`, `created_by`, `updated_by`, `created_at`, `updated_at`)
+SELECT `id`, `item_id`, `location_id`, `quantity`, `created_by`, `updated_by`, `created`, `updated`  FROM `bensu-ci`.`product_item_quantity`;
