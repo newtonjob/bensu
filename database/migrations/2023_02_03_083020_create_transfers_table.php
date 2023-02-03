@@ -15,7 +15,6 @@ return new class extends Migration
     {
         Schema::create('transfers', function (Blueprint $table) {
             $table->id();
-            $table->json('meta')->nullable();
             $table->authors();
             $table->timestamps();
         });
