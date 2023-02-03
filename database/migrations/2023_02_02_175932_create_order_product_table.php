@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('order_id')->constrained();
             $table->foreignId('product_id')->constrained();
-            $table->integer('price');
+            $table->float('price');
             $table->integer('quantity');
             $table->foreignId('location_id')->constrained();
             $table->json('meta')->nullable();
