@@ -77,17 +77,17 @@
                                 <select class="select_option" name="cat" id="categori" aria-label="categories">
                                     <option value="">All Categories</option>
 
-                                    @foreach ($category_list as $cat)
-                                        <option
-                                            value="{{ $cat['slug'] }}" {{ ($_GET['cat'] ?? '') == $cat['slug'] ? 'selected' : '' }}>
-                                            {{ $cat['cat_name'] }}
+                                    @foreach (app('categories') as $category)
+                                        <option value="{{ $category->slug }}"
+                                            @selected(request('category') == $category->slug)>
+                                            {{ $category->name }}
                                         </option>
                                     @endforeach
                                 </select>
                             </div>
                             <div class="search_box">
-                                <input placeholder="Search product..." type="text" name="s"
-                                       value="{{ $_GET['s'] ?? ''}}" minlength="2">
+                                <input placeholder="Search product..." type="text" name="q" aria-label="search"
+                                       value="{{ request('q') }}" minlength="2">
                                 <button type="submit">Search</button>
                             </div>
                         </form>
@@ -96,22 +96,21 @@
                     <div class="middel_right_info v1">
                         <div class="header_wishlist">
                             <a href="{{ url('account#wishlist') }}"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
-                            <span class="wishlist_quantity">{{ $user['wishlist_count'] }}</span>
+                            <span class="wishlist_quantity">{{ 0 }}</span> {{--Todo: Implement wishlist count--}}
                         </div>
                         <div class="mini_cart_wrapper">
-                            {{ view('shop/templates/mini_cart') }}
+                            {{--Todo: Implement mini cart--}}
                         </div>
                     </div>
                     <div id="menu" class="text-left">
                         <ul class="offcanvas_main_menu">
                             <li class="menu-item-has-children active"><a href="{{ url()}}">Home</a></li>
                             <li class="menu-item-has-children"><a href="{{ url('shop') }}">Shop</a></li>
-                            <li class="menu-item-has-children"><span class="menu-expand"><i
-                                        class="fa fa-angle-down"></i></span>
+                            <li class="menu-item-has-children"><span class="menu-expand"><i class="fa fa-angle-down"></i></span>
                                 <a href="#">Brands</a>
                                 <ul class="sub-menu" style="display: none;">
-                                    @foreach ($brand_list as $b)
-                                        <li><a href="{{ url('shop?b='.$b['slug']) }}">{{ $b['brand_name'] }}</a></li>
+                                    @foreach (app('brands') as $brand)
+                                        <li><a href="{{ url("shop?b={$brand->slug}") }}">{{ $brand->name }}</a></li>
                                     @endforeach
                                 </ul>
                             </li>
@@ -205,18 +204,20 @@
                             </div>
                             <div class="categories_menu_toggle">
                                 <ul>
-                                    @foreach ($product_list as $key => $value)
+                                    @foreach (app('categories') as $category)
                                         <li class="menu_item_children">
-                                            <a href="{{ url('shop?cat='.$value[0]['cat_slug'])}}">
-                                                {{ $value[0]['cat_name'] ?? 'Uncategorized' }}
+                                            <a href="{{ url("shop?category={$category->slug}")}}">
+                                                {{ $category->name }}
                                                 <i class="fa fa-angle-right"></i>
                                             </a>
                                             <ul class="categories_mega_menu column_2">
                                                 <li class="menu_item_children"><a href="#">Products</a>
                                                     <ul class="categorie_sub_menu">
-                                                        @foreach ($value as $p)
+                                                        @foreach ($category->subCategories as $subCategory)
                                                             <li>
-                                                                <a href="{{ url('shop?p='.$p['slug'])}}">{{ $p['product_name'] }}</a>
+                                                                <a href="{{ url("shop?sub-category={$subCategory->slug}") }}">
+                                                                    {{ $subCategory->name }}
+                                                                </a>
                                                             </li>
                                                         @endforeach
                                                     </ul>
@@ -237,9 +238,8 @@
                                     <li>
                                         <a href="#">Brands</a>
                                         <ul class="sub_menu">
-                                            @foreach ($brand_list as $b)
-                                                <li><a href="{{ url('shop?b='.$b['slug']) }}">{{ $b['brand_name'] }}</a>
-                                                </li>
+                                            @foreach (app('brands') as $brand)
+                                                <li><a href="{{ url("shop?brand={$brand->slug}") }}">{{ $brand->name }}</a></li>
                                             @endforeach
                                         </ul>
                                     </li>
@@ -283,13 +283,13 @@
                     <div class="main_menu">
                         <nav>
                             <ul>
-                                <li><a class="active" href="{{ url()}}">Home</a></li>
+                                <li><a class="active" href="{{ url() }}">Home</a></li>
                                 <li><a href="{{ url('shop') }}">Shop</a></li>
                                 <li>
                                     <a href="#">Brands</a>
                                     <ul class="sub_menu">
-                                        @foreach ($brand_list as $b)
-                                            <li><a href="{{ url('shop?b='.$b['slug']) }}">{{ $b['brand_name'] }}</a>
+                                        @foreach (app('brands') as $brand)
+                                            <li><a href="{{ url("shop?brand={$brand->slug}") }}">{{ $brand->name }}</a>
                                             </li>
                                         @endforeach
                                     </ul>
@@ -328,14 +328,15 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="widgets_container contact_us">
                         <div class="footer_logo">
-                            <a href="#"><img src="{{ asset('img/logo/'.$site_data['site_logo']) }}" alt=""></a>
+                            <a href="#"><img src="{{ site('logo') }}" alt=""></a>
                         </div>
                         <div class="footer_contact">
                             <p>{{ $site_data['footer_quote'] }}</p>
-                            <p><span>Address: </span> {{ $site_data['site_address'] }}</p>
-                            <p><span>Mobile: </span> {{ $site_data['site_phone'] }}</p>
-                            <p><span>Support: </span><a target="_blank"
-                                                        href="mailto:{{ $site_data['site_email'] }}">{{ $site_data['site_email'] }}</a>
+                            <p><span>Address: </span> {{ site('address') }}</p>
+                            <p><span>Mobile: </span> {{ site('phone') }}</p>
+                            <p>
+                                <span>Support: </span>
+                                <a target="_blank" href="mailto:{{ site('email') }}">{{ site('email') }}</a>
                             </p>
                         </div>
                     </div>
@@ -345,12 +346,10 @@
                         <h3>Top Categories</h3>
                         <div class="footer_menu">
                             <ul>
-                                @foreach ($category_list as $key => $cat)
-                                    @continue($cat['featured'] != 1)
+                                @foreach (app('categories')->filter->isFeatured()->take(5) as $category)
                                     <li>
-                                        <a href="{{ url('shop?cat=' . $cat['slug']) }}">{{ $cat['cat_name'] }}</a>
+                                        <a href="{{ url("shop?category={$category->slug}") }}">{{ $category->name }}</a>
                                     </li>
-                                    @break($key == 5)
                                 @endforeach
                             </ul>
                         </div>
