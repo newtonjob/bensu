@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('tags')->nullable();
             $table->float('cost_price')->nullable();
             $table->float('price')->nullable();
-            $table->enum('currency', ['ngn', 'usd'])->default('NGN');
+            $table->enum('currency', ['ngn', 'usd'])->default('ngn');
             $table->integer('discount')->default(0);
             $table->string('model_no')->nullable()->unique();
             $table->string('serial_no')->nullable()->unique();
