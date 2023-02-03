@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('order_id')->constrained();
             $table->string('reference', 45)->unique();
-            $table->decimal('amount');
+            $table->float('amount', 10);
             $table->enum('channel', ['paystack', 'cash', 'transfer']);
             $table->timestamp('paid_at')->nullable()->index();
             $table->authors();

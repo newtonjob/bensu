@@ -56,5 +56,5 @@ SELECT `product_id`, `cat_id`, `product_name`, `slug`, `created_by`, `updated_by
 /**
   MIGRATE order_product
  */
-INSERT INTO `order_product`(`id`, `order_id`, `product_id`, `price`, `quantity`, `location_id`, `meta`, `updated_by`, `created_at`, `updated_at`)
-SELECT `id`, `order_id`, `item_id`, `price`, `quantity`, `location_id`, `meta`, `updated_by`, `created`, `updated` FROM `bensu-ci`.`order_item`;
+# INSERT INTO `order_product`(`id`, `order_id`, `product_id`, `price`, `quantity`, `location_id`, `meta`, `updated_by`, `created_at`, `updated_at`)
+# SELECT `id`, `order_id`, `item_id`, `price`, `quantity`, `location_id`, `meta`, `updated_by`, `created`, `updated` FROM `bensu-ci`.`order_item`;
