@@ -23,3 +23,10 @@ SELECT `brand_id`, `brand_name`, `brand_img`, `slug`, `created_by`, `updated_by`
  */
 INSERT INTO `colors`(`id`, `name`, `slug`, `created_by`, `updated_by`, `created_at`, `updated_at`)
 SELECT `color_id`, `color_name`, `slug`,  `created_by`, `updated_by`, `created`, `updated`  FROM `bensu-ci`.`color`;
+
+
+/**
+  MIGRATE categories
+ */
+INSERT INTO `categories`(`id`, `name`, `image`, `slug`, `relevance`, `featured_at`, `created_by`, `updated_by`, `created_at`, `updated_at`)
+SELECT `cat_id`, `cat_name`, `cat_img`, `slug`, IFNULL(`_order`, 0), IF(`featured`, `updated`, NULL), `created_by`, `updated_by`, `created`, `updated` FROM `bensu-ci`.`category`
