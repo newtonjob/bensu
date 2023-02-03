@@ -16,7 +16,6 @@ return new class extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained();
-            $table->float('amount');
             $table->enum('delivery_type', ['pickup', 'delivery', 'pos'])->default('pickup');
             $table->string('delivery_address')->nullable();
             $table->timestamp('delivered_at')->nullable();
