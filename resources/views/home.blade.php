@@ -1,4 +1,9 @@
 <x-site>
+    HELLO WORLD
+</x-site>
+
+{{--
+<x-site>
     <!--slider area start-->
     <section class="slider_section mb-70">
         <div class="slider_area owl-carousel">
@@ -485,3 +490,4 @@
         </div>
     </div>
 </x-site>
+--}}
