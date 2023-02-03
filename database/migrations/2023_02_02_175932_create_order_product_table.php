@@ -23,6 +23,8 @@ return new class extends Migration
             $table->json('meta')->nullable();
             $table->authors();
             $table->timestamps();
+
+            $table->unique(['order_id', 'product_id']);
         });
     }
 
