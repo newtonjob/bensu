@@ -54,7 +54,14 @@ SELECT `product_id`, `cat_id`, `product_name`, `slug`, `created_by`, `updated_by
 
 
 /**
+  MIGRATE products
+ */
+INSERT INTO `products`(`id`, `sub_category_id`, `brand_id`, `color_id`, `name`, `description`, `tags`, `cost_price`, `price`, `currency`, `discount`, `model_no`, `serial_no`, `featured_at`, `slug`, `subscribers`, `created_by`, `updated_by`, `created_at`, `updated_at`)
+SELECT `item_id`, `product_id`, `brand_id`, `color_id`, `item_name`, `item_desc`, `tags`, `cost_price`, `price`, `price_currency`, `discount`, `model_number`, `serial_number`, IF(`featured`, `updated`, NULL), `slug`, `get_stock_alert`, `created_by`, `updated_by`, `created`, `updated` FROM `bensu-ci`.`product_item`
+
+
+/**
   MIGRATE order_product
  */
-# INSERT INTO `order_product`(`id`, `order_id`, `product_id`, `price`, `quantity`, `location_id`, `meta`, `updated_by`, `created_at`, `updated_at`)
-# SELECT `id`, `order_id`, `item_id`, `price`, `quantity`, `location_id`, `meta`, `updated_by`, `created`, `updated` FROM `bensu-ci`.`order_item`;
+INSERT INTO `order_product`(`id`, `order_id`, `product_id`, `price`, `quantity`, `location_id`, `meta`, `updated_by`, `created_at`, `updated_at`)
+SELECT `id`, `order_id`, `item_id`, `price`, `quantity`, `location_id`, `meta`, `updated_by`, `created`, `updated` FROM `bensu-ci`.`order_item`;
