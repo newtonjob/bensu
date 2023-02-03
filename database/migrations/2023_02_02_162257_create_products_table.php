@@ -19,10 +19,10 @@ return new class extends Migration
             $table->foreignId('brand_id')->nullable()->constrained();
             $table->foreignId('color_id')->nullable()->constrained();
             $table->string('name')->unique();
-            $table->text('description')->nullable();
+            $table->mediumText('description')->nullable();
             $table->string('tags')->nullable();
-            $table->float('cost_price')->nullable();
-            $table->float('price')->nullable();
+            $table->decimal('cost_price')->nullable();
+            $table->decimal('price')->nullable();
             $table->enum('currency', ['ngn', 'usd'])->default('ngn');
             $table->integer('discount')->default(0);
             $table->string('model_no')->nullable()->unique();
