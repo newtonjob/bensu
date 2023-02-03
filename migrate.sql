@@ -21,7 +21,7 @@ SELECT `brand_id`, `brand_name`, `brand_img`, `slug`, `created_by`, `updated_by`
   MIGRATE categories
  */
 INSERT INTO `categories`(`id`, `name`, `image`, `slug`, `relevance`, `featured_at`, `created_by`, `updated_by`, `created_at`, `updated_at`)
-SELECT `cat_id`, `cat_name`, `cat_img`, `slug`, IFNULL(`_order`, 0), IF(`featured`, `updated`, NULL), `created_by`, `updated_by`, `created`, `updated` FROM `bensu-ci`.`category`
+SELECT `cat_id`, `cat_name`, `cat_img`, `slug`, IFNULL(`_order`, 0), IF(`featured`, `updated`, NULL), `created_by`, `updated_by`, `created`, `updated` FROM `bensu-ci`.`category`;
 
 
 
@@ -57,7 +57,7 @@ SELECT `product_id`, `cat_id`, `product_name`, `slug`, `created_by`, `updated_by
   MIGRATE products
  */
 INSERT INTO `products`(`id`, `sub_category_id`, `brand_id`, `color_id`, `name`, `description`, `tags`, `cost_price`, `price`, `currency`, `discount`, `model_no`, `serial_no`, `featured_at`, `slug`, `subscribers`, `created_by`, `updated_by`, `created_at`, `updated_at`)
-SELECT `item_id`, `product_id`, `brand_id`, `color_id`, `item_name`, `item_desc`, `tags`, `cost_price`, `price`, `price_currency`, `discount`, `model_number`, `serial_number`, IF(`featured`, `updated`, NULL), `slug`, `get_stock_alert`, `created_by`, `updated_by`, `created`, `updated` FROM `bensu-ci`.`product_item`
+SELECT `item_id`, `product_id`, `brand_id`, `color_id`, `item_name`, `item_desc`, `tags`, `cost_price`, `price`, `price_currency`, `discount`, `model_number`, `serial_number`, IF(`featured`, `updated`, NULL), `slug`, `get_stock_alert`, `created_by`, `updated_by`, `created`, `updated` FROM `bensu-ci`.`product_item`;
 
 
 /**
@@ -87,3 +87,10 @@ SELECT `id`, `user_id`, `item_id`, `created`, `created` FROM `bensu-ci`.`user_wi
  */
 INSERT INTO `stocks`(`id`, `product_id`, `location_id`, `quantity`, `created_by`, `updated_by`, `created_at`, `updated_at`)
 SELECT `id`, `item_id`, `location_id`, `quantity`, `created_by`, `updated_by`, `created`, `updated`  FROM `bensu-ci`.`product_item_quantity`;
+
+
+/**
+  MIGRATE reviews
+ */
+INSERT INTO `reviews`(`id`, `product_id`, `comment`, `star`, `created_by`, `updated_by`, `created_at`, `updated_at`, `deleted_at`)
+SELECT `id`, `item_id`, `review`, `star`, `created_by`, `updated_by`, `created`, `updated`, IF(`is_deleted`, `updated`, NULL) FROM `bensu-ci`.`product_reviews`;
