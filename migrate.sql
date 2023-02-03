@@ -74,7 +74,6 @@ INSERT INTO `wishes`(`id`, `user_id`, `product_id`, `created_at`, `updated_at`)
 SELECT `id`, `user_id`, `item_id`, `created`, `created` FROM `bensu-ci`.`user_wishlist`;
 
 
-
 /**
   MIGRATE wishes
  */
