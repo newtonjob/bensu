@@ -107,6 +107,7 @@ SELECT `id`, `order_id`, `reference`, `amount`, IF(vendor = 'M', 1, vendor - 1),
 INSERT INTO `settings`(`id`, `logo`, `title`, `description`, `banners`, `email`, `phone`, `address`, `social_links`, `about`, `footer_quote`, `usd_exchange_rate`, `meta`, `updated_at`, `updated_by`)
 SELECT `id`, `site_logo`, `site_title`, `site_desc`, `banner`, `site_email`, `site_phone`, `site_address`, `social_media_links`, `about`, `footer_quote`, `exchange_rate_usd`, `meta`, `updated`, `updated_by` FROM `bensu-ci`.`site_info`;
 
+
 /**
   MIGRATE transfers
  */
