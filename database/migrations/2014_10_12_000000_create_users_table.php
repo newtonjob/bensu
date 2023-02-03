@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('email')->unique();
+            $table->string('email')->nullable()->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password')->nullable();
             $table->string('phone', 45)->nullable()->unique();
@@ -29,7 +29,7 @@ return new class extends Migration
             $table->boolean('notifiable')->default(false);
             $table->integer('login_count')->default(0);
             $table->timestamp('last_login')->nullable();
-            $table->timestamp('banned_until')->nullable();
+            $table->dateTime('banned_until')->nullable();
             $table->json('meta')->nullable();
             $table->rememberToken();
             $table->timestamps();
