@@ -32,6 +32,7 @@ return new class extends Migration
             $table->json('subscribers')->nullable();
             $table->authors();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
