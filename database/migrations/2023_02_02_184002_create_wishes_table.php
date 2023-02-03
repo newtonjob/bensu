@@ -18,6 +18,8 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained();
             $table->foreignId('product_id')->constrained();
             $table->timestamps();
+
+            $table->unique(['user_id', 'product_id']);
         });
     }
 

@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('reviews', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('item_id')->constrained();
+            $table->foreignId('product_id')->constrained();
             $table->text('comment');
             $table->enum('star', [1, 2, 3, 4, 5])->default(5);
             $table->authors();
