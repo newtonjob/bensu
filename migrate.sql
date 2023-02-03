@@ -44,4 +44,17 @@ SELECT `location_id`, `location_name`, `slug`, `location_address`, IF(featured, 
   MIGRATE orders
  */
 INSERT INTO `orders`(`id`, `user_id`, `delivery_type`, `delivery_address`, `delivered_at`, `notes`, `created_by`, `updated_by`, `created_at`, `updated_at`, `deleted_at`)
-SELECT `order_id`, `user_id`, `delivery_type`+1, `delivery_address`, IF(`delivery_status`, `updated`, NULL), `order_notes`, `created_by`, `updated_by`, `created`, `updated`, IF(`is_deleted`, `updated`, NULL) FROM `bensu-ci`.`orders`
+SELECT `order_id`, `user_id`, `delivery_type`+1, `delivery_address`, IF(`delivery_status`, `updated`, NULL), `order_notes`, `created_by`, `updated_by`, `created`, `updated`, IF(`is_deleted`, `updated`, NULL) FROM `bensu-ci`.`orders`;
+
+/**
+  MIGRATE sub_categories
+ */
+INSERT INTO `sub_categories`(`id`, `category_id`, `name`, `slug`, `created_by`, `updated_by`, `created_at`, `updated_at`)
+SELECT `product_id`, `cat_id`, `product_name`, `slug`, `created_by`, `updated_by`, `created`, `updated` FROM `bensu-ci`.`product`;
+
+
+/**
+  MIGRATE order_product
+ */
+INSERT INTO `order_product`(`id`, `order_id`, `product_id`, `price`, `quantity`, `location_id`, `meta`, `updated_by`, `created_at`, `updated_at`)
+SELECT `id`, `order_id`, `item_id`, `price`, `quantity`, `location_id`, `meta`, `updated_by`, `created`, `updated` FROM `bensu-ci`.`order_item`;
