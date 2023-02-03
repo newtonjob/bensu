@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use App\Models\Setting;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -25,6 +27,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->registerMigrationMacros();
+        $this->registerSiteSetting();
     }
 
     public function registerMigrationMacros()
@@ -33,5 +36,12 @@ class AppServiceProvider extends ServiceProvider
             $this->foreignId('created_by')->nullable()->constrained('users');
             $this->foreignId('updated_by')->nullable()->constrained('users');
         });
+    }
+
+    public function registerSiteSetting()
+    {
+        $this->app->instance(Setting::class,
+            Cache::rememberForever('setting', fn () => Setting::firstOrFail())
+        );
     }
 }
