@@ -104,7 +104,7 @@
                     </div>
                     <div id="menu" class="text-left">
                         <ul class="offcanvas_main_menu">
-                            <li class="menu-item-has-children active"><a href="{{ url()}}">Home</a></li>
+                            <li class="menu-item-has-children active"><a href="{{ route('home') }}">Home</a></li>
                             <li class="menu-item-has-children"><a href="{{ url('shop') }}">Shop</a></li>
                             <li class="menu-item-has-children"><span class="menu-expand"><i class="fa fa-angle-down"></i></span>
                                 <a href="#">Brands</a>
@@ -180,7 +180,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-3 col-md-6">
                         <div class="logo">
-                            <a href="{{ url() }}"><img src="{{ site('logo') }}" alt="logo"></a>
+                            <a href="{{ route('home') }}"><img src="{{ site('logo') }}" alt="logo"></a>
                         </div>
                     </div>
                     <div class="col-lg-9 col-md-6">
@@ -233,7 +233,7 @@
                         <div class="main_menu menu_position">
                             <nav>
                                 <ul>
-                                    <li><a class="active" href="{{ url() }}">Home</a></li>
+                                    <li><a class="active" href="{{ route('home') }}">Home</a></li>
                                     <li><a href="{{ url('shop') }}">Shop</a></li>
                                     <li>
                                         <a href="#">Brands</a>
@@ -283,7 +283,7 @@
                     <div class="main_menu">
                         <nav>
                             <ul>
-                                <li><a class="active" href="{{ url() }}">Home</a></li>
+                                <li><a class="active" href="{{ route('home') }}">Home</a></li>
                                 <li><a href="{{ url('shop') }}">Shop</a></li>
                                 <li>
                                     <a href="#">Brands</a>
@@ -331,7 +331,7 @@
                             <a href="#"><img src="{{ site('logo') }}" alt=""></a>
                         </div>
                         <div class="footer_contact">
-                            <p>{{ $site_data['footer_quote'] }}</p>
+                            <p>{{ site('footer_quote') }}</p>
                             <p><span>Address: </span> {{ site('address') }}</p>
                             <p><span>Mobile: </span> {{ site('phone') }}</p>
                             <p>
