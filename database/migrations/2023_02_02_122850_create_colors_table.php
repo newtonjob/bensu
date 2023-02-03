@@ -17,8 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name')->unique();
             $table->string('slug')->unique();
-            $table->foreignId('created_by')->nullable()->constrained();
-            $table->foreignId('updated_by')->nullable()->constrained();
+            $table->authors();
             $table->timestamps();
         });
     }
