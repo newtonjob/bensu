@@ -16,9 +16,9 @@ return new class extends Migration
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
             $table->foreignId('order_id')->constrained();
-            $table->string('reference')->unique();
+            $table->string('reference', 45)->unique();
             $table->float('amount');
-            $table->enum('channel', ['M', 'P', 'C', 'B'])->default('P');
+            $table->enum('channel', ['paystack', 'cash', 'transfer']);
             $table->timestamp('paid_at')->nullable();
             $table->authors();
             $table->timestamps();
