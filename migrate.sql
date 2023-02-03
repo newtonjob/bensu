@@ -100,3 +100,10 @@ SELECT `id`, `item_id`, `review`, `star`, `created_by`, `updated_by`, `created`,
  */
 INSERT INTO `transactions`(`id`, `order_id`, `reference`, `amount`, `channel`, `paid_at`, `created_by`, `updated_by`, `created_at`, `updated_at`)
 SELECT `id`, `order_id`, `reference`, `amount`, IF(vendor = 'M', 1, vendor - 1), IF(status, updated, NULL), `created_by`, `updated_by`, `created`, `updated` FROM `bensu-ci`.`transaction`;
+
+
+/**
+  MIGRATE transfers
+ */
+INSERT INTO `transfers`(`id`, `created_by`, `updated_by`, `created_at`, `updated_at`)
+SELECT `id`, `created_by`, `updated_by`, `created`, `updated` FROM `bensu-ci`.`product_transfer`;
