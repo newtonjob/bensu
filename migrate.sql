@@ -59,12 +59,6 @@ INSERT INTO `order_product`(`id`, `order_id`, `product_id`, `price`, `quantity`,
 SELECT `id`, `order_id`, `item_id`, `price`, `quantity`, `location_id`, `meta`, `updated_by`, `created`, `updated` FROM `bensu-ci`.`order_item`;
 
 /**
-  MIGRATE order_product
- */
-INSERT INTO `wishes`(`id`, `user_id`, `product_id`, `created_at`, `updated_at`)
-SELECT `id`, `user_id`, `item_id`, `created`, `created` FROM `bensu-ci`.`user_wishlist`;
-
-/**
   MIGRATE wishes
  */
 INSERT INTO `wishes`(`id`, `user_id`, `product_id`, `created_at`, `updated_at`)
