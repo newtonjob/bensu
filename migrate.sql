@@ -16,3 +16,10 @@ SELECT `user_id`, `email`, IF(_email_verified, created, NULL), `password`, `phon
  */
 INSERT INTO `brands`(`id`, `name`, `image`, `slug`, `created_by`, `updated_by`, `created_at`, `updated_at`)
 SELECT `brand_id`, `brand_name`, `brand_img`, `slug`, `created_by`, `updated_by`, `created`, `updated` FROM `bensu-ci`.`brand`;
+
+
+/**
+  MIGRATE colors
+ */
+INSERT INTO `colors`(`id`, `name`, `slug`, `created_by`, `updated_by`, `created_at`, `updated_at`)
+SELECT `color_id`, `color_name`, `slug`,  `created_by`, `updated_by`, `created`, `updated`  FROM `bensu-ci`.`color`;
