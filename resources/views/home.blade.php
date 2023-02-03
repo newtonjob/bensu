@@ -2,24 +2,22 @@
     <!--slider area start-->
     <section class="slider_section mb-70">
         <div class="slider_area owl-carousel">
-            <?php
-            foreach ($site_data['banner'] as $key => $b){ ?>
-            <div class="single_slider d-flex align-items-center" data-bgimg="<?= cloudinary_url($b->img, ['transformation' => ['width' => 1700]]) ?>">
+            @foreach ($site_data['banner'] as $key => $b)
+            <div class="single_slider d-flex align-items-center" data-bgimg="{{ cloudinary_url($b->img, ['transformation' => ['width' => 1700]]) }}">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="slider_content">
-                                <h1><?= $b->t1 ?></h1>
-                                <h2><?= $b->t2 ?></h2>
-                                <p><?= $b->t3 ?></p>
-                                <a class="button" href="<?= site_url('shop') ?>">Shop now</a>
+                                <h1>{{ $b->t1 }}</h1>
+                                <h2>{{ $b->t2 }}</h2>
+                                <p>{{ $b->t3 }}</p>
+                                <a class="button" href="{{ url('shop') }}">Shop now</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-                <?php
-            } ?>
+            @endforeach
         </div>
     </section>
     <!--slider area end-->
@@ -31,7 +29,7 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="single_shipping">
                         <div class="shipping_icone">
-                            <img src="<?= base_url('assets/img/about/shipping1.png') ?>" alt="Free shipping">
+                            <img src="{{ asset('img/about/shipping1.png') }}" alt="Free shipping">
                         </div>
                         <div class="shipping_content">
                             <h2>Free Shipping</h2>
@@ -42,7 +40,7 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="single_shipping">
                         <div class="shipping_icone">
-                            <img src="<?= base_url('assets/img/about/shipping2.png') ?>" alt="Support">
+                            <img src="{{ asset('img/about/shipping2.png') }}" alt="Support">
                         </div>
                         <div class="shipping_content">
                             <h2>Support 24/7</h2>
@@ -53,7 +51,7 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="single_shipping">
                         <div class="shipping_icone">
-                            <img src="<?= base_url('assets/img/about/shipping3.png') ?>" alt="Money back">
+                            <img src="{{ asset('img/about/shipping3.png') }}" alt="Money back">
                         </div>
                         <div class="shipping_content">
                             <h2>100% Money Back</h2>
@@ -64,7 +62,7 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="single_shipping">
                         <div class="shipping_icone">
-                            <img src="<?= base_url('assets/img/about/shipping4.png') ?>" alt="secure payment">
+                            <img src="{{ asset('img/about/shipping4.png') }}" alt="secure payment">
                         </div>
                         <div class="shipping_content">
                             <h2>Secure Payment</h2>
@@ -81,21 +79,18 @@
     <div class="banner_area mb-40">
         <div class="container">
             <div class="row">
-                <?php
-                foreach ($site_data['meta']->ad->line1 as $key => $value) {
-                    if(empty($value)) continue;
-                    ?>
-                <div class="col-md-<?= $key == 1 ? '6' : '3' ?>">
-                    <div class="single_banner mb-30">
-                        <div class="banner_thumb">
-                            <a href="<?= site_url('shop') ?>">
-                                <img src="<?= cloudinary_url($value) ?>" alt="Banner image">
-                            </a>
+                @foreach ($site_data['meta']->ad->line1 as $key => $value)
+                    @continue(empty($value))
+                    <div class="col-md-{{ $key == 1 ? '6' : '3' }}">
+                        <div class="single_banner mb-30">
+                            <div class="banner_thumb">
+                                <a href="{{ url('shop') }}">
+                                    <img src="{{ cloudinary_url($value) }}" alt="Banner image">
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                    <?php
-                } ?>
+                @endforeach
             </div>
         </div>
     </div>
@@ -112,53 +107,51 @@
                 </div>
             </div>
             <div class="product_carousel product_column5 owl-carousel">
-                <?php
-                foreach ($discount_items as $i){ ?>
-                <article class="single_product">
-                    <figure>
-                        <div class="product_thumb">
-                            <a class="primary_img" href="<?= site_url('shop/product/'.$i['slug'])?>">
-                                <img src="<?= $i['item_img'][0] ?>" alt="Item image">
-                            </a>
-                                <?php
-                            if(isset($i['item_img'][1])){ ?>
-                            <a class="secondary_img" href="<?= site_url('shop/product/'.$i['slug'])?>">
-                                <img src="<?= $i['item_img'][1] ?>" alt="Item image">
-                            </a>
-                                <?php
-                            } ?>
-                            <div class="label_product">
-                                <span class="label_sale">sale</span>
+                @foreach ($discount_items as $i)
+                    <article class="single_product">
+                        <figure>
+                            <div class="product_thumb">
+                                <a class="primary_img" href="{{ url('shop/product/'.$i['slug'])}}">
+                                    <img src="{{ $i['item_img'][0] }}" alt="Item image">
+                                </a>
+
+                                @isset($i['item_img'][1])
+                                    <a class="secondary_img" href="{{ url('shop/product/'.$i['slug'])}}">
+                                        <img src="{{ $i['item_img'][1] }}" alt="Item image">
+                                    </a>
+                                @endisset
+
+                                <div class="label_product">
+                                    <span class="label_sale">sale</span>
+                                </div>
+                                <div class="action_links">
+                                    <ul>
+                                        <li class="wishlist"><a href="{{ url('shop/wishlist-add/'.$i['item_id']) }}" title="Add to Wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
+                                        <!--<li class="compare"><a href="#" title="compare"><span class="ion-levels"></span></a></li>-->
+                                        <li class="quick_button"><a href="{{ url('shop/quick-look/'.$i['slug'])}}" data-toggle="modal" data-target="#modal_box"  title="quick view"> <span class="ion-ios-search-strong"></span></a></li>
+                                    </ul>
+                                </div>
+                                <div class="add_to_cart">
+                                    <a href="{{ url('shop/cart-add/'.$i['item_id']) }}" title="add to cart"><span class="spinner-border spinner-border-sm text-white preloader" style="display: none"></span> Add to cart</a>
+                                </div>
+                                <div class="product_timing">
+                                    <div data-countdown="2019/12/25"></div>
+                                </div>
                             </div>
-                            <div class="action_links">
-                                <ul>
-                                    <li class="wishlist"><a href="<?= site_url('shop/wishlist-add/'.$i['item_id']) ?>" title="Add to Wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
-                                    <!--<li class="compare"><a href="#" title="compare"><span class="ion-levels"></span></a></li>-->
-                                    <li class="quick_button"><a href="<?= site_url('shop/quick-look/'.$i['slug'])?>" data-toggle="modal" data-target="#modal_box"  title="quick view"> <span class="ion-ios-search-strong"></span></a></li>
-                                </ul>
-                            </div>
-                            <div class="add_to_cart">
-                                <a href="<?= site_url('shop/cart-add/'.$i['item_id']) ?>" title="add to cart"><span class="spinner-border spinner-border-sm text-white preloader" style="display: none"></span> Add to cart</a>
-                            </div>
-                            <div class="product_timing">
-                                <div data-countdown="2019/12/25"></div>
-                            </div>
-                        </div>
-                        <figcaption class="product_content">
-                            <div class="price_box">
-                                <span class="old_price">
-                                    ₦<?= number_format($i['price_exchanged'], 2) ?>
-                                </span>
-                                <span class="current_price">
-                                    ₦<?= number_format($i['price_discounted'], 2) ?>
-                                </span>
-                            </div>
-                            <h3 class="product_name"><a href="<?= site_url('shop/product/'.$i['slug'])?>"><?= $i['item_name'] ?></a></h3>
-                        </figcaption>
-                    </figure>
-                </article>
-                    <?php
-                } ?>
+                            <figcaption class="product_content">
+                                <div class="price_box">
+                                    <span class="old_price">
+                                        ₦{{ number_format($i['price_exchanged'], 2) }}
+                                    </span>
+                                    <span class="current_price">
+                                        ₦{{ number_format($i['price_discounted'], 2) }}
+                                    </span>
+                                </div>
+                                <h3 class="product_name"><a href="{{ url('shop/product/'.$i['slug'])}}">{{ $i['item_name'] }}</a></h3>
+                            </figcaption>
+                        </figure>
+                    </article>
+                @endforeach
             </div>
         </div>
     </section>
@@ -168,27 +161,24 @@
     <div class="banner_area mb-40">
         <div class="container">
             <div class="row">
-                <?php
-                foreach ($site_data['meta']->ad->line2 as $key => $value) {
-                    if(empty($value)) continue;
-                    ?>
-                <div class="col-md-6">
-                    <div class="single_banner mb-30">
-                        <div class="banner_thumb">
-                            <a href="<?= site_url('shop') ?>">
-                                <img src="<?= cloudinary_url($value) ?>" alt="Banner image">
-                            </a>
+                @foreach ($site_data['meta']->ad->line2 as $key => $value)
+                    @continue(empty($value))
+                    <div class="col-md-6">
+                        <div class="single_banner mb-30">
+                            <div class="banner_thumb">
+                                <a href="{{ url('shop') }}">
+                                    <img src="{{ cloudinary_url($value) }}" alt="Banner image">
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                    <?php
-                } ?>
+                @endforeach
             </div>
         </div>
     </div>
     <!--banner area end-->
 
-    <!--top- category area start-->
+    <!-- top-category area start-->
     <section class="top_category_product mb-70">
         <div class="container">
             <div class="row">
@@ -196,36 +186,34 @@
                     <div class="top_category_header">
                         <h3>Top Categories</h3>
                         <p>Our customers find more interest in these categories.</p>
-                        <a href="<?= site_url('shop') ?>">Show All Categories</a>
+                        <a href="{{ url('shop') }}">Show All Categories</a>
                     </div>
                 </div>
                 <div class="col-lg-10 col-md-9">
                     <div class="top_category_container category_column5 owl-carousel">
-                        <?php
-                        foreach ($category_list as $cat){
-                            if($cat['featured'] != 1) continue ?>
-                        <div class="col-lg-2">
-                            <article class="single_category">
-                                <figure>
-                                    <div class="category_thumb">
-                                        <a href="<?= site_url('shop?cat='.$cat['slug']) ?>">
-                                            <img src="<?= $cat['cat_img'] ?>" alt="<?= $cat['cat_name'] ?> Image">
-                                        </a>
-                                    </div>
-                                    <figcaption class="category_name">
-                                        <h3><a href="<?= site_url('shop?cat='.$cat['slug']) ?>"><?= $cat['cat_name'] ?></a></h3>
-                                    </figcaption>
-                                </figure>
-                            </article>
-                        </div>
-                            <?php
-                        } ?>
+                        @foreach ($category_list as $cat)
+                            @continue($cat['featured'] != 1)
+                            <div class="col-lg-2">
+                                <article class="single_category">
+                                    <figure>
+                                        <div class="category_thumb">
+                                            <a href="{{ url('shop?cat='.$cat['slug']) }}">
+                                                <img src="{{ $cat['cat_img'] }}" alt="{{ $cat['cat_name'] }} Image">
+                                            </a>
+                                        </div>
+                                        <figcaption class="category_name">
+                                            <h3><a href="{{ url('shop?cat='.$cat['slug']) }}">{{ $cat['cat_name'] }}</a></h3>
+                                        </figcaption>
+                                    </figure>
+                                </article>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!--top- category area end-->
+    <!-- top-category area end-->
 
     <!--featured product area start-->
     <section class="featured_product_area mb-70">
@@ -238,22 +226,20 @@
                 </div>
             </div>
             <div class="row featured_container featured_column3">
-                <?php
-                foreach ($featured_items as $i){ ?>
+                @foreach ($featured_items as $i)
                 <div class="col-lg-4">
                     <article class="single_product">
                         <figure>
                             <div class="product_thumb">
-                                <a class="primary_img" href="<?= site_url('shop/product/'.$i['slug'])?>">
-                                    <img src="<?= $i['item_img'][0] ?>" alt="Item image">
+                                <a class="primary_img" href="{{ url('shop/product/'.$i['slug'])}}">
+                                    <img src="{{ $i['item_img'][0] }}" alt="Item image">
                                 </a>
-                                    <?php
-                                if(isset($i['item_img'][1])){ ?>
-                                <a class="secondary_img" href="<?= site_url('shop/product/'.$i['slug'])?>">
-                                    <img src="<?= $i['item_img'][1] ?>" alt="Item image">
-                                </a>
-                                    <?php
-                                } ?>
+
+                                @isset($i['item_img'][1])
+                                    <a class="secondary_img" href="{{ url('shop/product/'.$i['slug'])}}">
+                                        <img src="{{ $i['item_img'][1] }}" alt="Item image">
+                                    </a>
+                                @endisset
 
                                 <div class="label_product">
                                     <span class="label_sale">sale</span>
@@ -262,24 +248,23 @@
                             <figcaption class="product_content">
                                 <div class="price_box">
                                     <span class="old_price">
-                                        <?= $i['discount'] ? '₦'.number_format($i['price_exchanged'], 2) : '' ?>
+                                        {{ $i['discount'] ? '₦'.number_format($i['price_exchanged'], 2) : '' }}
                                     </span>
                                     <span class="current_price">
-                                        ₦<?= number_format($i['price_discounted'], 2) ?>
+                                        ₦{{ number_format($i['price_discounted'], 2) }}
                                     </span>
                                 </div>
                                 <h3 class="product_name">
-                                    <a href="<?= site_url('shop/product/'.$i['slug'])?>"><?= $i['item_name'] ?></a>
+                                    <a href="{{ url('shop/product/'.$i['slug'])}}">{{ $i['item_name'] }}</a>
                                 </h3>
                                 <div class="add_to_cart">
-                                    <a href="<?= site_url('shop/cart-add/'.$i['item_id']) ?>" title="add to cart"><span class="spinner-border spinner-border-sm text-white preloader" style="display: none"></span> Add to cart</a>
+                                    <a href="{{ url('shop/cart-add/'.$i['item_id']) }}" title="add to cart"><span class="spinner-border spinner-border-sm text-white preloader" style="display: none"></span> Add to cart</a>
                                 </div>
                             </figcaption>
                         </figure>
                     </article>
                 </div>
-                    <?php
-                } ?>
+                @endforeach
             </div>
         </div>
     </section>
@@ -296,50 +281,48 @@
                 </div>
             </div>
             <div class="product_carousel product_column5 owl-carousel">
-                <?php
-                foreach ($rand_items as $i){ ?>
-                <article class="single_product">
-                    <figure>
-                        <div class="product_thumb">
-                            <a class="primary_img" href="<?= site_url('shop/product/'.$i['slug'])?>">
-                                <img src="<?= $i['item_img'][0] ?>" alt="Item image">
-                            </a>
-                                <?php
-                            if(isset($i['item_img'][1])){ ?>
-                            <a class="secondary_img" href="<?= site_url('shop/product/'.$i['slug'])?>">
-                                <img src="<?= $i['item_img'][1] ?>" alt="Item image">
-                            </a>
-                                <?php
-                            } ?>
-                            <div class="label_product">
-                                <span class="label_sale">sale</span>
+                @foreach ($rand_items as $i)
+                    <article class="single_product">
+                        <figure>
+                            <div class="product_thumb">
+                                <a class="primary_img" href="{{ url('shop/product/'.$i['slug'])}}">
+                                    <img src="{{ $i['item_img'][0] }}" alt="Item image">
+                                </a>
+
+                                @isset($i['item_img'][1]))
+                                    <a class="secondary_img" href="{{ url('shop/product/'.$i['slug'])}}">
+                                        <img src="{{ $i['item_img'][1] }}" alt="Item image">
+                                    </a>
+                                @endisset
+
+                                <div class="label_product">
+                                    <span class="label_sale">sale</span>
+                                </div>
+                                <div class="action_links">
+                                    <ul>
+                                        <li class="wishlist"><a href="{{ url('shop/wishlist-add/'.$i['item_id']) }}" title="Add to Wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
+                                        <!--<li class="compare"><a href="#" title="compare"><span class="ion-levels"></span></a></li>-->
+                                        <li class="quick_button"><a href="{{ url('shop/quick-look/'.$i['slug'])}}" data-toggle="modal" data-target="#modal_box" title="quick view"> <span class="ion-ios-search-strong"></span></a></li>
+                                    </ul>
+                                </div>
+                                <div class="add_to_cart">
+                                    <a href="{{ url('shop/cart-add/'.$i['item_id']) }}" title="add to cart"><span class="spinner-border spinner-border-sm text-white preloader" style="display: none"></span> Add to cart</a>
+                                </div>
                             </div>
-                            <div class="action_links">
-                                <ul>
-                                    <li class="wishlist"><a href="<?= site_url('shop/wishlist-add/'.$i['item_id']) ?>" title="Add to Wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
-                                    <!--<li class="compare"><a href="#" title="compare"><span class="ion-levels"></span></a></li>-->
-                                    <li class="quick_button"><a href="<?= site_url('shop/quick-look/'.$i['slug'])?>" data-toggle="modal" data-target="#modal_box" title="quick view"> <span class="ion-ios-search-strong"></span></a></li>
-                                </ul>
-                            </div>
-                            <div class="add_to_cart">
-                                <a href="<?= site_url('shop/cart-add/'.$i['item_id']) ?>" title="add to cart"><span class="spinner-border spinner-border-sm text-white preloader" style="display: none"></span> Add to cart</a>
-                            </div>
-                        </div>
-                        <figcaption class="product_content">
-                            <div class="price_box">
-                                <span class="old_price">
-                                    <?= $i['discount'] ? '₦'.number_format($i['price_exchanged'], 2) : '' ?>
-                                </span>
-                                <span class="current_price">
-                                    ₦<?= number_format($i['price_discounted'], 2) ?>
-                                </span>
-                            </div>
-                            <h3 class="product_name"><a href="<?= site_url('shop/product/'.$i['slug'])?>"><?= $i['item_name'] ?></a></h3>
-                        </figcaption>
-                    </figure>
-                </article>
-                    <?php
-                } ?>
+                            <figcaption class="product_content">
+                                <div class="price_box">
+                                    <span class="old_price">
+                                        {{ $i['discount'] ? '₦'.number_format($i['price_exchanged'], 2) : '' }}
+                                    </span>
+                                    <span class="current_price">
+                                        ₦{{ number_format($i['price_discounted'], 2) }}
+                                    </span>
+                                </div>
+                                <h3 class="product_name"><a href="{{ url('shop/product/'.$i['slug'])}}">{{ $i['item_name'] }}</a></h3>
+                            </figcaption>
+                        </figure>
+                    </article>
+                @endforeach
             </div>
         </div>
     </section>
@@ -349,21 +332,19 @@
     <div class="banner_area mb-40">
         <div class="container">
             <div class="row">
-                <?php
-                foreach ($site_data['meta']->ad->line3 as $key => $value) {
-                    if(empty($value)) continue;
-                    ?>
-                <div class="col-md-<?= $key == 0 ? '9' : '3' ?>">
-                    <div class="single_banner mb-30">
-                        <div class="banner_thumb">
-                            <a href="<?= site_url('shop') ?>">
-                                <img src="<?= cloudinary_url($value) ?>" alt="Banner image">
-                            </a>
+                @foreach ($site_data['meta']->ad->line3 as $key => $value)
+                    @continue(empty($value))
+
+                    <div class="col-md-{{ $key == 0 ? '9' : '3' }}">
+                        <div class="single_banner mb-30">
+                            <div class="banner_thumb">
+                                <a href="{{ url('shop') }}">
+                                    <img src="{{ cloudinary_url($value) }}" alt="Banner image">
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                    <?php
-                } ?>
+                @endforeach
             </div>
         </div>
     </div>
@@ -379,55 +360,53 @@
                             <h2>Television Series</h2>
                         </div>
                         <div class="product_carousel product_column4 owl-carousel">
-                            <?php
-                            foreach ($television_series as $i){ ?>
-                            <article class="single_product">
-                                <figure>
-                                    <div class="product_thumb">
-                                        <a class="primary_img" href="<?= site_url('shop/product/' . $i['slug']) ?>">
-                                            <img src="<?= $i['item_img'][0] ?>" alt="Item image">
-                                        </a>
-                                            <?php
-                                        if (isset($i['item_img'][1])) { ?>
-                                        <a class="secondary_img"
-                                           href="<?= site_url('shop/product/' . $i['slug']) ?>">
-                                            <img src="<?= $i['item_img'][1] ?>" alt="Item image">
-                                        </a>
-                                            <?php
-                                        } ?>
-                                        <div class="label_product">
-                                            <span class="label_sale">sale</span>
+                            @foreach ($television_series as $i)
+                                <article class="single_product">
+                                    <figure>
+                                        <div class="product_thumb">
+                                            <a class="primary_img" href="{{ url('shop/product/' . $i['slug']) }}">
+                                                <img src="{{ $i['item_img'][0] }}" alt="Item image">
+                                            </a>
+
+                                            @isset($i['item_img'][1])
+                                                <a class="secondary_img"
+                                                   href="{{ url('shop/product/' . $i['slug']) }}">
+                                                    <img src="{{ $i['item_img'][1] }}" alt="Item image">
+                                                </a>
+                                            @endisset
+
+                                            <div class="label_product">
+                                                <span class="label_sale">sale</span>
+                                            </div>
+                                            <div class="action_links">
+                                                <ul>
+                                                    <li class="wishlist"><a href="{{ url('shop/wishlist-add/'.$i['item_id']) }}" title="Add to Wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
+                                                    <!--<li class="compare"><a href="#" title="compare"><span class="ion-levels"></span></a></li>-->
+                                                    <li class="quick_button"><a href="{{ url('shop/quick-look/'.$i['slug'])}}" data-toggle="modal" data-target="#modal_box" title="quick view">
+                                                            <span class="ion-ios-search-strong"></span></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="add_to_cart">
+                                                <a href="{{ url('shop/cart-add/'.$i['item_id']) }}" title="add to cart"><span class="spinner-border spinner-border-sm text-white preloader" style="display: none"></span> Add to cart</a>
+                                            </div>
                                         </div>
-                                        <div class="action_links">
-                                            <ul>
-                                                <li class="wishlist"><a href="<?= site_url('shop/wishlist-add/'.$i['item_id']) ?>" title="Add to Wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
-                                                <!--<li class="compare"><a href="#" title="compare"><span class="ion-levels"></span></a></li>-->
-                                                <li class="quick_button"><a href="<?= site_url('shop/quick-look/'.$i['slug'])?>" data-toggle="modal" data-target="#modal_box" title="quick view">
-                                                        <span class="ion-ios-search-strong"></span></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="add_to_cart">
-                                            <a href="<?= site_url('shop/cart-add/'.$i['item_id']) ?>" title="add to cart"><span class="spinner-border spinner-border-sm text-white preloader" style="display: none"></span> Add to cart</a>
-                                        </div>
-                                    </div>
-                                    <figcaption class="product_content">
-                                        <div class="price_box">
-                                            <span class="old_price">
-                                                <?= $i['discount'] ? '₦' . number_format($i['price_exchanged'], 2) : '' ?>
-                                            </span>
-                                            <span class="current_price">
-                                                ₦<?= number_format($i['price_discounted'], 2) ?>
-                                            </span>
-                                        </div>
-                                        <h3 class="product_name">
-                                            <a href="<?= site_url('shop/product/' . $i['slug']) ?>"><?= $i['item_name'] ?></a>
-                                        </h3>
-                                    </figcaption>
-                                </figure>
-                            </article>
-                                <?php
-                            } ?>
+                                        <figcaption class="product_content">
+                                            <div class="price_box">
+                                                <span class="old_price">
+                                                    {{ $i['discount'] ? '₦' . number_format($i['price_exchanged'], 2) : '' }}
+                                                </span>
+                                                <span class="current_price">
+                                                    ₦{{ number_format($i['price_discounted'], 2) }}
+                                                </span>
+                                            </div>
+                                            <h3 class="product_name">
+                                                <a href="{{ url('shop/product/' . $i['slug']) }}">{{ $i['item_name'] }}</a>
+                                            </h3>
+                                        </figcaption>
+                                    </figure>
+                                </article>
+                            @endforeach
                         </div>
                     </div>
                 </div>
@@ -442,7 +421,7 @@
                             <article class="single_testimonial">
                                 <figure>
                                     <div class="testimonial_thumb">
-                                        <a href="#"><img src="<?= base_url('assets/img/about/testimonial1.jpg') ?>" alt="Client image"></a>
+                                        <a href="#"><img src="{{ asset('img/about/testimonial1.jpg') }}" alt="Client image"></a>
                                     </div>
                                     <figcaption class="testimonial_content">
                                         <p>Support and response has been amazing, helping me with several issues I came across and got them solved almost the same day. A pleasure to work with them!</p>
@@ -453,7 +432,7 @@
                             <article class="single_testimonial">
                                 <figure>
                                     <div class="testimonial_thumb">
-                                        <a href="#"><img src="<?= base_url('assets/img/about/testimonial2.jpg') ?>" alt="Client image"></a>
+                                        <a href="#"><img src="{{ asset('img/about/testimonial2.jpg') }}" alt="Client image"></a>
                                     </div>
                                     <figcaption class="testimonial_content">
                                         <p>Perfect Themes and the best of all that you have many options to choose! Best Support team ever! Thank you very much!</p>
@@ -464,7 +443,7 @@
                             <article class="single_testimonial">
                                 <figure>
                                     <div class="testimonial_thumb">
-                                        <a href="#"><img src="<?= base_url('assets/img/about/testimonial3.jpg') ?>" alt="Client image"></a>
+                                        <a href="#"><img src="{{ asset('img/about/testimonial3.jpg') }}" alt="Client image"></a>
                                     </div>
                                     <figcaption class="testimonial_content">
                                         <p>Code, template and others are very good. The support has served me immediately and solved my problems when I need help. Are to be congratulated.</p>
@@ -488,28 +467,21 @@
                 <div class="col-12">
                     <div class="brand_container owl-carousel">
                         <div class="brand_items">
+                            @foreach ($brand_list as $k => $b)
+                                @continue(empty($b['brand_img']))
 
-                            <?php $x = 0; foreach ($brand_list as $k => $b): if(empty($b['brand_img'])) continue; ?>
+                                <div class="single_brand">
+                                    <a href="#"><img src="{{ $b['brand_img'] }}" alt="{{ $b['brand_name'] }}"></a>
+                                </div>
 
-                            <div class="single_brand">
-                                <a href="#"><img src="<?= $b['brand_img'] ?>" alt="<?= $b['brand_name'] ?>"></a>
-                            </div>
-
-                                <?php if($x % 2): ?>
-
-                        </div>
-
-                        <div class="brand_items">
-
-                            <?php endif; ?>
-
-                                <?php $x ++; endforeach; ?>
+                                @if($loop->even)
+                                    </div><div class="brand_items">
+                                @endif
+                            @endforeach
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!--brand area end-->
-
 </x-site>
