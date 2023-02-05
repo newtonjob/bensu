@@ -9,10 +9,9 @@ class HomeController extends Controller
 {
     public function __invoke()
     {
-        $featured_products = Product::where('featured_at', '!=', null)->whereHas('images')->with('images')->get();
-        $discount_products = Product::where('discount', '!=', 0)->whereHas('images')->with('images')->get();
-        $top_categories    = Category::orderBy('relevance', 'desc')->take(5)->get();
+        $featured_products = Product::where('featured_at', '!=', null)->has('images')->with('images')->get();
+        $discount_products = Product::where('discount', '!=', 0)->has('images')->with('images')->get();
 
-        return view('home', compact('featured_products', 'discount_products', 'top_categories'));
+        return view('home', compact('featured_products', 'discount_products'));
     }
 }

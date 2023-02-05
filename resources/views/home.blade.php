@@ -112,12 +112,12 @@
                         <figure>
                             <div class="product_thumb">
                                 <a class="primary_img" href="{{ url("shop/product/{$product->slug}")}}">
-                                    <img src="{{ cloudinary_url($product->images[0]->src, ) }}" alt="Item image">
+                                    <img src="{{ cloudinary_url(config('services.cloudinary.root_product').$product->images[0]->src, 200, true) }}" alt="Item image">
                                 </a>
 
                                 @isset($product->images[1])
                                     <a class="secondary_img" href="{{ url("shop/product/{$product->slug}")}}">
-                                        <img src="{{ cloudinary_url($product->images[1]->src) }}" alt="Item image">
+                                        <img src="{{ cloudinary_url(config('services.cloudinary.root_product').$product->images[1]->src, ['width' => 400, 'height' => 300]) }}" alt="Item image">
                                     </a>
                                 @endisset
 
@@ -195,13 +195,14 @@
                 </div>
                 <div class="col-lg-10 col-md-9">
                     <div class="top_category_container category_column5 owl-carousel">
-                        @foreach ($top_categories as $category)
+                        @foreach (app('categories') as $category)
+                            @continue(! $category->isFeatured())
                             <div class="col-lg-2">
                                 <article class="single_category">
                                     <figure>
                                         <div class="category_thumb">
                                             <a href="{{ url("shop?category={$category->slug}") }}">
-                                                <img src="{{ cloudinary_url($category->image, ['width' => 200]) }}" alt="{{ $category->name }} Image">
+                                                <img src="{{ cloudinary_url($category->image, 200) }}" alt="{{ $category->name }} Image">
                                             </a>
                                         </div>
                                         <figcaption class="category_name">
@@ -235,12 +236,12 @@
                         <figure>
                             <div class="product_thumb">
                                 <a class="primary_img" href="{{ url("shop/product/{$product->slug}")}}">
-                                    <img src="{{ cloudinary_url($product->images[0]->src, ['width' => 400]) }}" alt="Item image">
+                                    <img src="{{ cloudinary_url(config('services.cloudinary.root_product').$product->images[0]->src, 115) }}" alt="Item image">
                                 </a>
 
                                 @isset($product->image[1])
                                     <a class="secondary_img" href="{{ url("shop/product/{$product->slug}")}}">
-                                        <img src="{{ cloudinary_url($product->images[1]->src) }}" alt="Item image">
+                                        <img src="{{ cloudinary_url(config('services.cloudinary.root_product').$product->images[1]->src, 115) }}" alt="Item image">
                                     </a>
                                 @endisset
 

@@ -51,7 +51,7 @@ class AppServiceProvider extends ServiceProvider
     public function registerCacheableApplicationModels()
     {
         $this->app->bind('categories',
-            fn () => Category::with('subCategories')->get() // Todo: Cache forever
+            fn () => Category::orderBy('relevance', 'desc')->with('subCategories')->get() // Todo: Cache forever
         );
 
         $this->app->bind('brands',
