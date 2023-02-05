@@ -8,6 +8,15 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Product extends Model
 {
-    use HasFactory;
-    use SoftDeletes;
+    use HasFactory, SoftDeletes;
+
+    public function isFeatured()
+    {
+        return (bool) $this->featured_at;
+    }
+
+    public function images()
+    {
+        return $this->hasMany(Image::class);
+    }
 }

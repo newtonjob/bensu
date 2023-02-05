@@ -32,6 +32,15 @@ function site($key = null)
     return $key ? $setting?->{$key} : $setting;
 }
 
+function discount($price, $discount)
+{
+    $percentage      = $discount / 100;
+    $discount_amount = $price * $percentage;
+    $discount_price  = $price - $discount_amount;
+
+    return $discount_price;
+}
+
 /**
  * @param $value
  * @param  array  $transformation
