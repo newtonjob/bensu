@@ -2468,7 +2468,7 @@
                     <div class="col-6 col-md-3 col-xl wow fadeInUp" data-wow-duration=.9s><a
                             href="page-shop-list-v6.html">
                             <div class=iconbox>
-                                <div class=icon><img src="images/shop-items/ct2.png" alt="Category Image"></div>
+                                <div class=icon><img src="{{asset('images/shop-items/ct2.png')}}" alt="Category Image"></div>
                                 <div class=details>
                                     <h5 class=title>Clothings</h5>
                                     <p class=subtitle>29 items</p>
@@ -2479,7 +2479,7 @@
                     <div class="col-6 col-md-3 col-xl wow fadeInUp" data-wow-duration=1.1s><a
                             href="page-shop-list-v6.html">
                             <div class=iconbox>
-                                <div class=icon><img src="images/shop-items/ct3.png" alt="Category Image"></div>
+                                <div class=icon><img src="{{asset('images/shop-items/ct3.png')}}" alt="Category Image"></div>
                                 <div class=details>
                                     <h5 class=title>Health & Beauty</h5>
                                     <p class=subtitle>29 items</p>
@@ -2490,7 +2490,7 @@
                     <div class="col-6 col-md-3 col-xl wow fadeInUp" data-wow-duration=1.3s><a
                             href="page-shop-list-v6.html">
                             <div class=iconbox>
-                                <div class=icon><img src="images/shop-items/ct4.png" alt="Category Image"></div>
+                                <div class=icon><img src="{{asset('images/shop-items/ct4.png')}}" alt="Category Image"></div>
                                 <div class=details>
                                     <h5 class=title>Home & Kitchen</h5>
                                     <p class=subtitle>29 items</p>
@@ -2501,7 +2501,7 @@
                     <div class="col-6 col-md-3 col-xl wow fadeInUp" data-wow-duration=1.5s><a
                             href="page-shop-list-v6.html">
                             <div class=iconbox>
-                                <div class=icon><img src="images/shop-items/ct5.png" alt="Category Image"></div>
+                                <div class=icon><img src={{asset('images/shop-items/ct5.png')}}" alt="Category Image"></div>
                                 <div class=details>
                                     <h5 class=title>Home & Furniture</h5>
                                     <p class=subtitle>29 items</p>
@@ -2512,7 +2512,7 @@
                     <div class="col-6 col-md-3 col-xl wow fadeInUp" data-wow-duration=1.7s><a
                             href="page-shop-list-v6.html">
                             <div class=iconbox>
-                                <div class=icon><img src="images/shop-items/ct6.png" alt="Category Image"></div>
+                                <div class=icon><img src="{{asset('images/shop-items/ct6.png')}}" alt="Category Image"></div>
                                 <div class=details>
                                     <h5 class=title>Grocery & Market</h5>
                                     <p class=subtitle>29 items</p>
@@ -2523,7 +2523,7 @@
                     <div class="col-6 col-md-3 col-xl wow fadeInUp" data-wow-duration=1.9s><a
                             href="page-shop-list-v6.html">
                             <div class=iconbox>
-                                <div class=icon><img src="images/shop-items/ct7.png" alt="Category Image"></div>
+                                <div class=icon><img src="{{asset('images/shop-items/ct7.png')}}" alt="Category Image"></div>
                                 <div class=details>
                                     <h5 class=title>Toy & Video Games</h5>
                                     <p class=subtitle>29 items</p>
@@ -2534,7 +2534,7 @@
                     <div class="col-6 col-md-3 col-xl wow fadeInUp" data-wow-duration=2.1s><a
                             href="page-shop-list-v6.html">
                             <div class=iconbox>
-                                <div class=icon><img src="images/shop-items/ct8.png" alt="Category Image"></div>
+                                <div class=icon><img src="{{asset('images/shop-items/ct8.png')}}" alt="Category Image"></div>
                                 <div class=details>
                                     <h5 class=title>Babies & Moms</h5>
                                     <p class=subtitle>29 items</p>
@@ -2546,7 +2546,7 @@
                 <div class="row ovh mt70">
                     <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-duration=.7s>
                         <div class="banner_one home1_style color1 mb30">
-                            <div class="thumb style1"><img class=float-end src="images/banner/smartwatch.png"
+                            <div class="thumb style1"><img class=float-end src="{{asset('images/banner/smartwatch.png')}}"
                                                            alt=smartwatch></div>
                             <div class=details>
                                 <p class="para color-light-blue">Starting from<span class=fw500>$899.</span></p>
@@ -2557,7 +2557,7 @@
                     </div>
                     <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-duration=.9s>
                         <div class="banner_one home1_style color2 mb30">
-                            <div class="thumb style1"><img class=float-end src="images/banner/earphone.png"
+                            <div class="thumb style1"><img class=float-end src="{{asset('images/banner/earphone.png')}}"
                                                            alt=EarPhone></div>
                             <div class=details>
                                 <p class="para color-light-blue">Starting from<span class=fw500>$899.</span></p>
@@ -2568,9 +2568,9 @@
                     </div>
                     <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-duration=1.1s>
                         <div class="banner_one home1_style color3 mb30">
-                            <div class=thumb><img class=float-end src="images/banner/smartdevice.png"
+                            <div class=thumb><img class=float-end src="{{asset('images/banner/smartdevice.png')}}"
                                                   alt=smartdevice.png>
-                                <div class=off_banner><img src="images/banner/off-banner.png" alt="Off Banner"></div>
+                                <div class=off_banner><img src="{{asset('images/banner/off-banner.png')}}" alt="Off Banner"></div>
                             </div>
                             <div class=details>
                                 <p class="para color-light-blue">Starting from<span class=fw500>$899.</span></p>
@@ -2627,7 +2627,7 @@
                                             <div class="shop_item bdrtrb1 px-2 px-sm-3 wow fadeIn"
                                                  data-wow-duration=1.1s>
                                                 <div class="thumb pb30">
-                                                    <img src="images/shop-items/bslm1.png" alt="Best Seller Item">
+                                                    <img src="{{asset('images/shop-items/bslm1.png')}}" alt="Best Seller Item">
                                                     <div class=thumb_info>
                                                         <ul class=mb0>
                                                             <li>
@@ -2677,7 +2677,7 @@
                                             <div class="shop_item bdrtrb1 px-2 px-sm-3 wow fadeIn"
                                                  data-wow-duration=1.3s>
                                                 <div class="thumb pb30">
-                                                    <img src="images/shop-items/bslm2.png" alt="Best Seller Item">
+                                                    <img src="{{asset('images/shop-items/bslm2.png')}}" alt="Best Seller Item">
                                                     <div class=thumb_info>
                                                         <ul class=mb0>
                                                             <li>
@@ -2728,7 +2728,7 @@
                                             <div class="shop_item bdrtrb1 px-2 px-sm-3 wow fadeIn"
                                                  data-wow-duration=1.5s>
                                                 <div class="thumb pb30">
-                                                    <img src="images/shop-items/bslm3.png" alt="Best Seller Item">
+                                                    <img src="{{asset('images/shop-items/bslm3.png')}}" alt="Best Seller Item">
                                                     <div class=thumb_info>
                                                         <ul class=mb0>
                                                             <li>
@@ -2779,7 +2779,7 @@
                                             <div class="shop_item bdrtrb1 px-2 px-sm-3 wow fadeIn"
                                                  data-wow-duration=1.7s>
                                                 <div class="thumb pb30">
-                                                    <img src="images/shop-items/bslm4.png" alt="Best Seller Item">
+                                                    <img src="{{asset('images/shop-items/bslm4.png')}}" alt="Best Seller Item">
                                                     <div class=thumb_info>
                                                         <ul class=mb0>
                                                             <li>
@@ -2830,7 +2830,7 @@
                                             <div class="shop_item bdrtrb1 px-2 px-sm-3 wow fadeIn"
                                                  data-wow-duration=1.9s>
                                                 <div class="thumb pb30">
-                                                    <img src="images/shop-items/bslm5.png" alt="Best Seller Item">
+                                                    <img src="{{asset('images/shop-items/bslm5.png')}}" alt="Best Seller Item">
                                                     <div class=thumb_info>
                                                         <ul class=mb0>
                                                             <li>
@@ -2884,7 +2884,7 @@
                                         <div class=item>
                                             <div class="shop_item bdrtrb1 px-2 px-sm-3">
                                                 <div class="thumb pb30">
-                                                    <img src="images/shop-items/bslm1.png" alt="Best Seller Item">
+                                                    <img src="{{asset('images/shop-items/bslm1.png')}}" alt="Best Seller Item">
                                                     <div class=thumb_info>
                                                         <ul class=mb0>
                                                             <li>
@@ -2933,7 +2933,7 @@
                                         <div class=item>
                                             <div class="shop_item bdrtrb1 px-2 px-sm-3">
                                                 <div class="thumb pb30">
-                                                    <img src="images/shop-items/bslm2.png" alt="Best Seller Item">
+                                                    <img src="{{asset('images/shop-items/bslm2.png')}}" alt="Best Seller Item">
                                                     <div class=thumb_info>
                                                         <ul class=mb0>
                                                             <li>
@@ -2983,7 +2983,7 @@
                                         <div class=item>
                                             <div class="shop_item bdrtrb1 px-2 px-sm-3">
                                                 <div class="thumb pb30">
-                                                    <img src="images/shop-items/bslm3.png" alt="Best Seller Item">
+                                                    <img src="{{asset('images/shop-items/bslm3.png')}}" alt="Best Seller Item">
                                                     <div class=thumb_info>
                                                         <ul class=mb0>
                                                             <li>
@@ -3033,7 +3033,7 @@
                                         <div class=item>
                                             <div class="shop_item bdrtrb1 px-2 px-sm-3">
                                                 <div class="thumb pb30">
-                                                    <img src="images/shop-items/bslm4.png" alt="Best Seller Item">
+                                                    <img src="{{asset('images/shop-items/bslm4.png')}}" alt="Best Seller Item">
                                                     <div class=thumb_info>
                                                         <ul class=mb0>
                                                             <li>
@@ -3083,7 +3083,7 @@
                                         <div class=item>
                                             <div class="shop_item bdrtrb1 px-2 px-sm-3">
                                                 <div class="thumb pb30">
-                                                    <img src="images/shop-items/bslm5.png" alt="Best Seller Item">
+                                                    <img src="{{asset('images/shop-items/bslm5.png')}}" alt="Best Seller Item">
                                                     <div class=thumb_info>
                                                         <ul class=mb0>
                                                             <li>
@@ -3136,7 +3136,7 @@
                                         <div class=item>
                                             <div class="shop_item bdrtrb1 px-2 px-sm-3">
                                                 <div class="thumb pb30">
-                                                    <img src="images/shop-items/bslm1.png" alt="Best Seller Item">
+                                                    <img src="{{asset('images/shop-items/bslm1.png')}}" alt="Best Seller Item">
                                                     <div class=thumb_info>
                                                         <ul class=mb0>
                                                             <li>
@@ -3185,7 +3185,7 @@
                                         <div class=item>
                                             <div class="shop_item bdrtrb1 px-2 px-sm-3">
                                                 <div class="thumb pb30">
-                                                    <img src="images/shop-items/bslm2.png" alt="Best Seller Item">
+                                                    <img src="{{asset('images/shop-items/bslm2.png')}}" alt="Best Seller Item">
                                                     <div class=thumb_info>
                                                         <ul class=mb0>
                                                             <li>
@@ -3235,7 +3235,7 @@
                                         <div class=item>
                                             <div class="shop_item bdrtrb1 px-2 px-sm-3">
                                                 <div class="thumb pb30">
-                                                    <img src="images/shop-items/bslm3.png" alt="Best Seller Item">
+                                                    <img src="{{asset('images/shop-items/bslm3.png')}}" alt="Best Seller Item">
                                                     <div class=thumb_info>
                                                         <ul class=mb0>
                                                             <li>
@@ -3285,7 +3285,7 @@
                                         <div class=item>
                                             <div class="shop_item bdrtrb1 px-2 px-sm-3">
                                                 <div class="thumb pb30">
-                                                    <img src="images/shop-items/bslm4.png" alt="Best Seller Item">
+                                                    <img src="{{asset('images/shop-items/bslm4.png')}}" alt="Best Seller Item">
                                                     <div class=thumb_info>
                                                         <ul class=mb0>
                                                             <li>
@@ -3335,7 +3335,7 @@
                                         <div class=item>
                                             <div class="shop_item bdrtrb1 px-2 px-sm-3">
                                                 <div class="thumb pb30">
-                                                    <img src="images/shop-items/bslm5.png" alt="Best Seller Item">
+                                                    <img src="{{asset('images/shop-items/bslm5.png')}}" alt="Best Seller Item">
                                                     <div class=thumb_info>
                                                         <ul class=mb0>
                                                             <li>
@@ -3389,7 +3389,7 @@
                                         <div class=item>
                                             <div class="shop_item bdrtrb1 px-2 px-sm-3">
                                                 <div class="thumb pb30">
-                                                    <img src="images/shop-items/bslm1.png" alt="Best Seller Item">
+                                                    <img src="{{asset('images/shop-items/bslm1.png')}}" alt="Best Seller Item">
                                                     <div class=thumb_info>
                                                         <ul class=mb0>
                                                             <li>
@@ -3438,7 +3438,7 @@
                                         <div class=item>
                                             <div class="shop_item bdrtrb1 px-2 px-sm-3">
                                                 <div class="thumb pb30">
-                                                    <img src="images/shop-items/bslm2.png" alt="Best Seller Item">
+                                                    <img src="{{asset('images/shop-items/bslm2.png')}}" alt="Best Seller Item">
                                                     <div class=thumb_info>
                                                         <ul class=mb0>
                                                             <li>
@@ -3488,7 +3488,7 @@
                                         <div class=item>
                                             <div class="shop_item bdrtrb1 px-2 px-sm-3">
                                                 <div class="thumb pb30">
-                                                    <img src="images/shop-items/bslm3.png" alt="Best Seller Item">
+                                                    <img src="{{asset('images/shop-items/bslm3.png')}}" alt="Best Seller Item">
                                                     <div class=thumb_info>
                                                         <ul class=mb0>
                                                             <li>
@@ -3538,7 +3538,7 @@
                                         <div class=item>
                                             <div class="shop_item bdrtrb1 px-2 px-sm-3">
                                                 <div class="thumb pb30">
-                                                    <img src="images/shop-items/bslm4.png" alt="Best Seller Item">
+                                                    <img src="{{asset('images/shop-items/bslm4.png')}}" alt="Best Seller Item">
                                                     <div class=thumb_info>
                                                         <ul class=mb0>
                                                             <li>
@@ -3588,7 +3588,7 @@
                                         <div class=item>
                                             <div class="shop_item bdrtrb1 px-2 px-sm-3">
                                                 <div class="thumb pb30">
-                                                    <img src="images/shop-items/bslm5.png" alt="Best Seller Item">
+                                                    <img src="{{asset('images/shop-items/bslm5.png')}}" alt="Best Seller Item">
                                                     <div class=thumb_info>
                                                         <ul class=mb0>
                                                             <li>
@@ -3641,7 +3641,7 @@
                                         <div class=item>
                                             <div class="shop_item bdrtrb1 px-2 px-sm-3">
                                                 <div class="thumb pb30">
-                                                    <img src="images/shop-items/bslm1.png" alt="Best Seller Item">
+                                                    <img src="{{asset('images/shop-items/bslm1.png')}}" alt="Best Seller Item">
                                                     <div class=thumb_info>
                                                         <ul class=mb0>
                                                             <li>
@@ -3690,7 +3690,7 @@
                                         <div class=item>
                                             <div class="shop_item bdrtrb1 px-2 px-sm-3">
                                                 <div class="thumb pb30">
-                                                    <img src="images/shop-items/bslm2.png" alt="Best Seller Item">
+                                                    <img src="{{asset('images/shop-items/bslm2.png')}}" alt="Best Seller Item">
                                                     <div class=thumb_info>
                                                         <ul class=mb0>
                                                             <li>
@@ -3740,7 +3740,7 @@
                                         <div class=item>
                                             <div class="shop_item bdrtrb1 px-2 px-sm-3">
                                                 <div class="thumb pb30">
-                                                    <img src="images/shop-items/bslm3.png" alt="Best Seller Item">
+                                                    <img src="{{asset('images/shop-items/bslm3.png')}}" alt="Best Seller Item">
                                                     <div class=thumb_info>
                                                         <ul class=mb0>
                                                             <li>
@@ -3790,7 +3790,7 @@
                                         <div class=item>
                                             <div class="shop_item bdrtrb1 px-2 px-sm-3">
                                                 <div class="thumb pb30">
-                                                    <img src="images/shop-items/bslm4.png" alt="Best Seller Item">
+                                                    <img src="{{asset('images/shop-items/bslm4.png')}}" alt="Best Seller Item">
                                                     <div class=thumb_info>
                                                         <ul class=mb0>
                                                             <li>
@@ -3840,7 +3840,7 @@
                                         <div class=item>
                                             <div class="shop_item bdrtrb1 px-2 px-sm-3">
                                                 <div class="thumb pb30">
-                                                    <img src="images/shop-items/bslm5.png" alt="Best Seller Item">
+                                                    <img src="{{asset('images/shop-items/bslm5.png')}}" alt="Best Seller Item">
                                                     <div class=thumb_info>
                                                         <ul class=mb0>
                                                             <li>
@@ -3945,7 +3945,7 @@
                                         <div class="item ovh">
                                             <div class="shop_item bdrtrb1 px-2 px-sm-3 wow fadeIn"
                                                  data-wow-duration=1.1s>
-                                                <div class="thumb pb30"><img src="images/shop-items/fp1.png"
+                                                <div class="thumb pb30"><img src="{{asset('images/shop-items/fp1.png')}}"
                                                                              alt="Furniture Product">
                                                     <div class=thumb_info>
                                                         <ul class=mb0>
@@ -3994,7 +3994,7 @@
                                         <div class="item ovh">
                                             <div class="shop_item bdrtrb1 px-2 px-sm-3 wow fadeIn"
                                                  data-wow-duration=1.3s>
-                                                <div class="thumb pb30"><img src="images/shop-items/fp2.png"
+                                                <div class="thumb pb30"><img src="{{asset('images/shop-items/fp2.png')}}"
                                                                              alt="Furniture Product">
                                                     <div class=thumb_info>
                                                         <ul class=mb0>
@@ -4043,7 +4043,7 @@
                                         <div class="item ovh">
                                             <div class="shop_item bdrtrb1 px-2 px-sm-3 wow fadeIn"
                                                  data-wow-duration=1.5s>
-                                                <div class="thumb pb30"><img src="images/shop-items/fp3.png"
+                                                <div class="thumb pb30"><img src="{{asset('images/shop-items/fp3.png')}}"
                                                                              alt="Furniture Product">
                                                     <div class=thumb_info>
                                                         <ul class=mb0>
@@ -4092,7 +4092,7 @@
                                         <div class="item ovh">
                                             <div class="shop_item bdrtrb1 px-2 px-sm-3 wow fadeIn"
                                                  data-wow-duration=1.7s>
-                                                <div class="thumb pb30"><img src="images/shop-items/fp4.png"
+                                                <div class="thumb pb30"><img src="{{asset('images/shop-items/fp4.png')}}"
                                                                              alt="Furniture Product">
                                                     <div class=thumb_info>
                                                         <ul class=mb0>
@@ -4141,7 +4141,7 @@
                                         <div class="item ovh">
                                             <div class="shop_item bdrtrb1 px-2 px-sm-3 wow fadeIn"
                                                  data-wow-duration=1.9s>
-                                                <div class="thumb pb30"><img src="images/shop-items/fp5.png"
+                                                <div class="thumb pb30"><img src="{{asset('images/shop-items/fp5.png')}}"
                                                                              alt="Furniture Product">
                                                     <div class=thumb_info>
                                                         <ul class=mb0>
@@ -4193,7 +4193,7 @@
                                     <div class="best_item_slider_shop_lising_page shop_item_5grid_slider slider_dib_sm nav_none_400 dots_none owl-theme owl-carousel">
                                         <div class=item>
                                             <div class="shop_item bdrtrb1 px-2 px-sm-3">
-                                                <div class="thumb pb30"><img src="images/shop-items/fp1.png"
+                                                <div class="thumb pb30"><img src="{{asset('images/shop-items/fp1.png')}}"
                                                                              alt="Furniture Product">
                                                     <div class=thumb_info>
                                                         <ul class=mb0>
@@ -4241,7 +4241,7 @@
                                         </div>
                                         <div class=item>
                                             <div class="shop_item bdrtrb1 px-2 px-sm-3">
-                                                <div class="thumb pb30"><img src="images/shop-items/fp2.png"
+                                                <div class="thumb pb30"><img src="{{asset('images/shop-items/fp2.png')}}"
                                                                              alt="Furniture Product">
                                                     <div class=thumb_info>
                                                         <ul class=mb0>
@@ -4289,7 +4289,7 @@
                                         </div>
                                         <div class=item>
                                             <div class="shop_item bdrtrb1 px-2 px-sm-3">
-                                                <div class="thumb pb30"><img src="images/shop-items/fp3.png"
+                                                <div class="thumb pb30"><img src="{{asset('images/shop-items/fp3.png')}}"
                                                                              alt="Furniture Product">
                                                     <div class=thumb_info>
                                                         <ul class=mb0>
@@ -4337,7 +4337,7 @@
                                         </div>
                                         <div class=item>
                                             <div class="shop_item bdrtrb1 px-2 px-sm-3">
-                                                <div class="thumb pb30"><img src="images/shop-items/fp4.png"
+                                                <div class="thumb pb30"><img src="{{asset('images/shop-items/fp4.png')}}"
                                                                              alt="Furniture Product">
                                                     <div class=thumb_info>
                                                         <ul class=mb0>
@@ -4385,7 +4385,7 @@
                                         </div>
                                         <div class=item>
                                             <div class="shop_item bdrtrb1 px-2 px-sm-3">
-                                                <div class="thumb pb30"><img src="images/shop-items/fp5.png"
+                                                <div class="thumb pb30"><img src="{{asset('images/shop-items/fp5.png')}}"
                                                                              alt="Furniture Product">
                                                     <div class=thumb_info>
                                                         <ul class=mb0>
@@ -4437,7 +4437,7 @@
                                     <div class="best_item_slider_shop_lising_page shop_item_5grid_slider slider_dib_sm nav_none_400 dots_none owl-theme owl-carousel">
                                         <div class=item>
                                             <div class="shop_item bdrtrb1 px-2 px-sm-3">
-                                                <div class="thumb pb30"><img src="images/shop-items/fp1.png"
+                                                <div class="thumb pb30"><img src="{{asset('images/shop-items/fp1.png')}}"
                                                                              alt="Furniture Product">
                                                     <div class=thumb_info>
                                                         <ul class=mb0>
@@ -4485,7 +4485,7 @@
                                         </div>
                                         <div class=item>
                                             <div class="shop_item bdrtrb1 px-2 px-sm-3">
-                                                <div class="thumb pb30"><img src="images/shop-items/fp2.png"
+                                                <div class="thumb pb30"><img src="{{asset('images/shop-items/fp2.png')}}"
                                                                              alt="Furniture Product">
                                                     <div class=thumb_info>
                                                         <ul class=mb0>
@@ -4533,7 +4533,7 @@
                                         </div>
                                         <div class=item>
                                             <div class="shop_item bdrtrb1 px-2 px-sm-3">
-                                                <div class="thumb pb30"><img src="images/shop-items/fp3.png"
+                                                <div class="thumb pb30"><img src="{{asset('images/shop-items/fp3.png')}}"
                                                                              alt="Furniture Product">
                                                     <div class=thumb_info>
                                                         <ul class=mb0>
@@ -4581,7 +4581,7 @@
                                         </div>
                                         <div class=item>
                                             <div class="shop_item bdrtrb1 px-2 px-sm-3">
-                                                <div class="thumb pb30"><img src="images/shop-items/fp4.png"
+                                                <div class="thumb pb30"><img src="{{asset('images/shop-items/fp4.png')}}"
                                                                              alt="Furniture Product">
                                                     <div class=thumb_info>
                                                         <ul class=mb0>
@@ -4629,7 +4629,7 @@
                                         </div>
                                         <div class=item>
                                             <div class="shop_item bdrtrb1 px-2 px-sm-3">
-                                                <div class="thumb pb30"><img src="images/shop-items/fp5.png"
+                                                <div class="thumb pb30"><img src="{{asset('images/shop-items/fp5.png')}}"
                                                                              alt="Furniture Product">
                                                     <div class=thumb_info>
                                                         <ul class=mb0>
@@ -4682,7 +4682,7 @@
                                     <div class="best_item_slider_shop_lising_page shop_item_5grid_slider slider_dib_sm nav_none_400 dots_none owl-theme owl-carousel">
                                         <div class=item>
                                             <div class="shop_item bdrtrb1 px-2 px-sm-3">
-                                                <div class="thumb pb30"><img src="images/shop-items/fp1.png"
+                                                <div class="thumb pb30"><img src="{{asset('images/shop-items/fp1.png')}}"
                                                                              alt="Furniture Product">
                                                     <div class=thumb_info>
                                                         <ul class=mb0>
@@ -4730,7 +4730,7 @@
                                         </div>
                                         <div class=item>
                                             <div class="shop_item bdrtrb1 px-2 px-sm-3">
-                                                <div class="thumb pb30"><img src="images/shop-items/fp2.png"
+                                                <div class="thumb pb30"><img src="{{asset('images/shop-items/fp2.png')}}"
                                                                              alt="Furniture Product">
                                                     <div class=thumb_info>
                                                         <ul class=mb0>
@@ -4778,7 +4778,7 @@
                                         </div>
                                         <div class=item>
                                             <div class="shop_item bdrtrb1 px-2 px-sm-3">
-                                                <div class="thumb pb30"><img src="images/shop-items/fp3.png"
+                                                <div class="thumb pb30"><img src="{{asset('images/shop-items/fp3.png')}}"
                                                                              alt="Furniture Product">
                                                     <div class=thumb_info>
                                                         <ul class=mb0>
@@ -4826,7 +4826,7 @@
                                         </div>
                                         <div class=item>
                                             <div class="shop_item bdrtrb1 px-2 px-sm-3">
-                                                <div class="thumb pb30"><img src="images/shop-items/fp4.png"
+                                                <div class="thumb pb30"><img src="{{asset('images/shop-items/fp4.png')}}"
                                                                              alt="Furniture Product">
                                                     <div class=thumb_info>
                                                         <ul class=mb0>
@@ -4874,7 +4874,7 @@
                                         </div>
                                         <div class=item>
                                             <div class="shop_item bdrtrb1 px-2 px-sm-3">
-                                                <div class="thumb pb30"><img src="images/shop-items/fp5.png"
+                                                <div class="thumb pb30"><img src="{{asset('images/shop-items/fp5.png')}}"
                                                                              alt="Furniture Product">
                                                     <div class=thumb_info>
                                                         <ul class=mb0>
@@ -4970,7 +4970,7 @@
                                                 <div class="item ovh">
                                                     <div class="shop_item bdrtrb1 px-2 px-sm-3 wow fadeIn"
                                                          data-wow-duration=1.1s>
-                                                        <div class="thumb pb30"><img src="images/shop-items/ep1.png"
+                                                        <div class="thumb pb30"><img src="{{asset('images/shop-items/ep1.png')}}"
                                                                                      alt="Electronics Product">
                                                             <div class=thumb_info>
                                                                 <ul class=mb0>
@@ -5020,7 +5020,7 @@
                                                 <div class="item ovh">
                                                     <div class="shop_item bdrtrb1 px-2 px-sm-3 wow fadeIn"
                                                          data-wow-duration=1.3s>
-                                                        <div class="thumb pb30"><img src="images/shop-items/ep2.png"
+                                                        <div class="thumb pb30"><img src="{{asset('images/shop-items/ep2.png')}}"
                                                                                      alt="Electronics Product">
                                                             <div class=thumb_info>
                                                                 <ul class=mb0>
@@ -5069,7 +5069,7 @@
                                                 <div class="item ovh">
                                                     <div class="shop_item bdrtrb1 px-2 px-sm-3 wow fadeIn"
                                                          data-wow-duration=1.5s>
-                                                        <div class="thumb pb30"><img src="images/shop-items/ep3.png"
+                                                        <div class="thumb pb30"><img src="{{asset('images/shop-items/ep3.png')}}"
                                                                                      alt="Electronics Product">
                                                             <div class=thumb_info>
                                                                 <ul class=mb0>
@@ -5119,7 +5119,7 @@
                                                 <div class="item ovh">
                                                     <div class="shop_item bdrtrb1 px-2 px-sm-3 wow fadeIn"
                                                          data-wow-duration=1.7s>
-                                                        <div class="thumb pb30"><img src="images/shop-items/ep4.png"
+                                                        <div class="thumb pb30"><img src="{{asset('images/shop-items/ep4.png')}}"
                                                                                      alt="Electronics Product">
                                                             <div class=thumb_info>
                                                                 <ul class=mb0>
@@ -5168,7 +5168,7 @@
                                                 <div class="item ovh">
                                                     <div class="shop_item bdrtrb1 px-2 px-sm-3 wow fadeIn"
                                                          data-wow-duration=1.9s>
-                                                        <div class="thumb pb30"><img src="images/shop-items/ep5.png"
+                                                        <div class="thumb pb30"><img src="{{asset('images/shop-items/ep5.png')}}"
                                                                                      alt="Electronics Product">
                                                             <div class=thumb_info>
                                                                 <ul class=mb0>
@@ -5226,7 +5226,7 @@
                                             <div class="best_item_slider_shop_lising_page shop_item_5grid_slider slider_dib_sm nav_none_400 dots_none nav_none owl-theme owl-carousel">
                                                 <div class=item>
                                                     <div class="shop_item bdrtrb1 px-2 px-sm-3">
-                                                        <div class="thumb pb30"><img src="images/shop-items/ep1.png"
+                                                        <div class="thumb pb30"><img src="{{asset('images/shop-items/ep1.png')}}"
                                                                                      alt="Electronics Product">
                                                             <div class=thumb_info>
                                                                 <ul class=mb0>
@@ -5275,7 +5275,7 @@
                                                 </div>
                                                 <div class=item>
                                                     <div class="shop_item bdrtrb1 px-2 px-sm-3">
-                                                        <div class="thumb pb30"><img src="images/shop-items/ep2.png"
+                                                        <div class="thumb pb30"><img src="{{asset('images/shop-items/ep2.png')}}"
                                                                                      alt="Electronics Product">
                                                             <div class=thumb_info>
                                                                 <ul class=mb0>
@@ -5323,7 +5323,7 @@
                                                 </div>
                                                 <div class=item>
                                                     <div class="shop_item bdrtrb1 px-2 px-sm-3">
-                                                        <div class="thumb pb30"><img src="images/shop-items/ep3.png"
+                                                        <div class="thumb pb30"><img src="{{asset('images/shop-items/ep3.png')}}"
                                                                                      alt="Electronics Product">
                                                             <div class=thumb_info>
                                                                 <ul class=mb0>
@@ -5372,7 +5372,7 @@
                                                 </div>
                                                 <div class=item>
                                                     <div class="shop_item bdrtrb1 px-2 px-sm-3">
-                                                        <div class="thumb pb30"><img src="images/shop-items/ep4.png"
+                                                        <div class="thumb pb30"><img src="{{asset('images/shop-items/ep4.png')}}"
                                                                                      alt="Electronics Product">
                                                             <div class=thumb_info>
                                                                 <ul class=mb0>
@@ -5420,7 +5420,7 @@
                                                 </div>
                                                 <div class=item>
                                                     <div class="shop_item bdrtrb1 px-2 px-sm-3">
-                                                        <div class="thumb pb30"><img src="images/shop-items/ep5.png"
+                                                        <div class="thumb pb30"><img src="{{asset('images/shop-items/ep5.png')}}"
                                                                                      alt="Electronics Product">
                                                             <div class=thumb_info>
                                                                 <ul class=mb0>
@@ -5477,7 +5477,7 @@
                                             <div class="best_item_slider_shop_lising_page shop_item_5grid_slider slider_dib_sm nav_none_400 dots_none nav_none owl-theme owl-carousel">
                                                 <div class=item>
                                                     <div class="shop_item bdrtrb1 px-2 px-sm-3">
-                                                        <div class="thumb pb30"><img src="images/shop-items/ep1.png"
+                                                        <div class="thumb pb30"><img src="{{asset('images/shop-items/ep1.png')}}"
                                                                                      alt="Electronics Product">
                                                             <div class=thumb_info>
                                                                 <ul class=mb0>
@@ -5526,7 +5526,7 @@
                                                 </div>
                                                 <div class=item>
                                                     <div class="shop_item bdrtrb1 px-2 px-sm-3">
-                                                        <div class="thumb pb30"><img src="images/shop-items/ep2.png"
+                                                        <div class="thumb pb30"><img src="{{asset('images/shop-items/ep2.png')}}"
                                                                                      alt="Electronics Product">
                                                             <div class=thumb_info>
                                                                 <ul class=mb0>
@@ -5574,7 +5574,7 @@
                                                 </div>
                                                 <div class=item>
                                                     <div class="shop_item bdrtrb1 px-2 px-sm-3">
-                                                        <div class="thumb pb30"><img src="images/shop-items/ep3.png"
+                                                        <div class="thumb pb30"><img src="{{asset('images/shop-items/ep3.png')}}"
                                                                                      alt="Electronics Product">
                                                             <div class=thumb_info>
                                                                 <ul class=mb0>
@@ -5623,7 +5623,7 @@
                                                 </div>
                                                 <div class=item>
                                                     <div class="shop_item bdrtrb1 px-2 px-sm-3">
-                                                        <div class="thumb pb30"><img src="images/shop-items/ep4.png"
+                                                        <div class="thumb pb30"><img src="{{asset('images/shop-items/ep4.png')}}"
                                                                                      alt="Electronics Product">
                                                             <div class=thumb_info>
                                                                 <ul class=mb0>
@@ -5671,7 +5671,7 @@
                                                 </div>
                                                 <div class=item>
                                                     <div class="shop_item bdrtrb1 px-2 px-sm-3">
-                                                        <div class="thumb pb30"><img src="images/shop-items/ep5.png"
+                                                        <div class="thumb pb30"><img src="{{asset('images/shop-items/ep5.png')}}"
                                                                                      alt="Electronics Product">
                                                             <div class=thumb_info>
                                                                 <ul class=mb0>
@@ -5729,7 +5729,7 @@
                                             <div class="best_item_slider_shop_lising_page shop_item_5grid_slider slider_dib_sm nav_none_400 dots_none nav_none owl-theme owl-carousel">
                                                 <div class=item>
                                                     <div class="shop_item bdrtrb1 px-2 px-sm-3">
-                                                        <div class="thumb pb30"><img src="images/shop-items/ep1.png"
+                                                        <div class="thumb pb30"><img src="{{asset('images/shop-items/ep1.png')}}"
                                                                                      alt="Electronics Product">
                                                             <div class=thumb_info>
                                                                 <ul class=mb0>
@@ -5778,7 +5778,7 @@
                                                 </div>
                                                 <div class=item>
                                                     <div class="shop_item bdrtrb1 px-2 px-sm-3">
-                                                        <div class="thumb pb30"><img src="images/shop-items/ep2.png"
+                                                        <div class="thumb pb30"><img src="{{asset('images/shop-items/ep2.png')}}"
                                                                                      alt="Electronics Product">
                                                             <div class=thumb_info>
                                                                 <ul class=mb0>
@@ -5826,7 +5826,7 @@
                                                 </div>
                                                 <div class=item>
                                                     <div class="shop_item bdrtrb1 px-2 px-sm-3">
-                                                        <div class="thumb pb30"><img src="images/shop-items/ep3.png"
+                                                        <div class="thumb pb30"><img src="{{asset('images/shop-items/ep3.png')}}"
                                                                                      alt="Electronics Product">
                                                             <div class=thumb_info>
                                                                 <ul class=mb0>
@@ -5875,7 +5875,7 @@
                                                 </div>
                                                 <div class=item>
                                                     <div class="shop_item bdrtrb1 px-2 px-sm-3">
-                                                        <div class="thumb pb30"><img src="images/shop-items/ep4.png"
+                                                        <div class="thumb pb30"><img src="{{asset('images/shop-items/ep4.png')}}"
                                                                                      alt="Electronics Product">
                                                             <div class=thumb_info>
                                                                 <ul class=mb0>
@@ -5923,7 +5923,7 @@
                                                 </div>
                                                 <div class=item>
                                                     <div class="shop_item bdrtrb1 px-2 px-sm-3">
-                                                        <div class="thumb pb30"><img src="images/shop-items/ep5.png"
+                                                        <div class="thumb pb30"><img src="{{asset('images/shop-items/ep5.png')}}"
                                                                                      alt="Electronics Product">
                                                             <div class=thumb_info>
                                                                 <ul class=mb0>
@@ -6009,7 +6009,7 @@
                         </div>
                         <div class="col-lg-6 align-self-center">
                             <div class="apple_widget_home1 animate_content text-center">
-                                <div class="thumb animate_thumb"><img src="images/banner/banner-img1.png"
+                                <div class="thumb animate_thumb"><img src="{{asset('images/banner/banner-img1.png')}}"
                                                                       alt="Banner Image"></div>
                             </div>
                         </div>
@@ -6060,7 +6060,7 @@
                                              data-wow-duration=0.3s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap1.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap1.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">Sony DJ Headphones
                                                             4334205465, Black, Standard</a></div>
@@ -6072,7 +6072,7 @@
                                              data-wow-duration=0.5s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap2.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap2.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">Sony E-Mount Full
                                                             Frame FE 24-70mm f/2.8 GM II G Master</a></div>
@@ -6084,7 +6084,7 @@
                                              data-wow-duration=0.7s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap3.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap3.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">TV 55" 4-Series 4K UHD
                                                             smart TV</a></div>
@@ -6096,7 +6096,7 @@
                                              data-wow-duration=0.9s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap4.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap4.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">TV 55" 4-Series 4K UHD
                                                             smart TV</a></div>
@@ -6108,7 +6108,7 @@
                                              data-wow-duration=1.1s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap5.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap5.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">Apple iPhone Retina 6s
                                                             Plus 64GB</a></div>
@@ -6120,7 +6120,7 @@
                                              data-wow-duration=1.3s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap6.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap6.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">Samsung Galaxy S21
                                                             Ultra Silicone Case with S-Pen Bundle</a></div>
@@ -6132,7 +6132,7 @@
                                              data-wow-duration=1.5s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap7.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap7.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">Apple iPhone Retina 6s
                                                             Plus 64GB</a></div>
@@ -6144,7 +6144,7 @@
                                              data-wow-duration=1.7s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap8.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap8.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">Office Chair Ergonomic
                                                             Cheap Desk Chair Mesh Computer</a></div>
@@ -6156,7 +6156,7 @@
                                              data-wow-duration=1.9s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap9.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap9.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">Ray-Ban Women's
                                                             Rb3647n Double Bridge Round Sunglasses</a></div>
@@ -6168,7 +6168,7 @@
                                              data-wow-duration=2.1s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap10.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap10.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">Suptek Aluminum Alloy
                                                             Cell Phone Desk Mount Stand</a></div>
