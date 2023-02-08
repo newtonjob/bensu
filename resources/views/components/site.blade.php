@@ -2501,7 +2501,7 @@
                     <div class="col-6 col-md-3 col-xl wow fadeInUp" data-wow-duration=1.5s><a
                             href="page-shop-list-v6.html">
                             <div class=iconbox>
-                                <div class=icon><img src={{asset('images/shop-items/ct5.png')}}" alt="Category Image"></div>
+                                <div class=icon><img src="{{asset('images/shop-items/ct5.png')}}" alt="Category Image"></div>
                                 <div class=details>
                                     <h5 class=title>Home & Furniture</h5>
                                     <p class=subtitle>29 items</p>
@@ -6180,7 +6180,7 @@
                                              data-wow-duration=2.3s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap11.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap11.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">PopSockets PopWallet+:
                                                             Swappable and Repositionable</a></div>
@@ -6192,7 +6192,7 @@
                                              data-wow-duration=2.5s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap12.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap12.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">Cooling Body Gel
                                                             Moisturizer with Soothing Aloe</a></div>
@@ -6208,7 +6208,7 @@
                                              data-wow-duration=0.3s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap1.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap1.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">Sony DJ Headphones
                                                             4334205465, Black, Standard</a></div>
@@ -6220,7 +6220,7 @@
                                              data-wow-duration=0.5s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap2.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap2.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">Sony E-Mount Full
                                                             Frame FE 24-70mm f/2.8 GM II G Master</a></div>
@@ -6232,7 +6232,7 @@
                                              data-wow-duration=0.7s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap3.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap3.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">TV 55" 4-Series 4K UHD
                                                             smart TV</a></div>
@@ -6244,7 +6244,7 @@
                                              data-wow-duration=0.9s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap4.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap4.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">TV 55" 4-Series 4K UHD
                                                             smart TV</a></div>
@@ -6256,7 +6256,7 @@
                                              data-wow-duration=1.1s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap5.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap5.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">Apple iPhone Retina 6s
                                                             Plus 64GB</a></div>
@@ -6268,7 +6268,7 @@
                                              data-wow-duration=1.3s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap6.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap6.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">Samsung Galaxy S21
                                                             Ultra Silicone Case with S-Pen Bundle</a></div>
@@ -6280,7 +6280,7 @@
                                              data-wow-duration=1.5s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap7.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap7.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">Apple iPhone Retina 6s
                                                             Plus 64GB</a></div>
@@ -6292,7 +6292,7 @@
                                              data-wow-duration=1.7s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap8.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap8.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">Office Chair Ergonomic
                                                             Cheap Desk Chair Mesh Computer</a></div>
@@ -6304,7 +6304,7 @@
                                              data-wow-duration=1.9s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap9.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap9.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">Ray-Ban Women's
                                                             Rb3647n Double Bridge Round Sunglasses</a></div>
@@ -6316,7 +6316,7 @@
                                              data-wow-duration=2.1s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap10.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap10.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">Suptek Aluminum Alloy
                                                             Cell Phone Desk Mount Stand</a></div>
@@ -6328,7 +6328,7 @@
                                              data-wow-duration=2.3s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap11.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap11.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">PopSockets PopWallet+:
                                                             Swappable and Repositionable</a></div>
@@ -6340,7 +6340,7 @@
                                              data-wow-duration=2.5s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap12.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap12.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">Cooling Body Gel
                                                             Moisturizer with Soothing Aloe</a></div>
@@ -6357,7 +6357,7 @@
                                              data-wow-duration=0.3s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap1.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap1.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">Sony DJ Headphones
                                                             4334205465, Black, Standard</a></div>
@@ -6369,7 +6369,7 @@
                                              data-wow-duration=0.5s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap2.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap2.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">Sony E-Mount Full
                                                             Frame FE 24-70mm f/2.8 GM II G Master</a></div>
@@ -6381,7 +6381,7 @@
                                              data-wow-duration=0.7s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap3.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap3.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">TV 55" 4-Series 4K UHD
                                                             smart TV</a></div>
@@ -6393,7 +6393,7 @@
                                              data-wow-duration=0.9s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap4.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap4.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">TV 55" 4-Series 4K UHD
                                                             smart TV</a></div>
@@ -6405,7 +6405,7 @@
                                              data-wow-duration=1.1s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap5.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap5.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">Apple iPhone Retina 6s
                                                             Plus 64GB</a></div>
@@ -6417,7 +6417,7 @@
                                              data-wow-duration=1.3s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap6.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap6.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">Samsung Galaxy S21
                                                             Ultra Silicone Case with S-Pen Bundle</a></div>
@@ -6429,7 +6429,7 @@
                                              data-wow-duration=1.5s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap7.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap7.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">Apple iPhone Retina 6s
                                                             Plus 64GB</a></div>
@@ -6441,7 +6441,7 @@
                                              data-wow-duration=1.7s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap8.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap8.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">Office Chair Ergonomic
                                                             Cheap Desk Chair Mesh Computer</a></div>
@@ -6453,7 +6453,7 @@
                                              data-wow-duration=1.9s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap9.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap9.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">Ray-Ban Women's
                                                             Rb3647n Double Bridge Round Sunglasses</a></div>
@@ -6465,7 +6465,7 @@
                                              data-wow-duration=2.1s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap10.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap10.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">Suptek Aluminum Alloy
                                                             Cell Phone Desk Mount Stand</a></div>
@@ -6477,7 +6477,7 @@
                                              data-wow-duration=2.3s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap11.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap11.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">PopSockets PopWallet+:
                                                             Swappable and Repositionable</a></div>
@@ -6489,7 +6489,7 @@
                                              data-wow-duration=2.5s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap12.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap12.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">Cooling Body Gel
                                                             Moisturizer with Soothing Aloe</a></div>
@@ -6505,7 +6505,7 @@
                                              data-wow-duration=0.3s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap1.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap1.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">Sony DJ Headphones
                                                             4334205465, Black, Standard</a></div>
@@ -6517,7 +6517,7 @@
                                              data-wow-duration=0.5s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap2.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap2.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">Sony E-Mount Full
                                                             Frame FE 24-70mm f/2.8 GM II G Master</a></div>
@@ -6529,7 +6529,7 @@
                                              data-wow-duration=0.7s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap3.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap3.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">TV 55" 4-Series 4K UHD
                                                             smart TV</a></div>
@@ -6541,7 +6541,7 @@
                                              data-wow-duration=0.9s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap4.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap4.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">TV 55" 4-Series 4K UHD
                                                             smart TV</a></div>
@@ -6553,7 +6553,7 @@
                                              data-wow-duration=1.1s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap5.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap5.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">Apple iPhone Retina 6s
                                                             Plus 64GB</a></div>
@@ -6565,7 +6565,7 @@
                                              data-wow-duration=1.3s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap6.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap6.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">Samsung Galaxy S21
                                                             Ultra Silicone Case with S-Pen Bundle</a></div>
@@ -6577,7 +6577,7 @@
                                              data-wow-duration=1.5s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap7.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap7.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">Apple iPhone Retina 6s
                                                             Plus 64GB</a></div>
@@ -6589,7 +6589,7 @@
                                              data-wow-duration=1.7s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap8.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap8.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">Office Chair Ergonomic
                                                             Cheap Desk Chair Mesh Computer</a></div>
@@ -6601,7 +6601,7 @@
                                              data-wow-duration=1.9s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap9.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap9.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">Ray-Ban Women's
                                                             Rb3647n Double Bridge Round Sunglasses</a></div>
@@ -6613,7 +6613,7 @@
                                              data-wow-duration=2.1s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap10.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap10.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">Suptek Aluminum Alloy
                                                             Cell Phone Desk Mount Stand</a></div>
@@ -6625,7 +6625,7 @@
                                              data-wow-duration=2.3s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap11.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap11.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">PopSockets PopWallet+:
                                                             Swappable and Repositionable</a></div>
@@ -6637,7 +6637,7 @@
                                              data-wow-duration=2.5s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap12.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap12.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">Cooling Body Gel
                                                             Moisturizer with Soothing Aloe</a></div>
@@ -6653,7 +6653,7 @@
                                              data-wow-duration=0.3s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap1.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap1.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">Sony DJ Headphones
                                                             4334205465, Black, Standard</a></div>
@@ -6665,7 +6665,7 @@
                                              data-wow-duration=0.5s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap2.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap2.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">Sony E-Mount Full
                                                             Frame FE 24-70mm f/2.8 GM II G Master</a></div>
@@ -6677,7 +6677,7 @@
                                              data-wow-duration=0.7s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap3.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap3.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">TV 55" 4-Series 4K UHD
                                                             smart TV</a></div>
@@ -6689,7 +6689,7 @@
                                              data-wow-duration=0.9s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap4.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap4.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">TV 55" 4-Series 4K UHD
                                                             smart TV</a></div>
@@ -6701,7 +6701,7 @@
                                              data-wow-duration=1.1s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap5.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap5.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">Apple iPhone Retina 6s
                                                             Plus 64GB</a></div>
@@ -6713,7 +6713,7 @@
                                              data-wow-duration=1.3s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap6.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap6.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">Samsung Galaxy S21
                                                             Ultra Silicone Case with S-Pen Bundle</a></div>
@@ -6725,7 +6725,7 @@
                                              data-wow-duration=1.5s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap7.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap7.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">Apple iPhone Retina 6s
                                                             Plus 64GB</a></div>
@@ -6737,7 +6737,7 @@
                                              data-wow-duration=1.7s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap8.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap8.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">Office Chair Ergonomic
                                                             Cheap Desk Chair Mesh Computer</a></div>
@@ -6749,7 +6749,7 @@
                                              data-wow-duration=1.9s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap9.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap9.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">Ray-Ban Women's
                                                             Rb3647n Double Bridge Round Sunglasses</a></div>
@@ -6761,7 +6761,7 @@
                                              data-wow-duration=2.1s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap10.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap10.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">Suptek Aluminum Alloy
                                                             Cell Phone Desk Mount Stand</a></div>
@@ -6773,7 +6773,7 @@
                                              data-wow-duration=2.3s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap11.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap11.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">PopSockets PopWallet+:
                                                             Swappable and Repositionable</a></div>
@@ -6785,7 +6785,7 @@
                                              data-wow-duration=2.5s>
                                             <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                                 <div class=flex-shrink-0><img alt="Hot New Arrival Product"
-                                                                              src="images/shop-items/hnap12.png"></div>
+                                                                              src="{{asset('images/shop-items/hnap12.png')}}"></div>
                                                 <div class="flex-grow-1 ms-3">
                                                     <div class="mb-2 title"><a href="index.html#">Cooling Body Gel
                                                             Moisturizer with Soothing Aloe</a></div>
@@ -6813,27 +6813,27 @@
                         <div class="shop_item_6grid_slider slider_dib_sm dots_none nav_none owl-carousel owl-theme">
                             <div class=item>
                                 <div class="partner_item wow fadeInUp" data-wow-duration=0.3s><img
-                                        src="images/partners/1.png" alt=1.png></div>
+                                        src="{{asset('images/partners/1.png')}}" alt=1.png></div>
                             </div>
                             <div class=item>
                                 <div class="partner_item wow fadeInUp" data-wow-duration=0.5s><img
-                                        src="images/partners/2.png" alt=2.png></div>
+                                        src="{{asset('images/partners/2.png')}}" alt=2.png></div>
                             </div>
                             <div class=item>
                                 <div class="partner_item wow fadeInUp" data-wow-duration=0.7s><img
-                                        src="images/partners/3.png" alt=3.png></div>
+                                        src="{{asset('images/partners/3.png')}}" alt=3.png></div>
                             </div>
                             <div class=item>
                                 <div class="partner_item wow fadeInUp" data-wow-duration=0.9s><img
-                                        src="images/partners/4.png" alt=4.png></div>
+                                        src="{{asset('images/partners/4.png')}}" alt=4.png></div>
                             </div>
                             <div class=item>
                                 <div class="partner_item wow fadeInUp" data-wow-duration=1.1s><img
-                                        src="images/partners/5.png" alt=5.png></div>
+                                        src="{{asset('images/partners/5.png')}}" alt=5.png></div>
                             </div>
                             <div class=item>
                                 <div class="partner_item wow fadeInUp" data-wow-duration=1.3s><img
-                                        src="images/partners/6.png" alt=6.png></div>
+                                        src="{{asset('images/partners/6.png')}}" alt=6.png></div>
                             </div>
                         </div>
                     </div>
@@ -6945,17 +6945,17 @@
                             <h4 class="title mb20">We accept</h4>
                             <div class=acceped_card_list>
                                 <ul class="d-flex mb-0">
-                                    <li class=me-2><a href="index.html#"><img src="images/resource/visa-card.png"
+                                    <li class=me-2><a href="index.html#"><img src="{{asset('images/resource/visa-card.png')}}"
                                                                               alt=visa-card></a></li>
-                                    <li class=me-2><a href="index.html#"><img src="images/resource/master-card.png"
+                                    <li class=me-2><a href="index.html#"><img src="{{asset('images/resource/master-card.png')}}"
                                                                               alt=master-card></a></li>
-                                    <li class=me-2><a href="index.html#"><img src="images/resource/apple-pay.png"
+                                    <li class=me-2><a href="index.html#"><img src="{{asset('images/resource/apple-pay.png')}}"
                                                                               alt=apple-pay></a></li>
-                                    <li class=me-2><a href="index.html#"><img src="images/resource/discover-card.png"
+                                    <li class=me-2><a href="index.html#"><img src="{{asset('images/resource/discover-card.png')}}"
                                                                               alt=discover-card></a></li>
-                                    <li class=me-2><a href="index.html#"><img src="images/resource/paypal.png"
+                                    <li class=me-2><a href="index.html#"><img src="{{asset('images/resource/paypal.png')}}"
                                                                               alt=paypal></a></li>
-                                    <li><a href="index.html#"><img src="images/resource/amex-card.png"
+                                    <li><a href="index.html#"><img src="{{asset('images/resource/amex-card.png')}}"
                                                                    alt=amex-card></a></li>
                                 </ul>
                             </div>
