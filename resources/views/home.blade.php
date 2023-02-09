@@ -5,4 +5,5 @@
     <x-home.categories />
     <x-home.featured-products />
     <x-home.partners />
+
 </x-site>
