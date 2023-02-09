@@ -21,7 +21,7 @@
     <link rel=preconnect href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&family=Poppins:wght@700&display=swap"
           rel=stylesheet>
-    <link rel=stylesheet href="css/responsive.css">
+    <link rel=stylesheet href="{{asset('css/responsive.css')}}">
     <title>Zeomart - Multi-Vendor & Marketplace HTML Template</title>
     <link href="{{asset('images/favicon.ico')}}'" sizes=128x128 rel="shortcut icon" type=image/x-icon>
     <link href="{{asset('images/favicon.ico')}}'" sizes=128x128 rel="shortcut icon">
