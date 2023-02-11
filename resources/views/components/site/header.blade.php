@@ -33,13 +33,19 @@
                                                     <ul>
                                                         @foreach(app('featured_products') as $product)
                                                             <li>
-                                                                <div class=thumb><img src="{{ cloudinary_url(config('services.cloudinary.root_product'). $product->images[0]->src) }}" alt="{{ $product->name }}"></div>
-                                                                <div class=info-product>
-                                                                    <div class=item_title>{{ $product->name }}</div>
-                                                                    <div class=price>
-                                                                        <span class=sale>₦{{ $product->price }}</span>
+                                                                <a href="{{ url("shop/product/{$product->slug}")}}">
+                                                                    <div class=thumb>
+                                                                        <img src="{{ cloudinary_url(config('services.cloudinary.root_product'). $product->images[0]->src) }}" alt="{{ $product->name }}">
                                                                     </div>
-                                                                </div>
+                                                                    <div class=info-product>
+                                                                        <div class=item_title>{{ $product->name }}</div>
+                                                                        <div class=price>
+                                                                            <span class=sale>
+                                                                                ₦{{ number_format(discount($product->price, $product->discount)) }}
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
                                                             </li>
                                                         @endforeach
                                                     </ul>
@@ -86,7 +92,7 @@
                                 </a>
                             </li>
                             <li class=list-inline-item><a class="header_top_iconbox cart-filter-btn"
-                                                          href="index.html#">
+                                                          href="#">
                                     <div class="d-block d-md-flex">
                                         <div class=icon><span><img src="{{asset('images/icons/flaticon-shopping-cart-white.svg')}}"
                                                                    alt=""></span><span class=badge>2</span></div>
@@ -152,7 +158,7 @@
                 <li class=visible_list>
                     <a href="{{ url('home/stores') }}"><span class=title>Our Stores</span></a>
                 </li>
-                <li class=visible_list> <a href="index.html#"><span class=title>Brands</span></a>
+                <li class=visible_list> <a href="#"><span class=title>Brands</span></a>
                     <ul>
                         @foreach (app('brands') as $brand)
                             <li><a href="{{ url("shop?brand={$brand->slug}") }}">{{ $brand->name }}</a></li>
@@ -190,21 +196,21 @@
                     <div class="custom-control custom-checkbox">
                         <input type=checkbox class=custom-control-input id=exampleCheck3>
                         <label class=custom-control-label for=exampleCheck3>Remember me</label>
-                        <a class="btn-fpswd float-end" href="index.html#">Lost your password?</a>
+                        <a class="btn-fpswd float-end" href="#">Lost your password?</a>
                     </div>
                     <button type=submit class="btn btn-log btn-thm mt20">Login</button>
                     <p class="text-center mb25 mt10">Don't have an account? <a class=signup-filter-btn
-                                                                               href="index.html#">Create account</a>
+                                                                               href="#">Create account</a>
                     </p>
                     <div class=hr_content>
                         <hr>
                         <span class=hr_top_text>or</span>
                     </div>
                     <ul class="login_with_social text-center mt30 mb0">
-                        <li class=list-inline-item><a href="index.html#"><i class="fab fa-facebook"></i></a></li>
-                        <li class=list-inline-item><a href="index.html#"><i class="fab fa-google"></i></a></li>
-                        <li class=list-inline-item><a href="index.html#"><i class="fab fa-twitter"></i></a></li>
-                        <li class=list-inline-item><a href="index.html#"><i class="fab fa-apple"></i></a></li>
+                        <li class=list-inline-item><a href="#"><i class="fab fa-facebook"></i></a></li>
+                        <li class=list-inline-item><a href="#"><i class="fab fa-google"></i></a></li>
+                        <li class=list-inline-item><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li class=list-inline-item><a href="#"><i class="fab fa-apple"></i></a></li>
                     </ul>
                 </form>
             </div>
@@ -274,8 +280,8 @@
                         <input class=range-example-km value=80>
                     </div>
                 </div>
-                <a href="index.html#" class="cart_btns btn btn-white">View Cart</a>
-                <a href="index.html#" class="checkout_btns btn btn-thm">Checkout</a>
+                <a href="#" class="cart_btns btn btn-white">View Cart</a>
+                <a href="#" class="checkout_btns btn btn-thm">Checkout</a>
             </div>
         </div>
     </div>
@@ -306,17 +312,17 @@
                         <input type=password class=form-control placeholder=******************>
                     </div>
                     <button type=submit class="btn btn-signup btn-thm">Create Account</button>
-                    <p class="text-center mb25 mt10">Already have an account? <a href="page-login.html">Sign in</a>
+                    <p class="text-center mb25 mt10">Already have an account? <a href="">Sign in</a>
                     </p>
                     <div class=hr_content>
                         <hr>
                         <span class=hr_top_text>or</span>
                     </div>
                     <ul class="login_with_social text-center mt30 mb0">
-                        <li class=list-inline-item><a href="index.html#"><i class="fab fa-facebook"></i></a></li>
-                        <li class=list-inline-item><a href="index.html#"><i class="fab fa-google"></i></a></li>
-                        <li class=list-inline-item><a href="index.html#"><i class="fab fa-twitter"></i></a></li>
-                        <li class=list-inline-item><a href="index.html#"><i class="fab fa-apple"></i></a></li>
+                        <li class=list-inline-item><a href="#"><i class="fab fa-facebook"></i></a></li>
+                        <li class=list-inline-item><a href="#"><i class="fab fa-google"></i></a></li>
+                        <li class=list-inline-item><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li class=list-inline-item><a href="#"><i class="fab fa-apple"></i></a></li>
                     </ul>
                 </form>
             </div>
@@ -329,16 +335,16 @@
             <div class=menu_and_widgets>
                 <div class="mobile_menu_bar float-start">
                     <a class=menubar href="#menu"><span></span></a>
-                    <a class=mobile_logo href="index.html#">BENSU<span class=text-thm>.</span></a>
+                    <a class=mobile_logo href="#">BENSU<span class=text-thm>.</span></a>
                 </div>
                 <div class=mobile_menu_widget_icons>
                     <ul class="cart mt15">
                         <li class=list-inline-item>
-                            <a class="cart_btn signin-filter-btn" href="index.html#"><span
+                            <a class="cart_btn signin-filter-btn" href="#"><span
                                     class="icon flaticon-profile"></span></a>
                         </li>
                         <li class=list-inline-item>
-                            <a class="cart_btn cart-filter-btn" href="index.html#"><span class=icon><img
+                            <a class="cart_btn cart-filter-btn" href="#"><span class=icon><img
                                         src="{{asset('images/icons/flaticon-shopping-cart-white.svg')}}" alt=""></span><span
                                     class="badge bgc-thm">2</span></a>
                         </li>
@@ -357,66 +363,23 @@
                                             <div class="search-suggestions text-start">
                                                 <div class=box-suggestions>
                                                     <ul>
-                                                        <li>
-                                                            <div class=thumb>
-                                                                <img src="{{asset('images/listing/sf1.png')}}'" alt=sf1.png>
-                                                            </div>
-                                                            <div class=info-product>
-                                                                <div class=item_title>Sony DJ Headphones 4334205465,
-                                                                    Black, Standard
-                                                                </div>
-                                                                <div class=price><span class=sale>$32.50</span>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class=thumb>
-                                                                <img src="{{asset('images/listing/sf2.png')}}" alt=sf2.png>
-                                                            </div>
-                                                            <div class=info-product>
-                                                                <div class=item_title>Sony E-Mount Full Frame FE
-                                                                    24-70mm f/2.8 GM II G Master
-                                                                </div>
-                                                                <div class=price><span class=sale>$32.50</span>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class=thumb>
-                                                                <img src="{{asset('images/listing/sf3.png')}}" alt=sf3.png>
-                                                            </div>
-                                                            <div class=info-product>
-                                                                <div class=item_title>TV 55" 4-Series 4K UHD smart
-                                                                    TV
-                                                                </div>
-                                                                <div class=price><span class=sale>$32.50</span>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class=thumb>
-                                                                <img src="{{asset('images/listing/sf4.png')}}" alt=sf4.png>
-                                                            </div>
-                                                            <div class=info-product>
-                                                                <div class=item_title>Hugolog Baby Monitor, 2K
-                                                                    Security Camera, PT Cameras for
-                                                                </div>
-                                                                <div class=price><span class=sale>$32.50</span>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class=thumb>
-                                                                <img src="{{asset('images/listing/sf5.png')}}" alt=sf5.png>
-                                                            </div>
-                                                            <div class=info-product>
-                                                                <div class=item_title>Apple iPhone Retina 6s Plus
-                                                                    64GB
-                                                                </div>
-                                                                <div class=price><span class=sale>$32.50</span>
-                                                                </div>
-                                                            </div>
-                                                        </li>
+                                                        @foreach(app('featured_products') as $product)
+                                                            <li>
+                                                                <a href="{{ url("shop/product/{$product->slug}")}}">
+                                                                    <div class=thumb>
+                                                                        <img src="{{ cloudinary_url(config('services.cloudinary.root_product'). $product->images[0]->src) }}" alt="{{ $product->name }}">
+                                                                    </div>
+                                                                    <div class=info-product>
+                                                                        <div class=item_title>{{ $product->name }}</div>
+                                                                        <div class=price>
+                                                                            <span class=sale>
+                                                                                ₦{{ number_format(discount($product->price, $product->discount)) }}
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                        @endforeach
                                                     </ul>
                                                 </div>
                                             </div>
@@ -443,7 +406,7 @@
         <ul>
             <li><span>Home</span>
                 <ul>
-                    <li><a href="index.html">Home V1</a></li>
+                    <li><a href="">Home V1</a></li>
                     <li><a href="index2.html">Home V2</a></li>
                     <li><a href="index3.html">Home V3</a></li>
                     <li><a href="index4.html">Home V4</a></li>
@@ -565,25 +528,54 @@
                     <li><a href="page-blog-single2.html">Blog Single v2</a></li>
                 </ul>
             </li>
-            <li class="title my-3 bb1 pl20 fz20 fw500 pb-3">CATEGORIES</li>
-            <li><span>Home & Kitchen</span>
+            <li class="title my-3 bb1 pl20 fz20 fw500 pb-3">Departments</li>
+            <li><span><i class="flaticon-cooking mr20"></i>Home & Kitchen</span>
                 <ul>
                     <li><a href="page-shop-list-v1.html">Home & Kitchen</a></li>
                 </ul>
             </li>
-            @foreach(app('categories') as $category)
-                <li>
-                    <span>{{ $category->name }}</span>
-                    <ul class=mb20>
-                        @foreach($category->subCategories as $subCategory)
-                            <li><a href="{{ url("shop?sub-category={$subCategory->slug}") }}">
-                                    {{ $subCategory->name }}
-                                </a>
-                            </li>
-                        @endforeach
-                    </ul>
-                </li>
-            @endforeach
+            <li><span><i class="flaticon-armchair mr20"></i>Home & Furniture</span>
+                <ul>
+                    <li><a href="page-shop-list-v1.html">Home & Furniture</a></li>
+                </ul>
+            </li>
+            <li><span><i class="flaticon-smartphone-1 mr20"></i>Electronics</span>
+                <ul>
+                    <li><a href="page-shop-list-v1.html">Electronics</a></li>
+                </ul>
+            </li>
+            <li><span><i class="flaticon-bride-dress mr20"></i>Clothing & Accessories</span>
+                <ul>
+                    <li><a href="page-shop-list-v1.html">Clothing & Accessories</a></li>
+                </ul>
+            </li>
+            <li><span><i class="flaticon-heart-beat mr20"></i>Health & Beauty</span>
+                <ul>
+                    <li><a href="page-shop-list-v1.html">Health & Beauty</a></li>
+                </ul>
+            </li>
+            <li><span><i class="flaticon-volleyball mr20"></i>Sport & Outdoor</span>
+                <ul>
+                    <li><a href="page-shop-list-v1.html">Sport & Outdoor</a></li>
+                </ul>
+            </li>
+            <li><span><i class="flaticon-groceries mr20"></i>Grocery & Market</span>
+                <ul>
+                    <li><a href="page-shop-list-v1.html">Grocery & Market</a></li>
+                </ul>
+            </li>
+            <li><span><i class="flaticon-remote-control mr20"></i>Toy & Video Games</span>
+                <ul>
+                    <li><a href="page-shop-list-v1.html">Toy & Video Games</a></li>
+                </ul>
+            </li>
+            <li><span><i class="flaticon-feeding-bottle mr20"></i>Babies & Moms</span>
+                <ul>
+                    <li><a href="page-shop-list-v1.html">Babies & Moms</a></li>
+                </ul>
+            </li>
+            <li><a class="tdu text-thm1 text-capitalize" href="#">See More <i
+                        class="far fa-angle-down"></i></a></li>
         </ul>
     </nav>
 </div>
