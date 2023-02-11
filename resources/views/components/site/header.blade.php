@@ -37,7 +37,7 @@
                                                                 <div class=info-product>
                                                                     <div class=item_title>{{ $product->name }}</div>
                                                                     <div class=price>
-                                                                        <span class=sale>{{ $product->price }}</span>
+                                                                        <span class=sale>₦{{ $product->price }}</span>
                                                                     </div>
                                                                 </div>
                                                             </li>
