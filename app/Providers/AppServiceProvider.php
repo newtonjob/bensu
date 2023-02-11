@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Models\Brand;
 use App\Models\Category;
+use App\Models\Product;
 use App\Models\Setting;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Cache;
@@ -51,7 +52,11 @@ class AppServiceProvider extends ServiceProvider
     public function registerCacheableApplicationModels()
     {
         $this->app->bind('categories',
-            fn () => Category::orderBy('relevance', 'desc')->with('subCategories')->get() // Todo: Cache forever
+            fn () => Category::orderBy('relevance', 'desc')->has('subCategories')->with('subCategories')->get() // Todo: Cache forever
+        );
+
+        $this->app->bind('featured_products',
+            fn () => Product::where('featured_at', '!=', null)->has('images')->with('images')->get()->random(4) // Todo: Cache forever
         );
 
         $this->app->bind('brands',
