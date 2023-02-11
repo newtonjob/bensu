@@ -328,8 +328,8 @@
         <div class="header stylehome1">
             <div class=menu_and_widgets>
                 <div class="mobile_menu_bar float-start">
-                    <a class=menubar href="index.html#menu"><span></span></a>
-                    <a class=mobile_logo href="index.html#">Zeomart<span class=text-thm>.</span></a>
+                    <a class=menubar href="#menu"><span></span></a>
+                    <a class=mobile_logo href="index.html#">BENSU<span class=text-thm>.</span></a>
                 </div>
                 <div class=mobile_menu_widget_icons>
                     <ul class="cart mt15">
@@ -565,54 +565,25 @@
                     <li><a href="page-blog-single2.html">Blog Single v2</a></li>
                 </ul>
             </li>
-            <li class="title my-3 bb1 pl20 fz20 fw500 pb-3">Departments</li>
-            <li><span><i class="flaticon-cooking mr20"></i>Home & Kitchen</span>
+            <li class="title my-3 bb1 pl20 fz20 fw500 pb-3">CATEGORIES</li>
+            <li><span>Home & Kitchen</span>
                 <ul>
                     <li><a href="page-shop-list-v1.html">Home & Kitchen</a></li>
                 </ul>
             </li>
-            <li><span><i class="flaticon-armchair mr20"></i>Home & Furniture</span>
-                <ul>
-                    <li><a href="page-shop-list-v1.html">Home & Furniture</a></li>
-                </ul>
-            </li>
-            <li><span><i class="flaticon-smartphone-1 mr20"></i>Electronics</span>
-                <ul>
-                    <li><a href="page-shop-list-v1.html">Electronics</a></li>
-                </ul>
-            </li>
-            <li><span><i class="flaticon-bride-dress mr20"></i>Clothing & Accessories</span>
-                <ul>
-                    <li><a href="page-shop-list-v1.html">Clothing & Accessories</a></li>
-                </ul>
-            </li>
-            <li><span><i class="flaticon-heart-beat mr20"></i>Health & Beauty</span>
-                <ul>
-                    <li><a href="page-shop-list-v1.html">Health & Beauty</a></li>
-                </ul>
-            </li>
-            <li><span><i class="flaticon-volleyball mr20"></i>Sport & Outdoor</span>
-                <ul>
-                    <li><a href="page-shop-list-v1.html">Sport & Outdoor</a></li>
-                </ul>
-            </li>
-            <li><span><i class="flaticon-groceries mr20"></i>Grocery & Market</span>
-                <ul>
-                    <li><a href="page-shop-list-v1.html">Grocery & Market</a></li>
-                </ul>
-            </li>
-            <li><span><i class="flaticon-remote-control mr20"></i>Toy & Video Games</span>
-                <ul>
-                    <li><a href="page-shop-list-v1.html">Toy & Video Games</a></li>
-                </ul>
-            </li>
-            <li><span><i class="flaticon-feeding-bottle mr20"></i>Babies & Moms</span>
-                <ul>
-                    <li><a href="page-shop-list-v1.html">Babies & Moms</a></li>
-                </ul>
-            </li>
-            <li><a class="tdu text-thm1 text-capitalize" href="index.html#">See More <i
-                        class="far fa-angle-down"></i></a></li>
+            @foreach(app('categories') as $category)
+                <li>
+                    <span>{{ $category->name }}</span>
+                    <ul class=mb20>
+                        @foreach($category->subCategories as $subCategory)
+                            <li><a href="{{ url("shop?sub-category={$subCategory->slug}") }}">
+                                    {{ $subCategory->name }}
+                                </a>
+                            </li>
+                        @endforeach
+                    </ul>
+                </li>
+            @endforeach
         </ul>
     </nav>
 </div>
