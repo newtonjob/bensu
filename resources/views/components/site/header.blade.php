@@ -22,38 +22,11 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-auto p0">
-                                <div class=top-search>
-                                    <form action="{{ url('shop') }}" class=form-search accept-charset=utf-8>
-                                        <div class="box-search pre_line">
-                                            <input class=form_control name=q placeholder="Search products…" aria-label="search"
-                                                   value="{{ request('q') }}" minlength="2">
-                                            <div class=search-suggestions>
-                                                <div class=box-suggestions>
-                                                    <ul>
-                                                        @foreach(app('featured_products') as $product)
-                                                            <li>
-                                                                <a href="{{ url("shop/product/{$product->slug}")}}">
-                                                                    <div class=thumb>
-                                                                        <img src="{{ cloudinary_url(config('services.cloudinary.root_product'). $product->images[0]->src) }}" alt="{{ $product->name }}">
-                                                                    </div>
-                                                                    <div class=info-product>
-                                                                        <div class=item_title>{{ $product->name }}</div>
-                                                                        <div class=price>
-                                                                            <span class=sale>
-                                                                                ₦{{ number_format(discount($product->price, $product->discount)) }}
-                                                                            </span>
-                                                                        </div>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                        @endforeach
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
+                            @php
+                                $products = app('featured_products')
+                            @endphp
+                            <div class="col-auto p0 pre_line">
+                                <x-site.search-bar :products="$products"/>
                             </div>
                             <div class="col-auto p0">
                                 <div class=advscrh_frm_btn>
@@ -356,36 +329,7 @@
                     <div class="container search_form_wrapper">
                         <div class=row>
                             <div>
-                                <div class="top-search text-start">
-                                    <form action=# class=form-search accept-charset=utf-8>
-                                        <div class=box-search>
-                                            <input class=form_control name=search placeholder="Search products…">
-                                            <div class="search-suggestions text-start">
-                                                <div class=box-suggestions>
-                                                    <ul>
-                                                        @foreach(app('featured_products') as $product)
-                                                            <li>
-                                                                <a href="{{ url("shop/product/{$product->slug}")}}">
-                                                                    <div class=thumb>
-                                                                        <img src="{{ cloudinary_url(config('services.cloudinary.root_product'). $product->images[0]->src) }}" alt="{{ $product->name }}">
-                                                                    </div>
-                                                                    <div class=info-product>
-                                                                        <div class=item_title>{{ $product->name }}</div>
-                                                                        <div class=price>
-                                                                            <span class=sale>
-                                                                                ₦{{ number_format(discount($product->price, $product->discount)) }}
-                                                                            </span>
-                                                                        </div>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                        @endforeach
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
+                                <x-site.search-bar :products="$products" />
                             </div>
                             <div>
                                 <div class=advscrh_frm_btn>
