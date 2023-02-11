@@ -61,7 +61,7 @@
 </head>
 <body>
 <div class="wrapper ovh">
-{{--    <div class=preloader></div>--}}
+    <div class=preloader></div>
     <x-site.header />
     <div class="body_content_wrapper position-relative pt30">
         {{ $slot }}
