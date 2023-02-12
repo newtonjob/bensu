@@ -11,7 +11,7 @@
                                         <span class=tag>Limited Edition</span>
                                         <h3 class=banner-title>
                                             <span class=fw400>Electronic Essentials</span><br>
-                                            Refrigerators, TVs, Microwaves<br class="d-none d-xl-block">
+                                            Refrigerators, Microwaves<br class="d-none d-xl-block">
                                             & more
                                         </h3>
                                         <p>Discover our new items. Up to<span class=fw500>25% Off !</span></p>
@@ -20,8 +20,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="slide slide-one bgpc"
-                             style=background-image:url({{asset('images/home/5.jpg')}});height:600px>
+                        <div class="slide slide-one bgpc" style=background-image:url({{asset('images/home/5.jpg')}});height:600px>
                             <div class=container>
                                 <div class="row home-content">
                                     <div class="col-lg-5 offset-lg-1">
@@ -31,7 +30,7 @@
                                             You should be Shopping.
                                         </h3>
                                         <p>Discover our new items. Up to<span class=fw500>25% Off !</span></p>
-                                        <a href="page-shop-cart.html" class="btn banner-btn btn-thm">Shop Now</a>
+                                        <a href="" class="btn banner-btn btn-thm">Shop Now</a>
                                     </div>
                                 </div>
                             </div>
@@ -42,11 +41,11 @@
                                     <div class="col-lg-5 offset-lg-1">
                                         <span class=tag>Limited Edition</span>
                                         <h3 class=banner-title>
-                                            <span class=fw400>Game Consoles and</span><br>
-                                            Accessories Super Deals
+                                            <span class=fw400>Smart TVs and Accessories</span><br>
+                                            Super Deals
                                         </h3>
                                         <p>Discover our new items. Up to<span class=fw500>25% Off !</span></p>
-                                        <a href="page-shop-cart.html" class="btn banner-btn btn-thm">Shop Now</a>
+                                        <a href="" class="btn banner-btn btn-thm">Shop Now</a>
                                     </div>
                                 </div>
                             </div>
