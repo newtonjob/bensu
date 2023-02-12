@@ -59,6 +59,10 @@ class AppServiceProvider extends ServiceProvider
             fn () => Product::where('featured_at', '!=', null)->has('images')->with('images')->get()->random(4) // Todo: Cache forever
         );
 
+        $this->app->bind('discount_products',
+            fn () => Product::where('discount', '!=', 0)->has('images')->with('images')->get() // Todo: Cache forever
+        );
+
         $this->app->bind('brands',
             fn () => Brand::all() // Todo: Cache forever
         );
