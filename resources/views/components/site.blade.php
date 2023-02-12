@@ -58,6 +58,13 @@
             width: 100%;
         }
 
+        .hero3 {
+            background: #D1ECFD url("{{asset('images/home/tv.png')}}") no-repeat bottom right;
+            background-size: 45% !important;
+            position: relative;
+            height: 600px;
+        }
+
         .dark_blue {
             background-color: #0e246c !important;
         }

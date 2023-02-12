@@ -20,21 +20,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="slide slide-one" style=background-image:url({{asset('images/home/2.jpg')}});height:600px>
-                            <div class=container>
-                                <div class="row home-content">
-                                    <div class="col-lg-5 offset-lg-1">
-                                        <span class=tag>Limited Edition</span>
-                                        <h3 class=banner-title>
-                                            <span class=fw400>Game Consoles and</span><br>
-                                            Accessories Super Deals
-                                        </h3>
-                                        <p>Discover our new items. Up to<span class=fw500>25% Off !</span></p>
-                                        <a href="page-shop-cart.html" class="btn banner-btn btn-thm">Shop Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                         <div class="slide slide-one bgpc"
                              style=background-image:url({{asset('images/home/5.jpg')}});height:600px>
                             <div class=container>
@@ -44,6 +29,21 @@
                                         <h3 class=banner-title>
                                             <span class=fw400>Time's Ticking,</span><br>
                                             You should be Shopping.
+                                        </h3>
+                                        <p>Discover our new items. Up to<span class=fw500>25% Off !</span></p>
+                                        <a href="page-shop-cart.html" class="btn banner-btn btn-thm">Shop Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide slide-one hero3">
+                            <div class=container>
+                                <div class="row home-content">
+                                    <div class="col-lg-5 offset-lg-1">
+                                        <span class=tag>Limited Edition</span>
+                                        <h3 class=banner-title>
+                                            <span class=fw400>Game Consoles and</span><br>
+                                            Accessories Super Deals
                                         </h3>
                                         <p>Discover our new items. Up to<span class=fw500>25% Off !</span></p>
                                         <a href="page-shop-cart.html" class="btn banner-btn btn-thm">Shop Now</a>
