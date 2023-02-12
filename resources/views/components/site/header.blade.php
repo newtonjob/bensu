@@ -3,7 +3,7 @@
         <div class=row>
             <div class="col-lg-2 col-xxl-2">
                 <div class=header_top_logo_home1>
-                    <div class="logo">BENSU<span class=text-thm>.</span></div>
+                    <div class="logo"><a class=logo href="">BENSU<span class=text-thm>.</span></a></div>
                 </div>
             </div>
             <div class="col-lg-5 col-xxl-6">
@@ -26,6 +26,7 @@
                             <div class="col-auto p0 pre_line">
                                 <x-site.search-bar :products="$products"/>
                             </div>
+
                             <div class="col-auto p0">
                                 <div class=advscrh_frm_btn>
                                     <button type=submit class="btn search-btn">
@@ -306,7 +307,7 @@
             <div class=menu_and_widgets>
                 <div class="mobile_menu_bar float-start">
                     <a class=menubar href="#menu"><span></span></a>
-                    <a class=mobile_logo href="#">BENSU<span class=text-thm>.</span></a>
+                    <a class=mobile_logo href="">BENSU<span class=text-thm>.</span></a>
                 </div>
                 <div class=mobile_menu_widget_icons>
                     <ul class="cart mt15">
