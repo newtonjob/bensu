@@ -22,9 +22,7 @@
                                     </select>
                                 </div>
                             </div>
-                            @php
-                                $products = app('featured_products')
-                            @endphp
+                            @php($products = app('featured_products'))
                             <div class="col-auto p0 pre_line">
                                 <x-site.search-bar :products="$products"/>
                             </div>
@@ -43,16 +41,6 @@
                 <div class="hm_log_fav_cart_widget justify-content-center">
                     <div class=wrapper>
                         <ul class=mb0>
-                            <li class=list-inline-item><a class=header_top_iconbox href="{{ url('account#wishlist') }}">
-                                    <div class="d-block d-md-flex">
-                                        <div class=icon><span class=flaticon-heart></span><span class=badge>{{ 0 }}</span></div>
-                                        <div class=details>
-                                            <p class=subtitle>Wishlist</p>
-                                            <h5 class=title>My Items</h5>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
                             <li class=list-inline-item><a class="header_top_iconbox signin-filter-btn"
                                                           href="">
                                     <div class="d-block d-md-flex">
@@ -60,6 +48,16 @@
                                         <div class=details>
                                             <p class=subtitle>Sign In</p>
                                             <h5 class=title>Account</h5>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class=list-inline-item><a class=header_top_iconbox href="{{ url('account#wishlist') }}">
+                                    <div class="d-block d-md-flex">
+                                        <div class=icon><span class=flaticon-heart></span><span class=badge>{{ 0 }}</span></div>
+                                        <div class=details>
+                                            <p class=subtitle>Wishlist</p>
+                                            <h5 class=title>My Items</h5>
                                         </div>
                                     </div>
                                 </a>
@@ -315,6 +313,10 @@
                         <li class=list-inline-item>
                             <a class="cart_btn signin-filter-btn" href="#"><span
                                     class="icon flaticon-profile"></span></a>
+                        </li>
+                        <li class=list-inline-item>
+                            <a class="cart_btn" href="{{ url('account#wishlist') }}"><span
+                                    class="icon flaticon-heart"></span><span class="badge bgc-thm">{{ 0 }}</span></a>
                         </li>
                         <li class=list-inline-item>
                             <a class="cart_btn cart-filter-btn" href="#"><span class=icon><img
