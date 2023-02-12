@@ -26,7 +26,7 @@
                                                 <a href="{{ url("shop/wishlist-add/{$product}") }}" title="Add to wishlist"><span class=flaticon-heart></span></a>
                                             </li>
                                             <li>
-                                                <a href="{{ url("shop/quick-look/{$product->slug}")}}"><span class=flaticon-show></span></a>
+                                                <a href="{{ url("shop/quick-look/{$product->slug}") }}"><span class=flaticon-show></span></a>
                                             </li>
                                             <li><a href=""><span class=flaticon-graph></span></a>
                                             </li>
@@ -56,9 +56,9 @@
                                     </div>
                                     <div class=si_footer>
                                         <div class=price>
-                                            {{ number_format(discount($product->price, $product->discount)) }}
+                                            ₦{{ number_format(discount($product->price, $product->discount)) }}
                                             <small>
-                                                <del>{{ $product->discount ? $product->price : '' }}</del>
+                                                <del>₦{{ $product->discount ? $product->price : '' }}</del>
                                                 <span class="off_tag text-thm1 badge">
                                                     {{ $product->discount ? '-'.$product->discount. '%' : ''  }}
                                                 </span>
