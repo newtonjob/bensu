@@ -57,6 +57,14 @@
             display: inline-block;
             width: 100%;
         }
+
+        .dark_blue {
+            background-color: #0e246c !important;
+        }
+
+        .light_blue{
+            background-color: #1a56cf !important;
+        }
     </style>
 </head>
 <body>
