@@ -302,7 +302,7 @@
 </div>
 <div id=page class=stylehome1>
     <div class=mobile-menu>
-        <div class="header stylehome1">
+        <div class="header stylehome1  dark_blue">
             <div class=menu_and_widgets>
                 <div class="mobile_menu_bar float-start">
                     <a class=menubar href="#menu"><span></span></a>
