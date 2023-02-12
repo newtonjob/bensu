@@ -1,4 +1,4 @@
-<div class="header_middle pt20 pb20 dn-992">
+<div class="header_middle pt20 pb20 dn-992 dark_blue">
     <div class=container>
         <div class=row>
             <div class="col-lg-2 col-xxl-2">
@@ -83,7 +83,7 @@
         </div>
     </div>
 </div>
-<header class="header-nav menu_style_home_one main-menu">
+<header class="header-nav menu_style_home_one main-menu light_blue">
     <nav class=posr>
         <div class="container posr menu_bdrt1">
             <div class=menu-toggle>
