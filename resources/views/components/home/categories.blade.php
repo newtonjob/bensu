@@ -4,7 +4,7 @@
             <div class=col-lg-12>
                 <div class="d-flex justify-content-between">
                     <div class=main-title>
-                        <h2>Top Categores</h2>
+                        <h2>Top Categories</h2>
                     </div>
                     <div class="main-title mb-5"><a class="title_more_btn mt10" href="{{ url('shop') }}">View
                             All Categories</a></div>
@@ -12,8 +12,7 @@
             </div>
         </div>
         <div class="row ovh">
-            @php($categories = app('categories')->take(8))
-            @foreach ($categories as $category)
+            @foreach (app('categories')->take(8) as $category)
                 <div class="col-6 col-md-3 col-xl wow fadeInUp" data-wow-duration=.7s><a
                         href="{{ url("shop?category={$category->slug}") }}">
                         <div class=iconbox>
