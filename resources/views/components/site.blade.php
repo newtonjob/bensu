@@ -72,6 +72,10 @@
         .light_blue{
             background-color: #1a56cf !important;
         }
+
+        .title-56 {
+            height: 56px !important;
+        }
     </style>
 </head>
 <body>
