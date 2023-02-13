@@ -13,7 +13,7 @@
         </div>
         <div class="row ovh">
             @foreach (app('categories')->take(8) as $category)
-                <div class="col-6 col-md-3 col-xl wow fadeInUp" data-wow-duration=.7s><a
+                <div class="col-6 col-md-3 col-xl wow fadeInUp" data-wow-duration={{ (0.3 * $loop->iteration).'s' }}><a
                         href="{{ url("shop?category={$category->slug}") }}">
                         <div class=iconbox>
                             <div class=icon><img src="{{ cloudinary_url($category->image, ['width' => 100]) }}" alt="{{ $category->name }} Image"></div>
@@ -26,7 +26,7 @@
             @endforeach
         </div>
         <div class="row ovh mt70">
-            <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-duration=.7s>
+            <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-duration=1.2s>
                 <div class="banner_one home1_style color1 mb30">
                     <div class="thumb style1">
                         <img class=float-end src="{{asset('images/banner/smartwatch.png')}}" alt=smartwatch>
@@ -37,7 +37,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-duration=.9s>
+            <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-duration=1s>
                 <div class="banner_one home1_style color2 mb30">
                     <div class="thumb style1"><img class=float-end src="{{asset('images/banner/earphone.png')}}"
                                                    alt=EarPhone></div>
@@ -47,7 +47,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-duration=1.1s>
+            <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-duration=.8s>
                 <div class="banner_one home1_style color3 mb30">
                     <div class=thumb><img class=float-end src="{{asset('images/banner/smartdevice.png')}}"
                                           alt=smartdevice.png>
