@@ -1,4 +1,4 @@
-@props(['discount_products'])
+@props(['discountedProducts'])
 <section class="deliver-divider pt30 pb70">
     <div class=container>
         <div class=row>
@@ -28,9 +28,9 @@
         <div class=row>
             <div class=col-lg-12>
                 <div class="navi_pagi_bottom_center shop_item_5grid_slider dod_slider owl-carousel owl-theme">
-                    <x-home.products :products="$discount_products" />
-                    <x-home.products :products="$discount_products" />
-                    <x-home.products :products="$discount_products" />
+                    <x-home.products :products="$discountedProducts" />
+                    <x-home.products :products="$discountedProducts" />
+                    <x-home.products :products="$discountedProducts" />
                 </div>
             </div>
         </div>

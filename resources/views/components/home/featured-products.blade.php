@@ -1,4 +1,4 @@
-@props(['best_sellers', 'new_products'])
+@props(['bestSellers', 'newProducts'])
 <section class="featured-product pt0 pb90">
     <div class=container>
         <div class=row>
@@ -29,12 +29,12 @@
                         <div class="tab-pane fade show active" id=nav-home role=tabpanel
                              aria-labelledby=nav-home-tab>
                             <div class="best_item_slider_shop_lising_page shop_item_5grid_slider slider_dib_sm nav_none_400 dots_none owl-theme owl-carousel">
-                                <x-home.products :products="$best_sellers->take(5)" />
+                                <x-home.products :products="$bestSellers->take(5)" />
                             </div>
                         </div>
                         <div class="tab-pane fade" id=nav-all role=tabpanel aria-labelledby=nav-bread-tab>
                             <div class="best_item_slider_shop_lising_page shop_item_5grid_slider slider_dib_sm nav_none_400 dots_none owl-theme owl-carousel">
-                                <x-home.products :products="$best_sellers->shuffle()" />
+                                <x-home.products :products="$bestSellers->shuffle()" />
                             </div>
                         </div>
                     </div>
@@ -114,12 +114,9 @@
                         <div class="fade tab-pane active show" id=nav-hnat20 aria-labelledby=nav-hnat20-tab
                              role=tabpanel>
                             <div class=row>
-                                @php
-                                    $wow = 0.3;
-                                @endphp
-                                @foreach($new_products as $product)
+                                @foreach($newProducts as $product)
                                     <div class="col-lg-3 col-lg-4 col-sm-6 px-1 px-sm-0 fadeInUp wow"
-                                         data-wow-duration={{$wow.'s'}}>
+                                         data-wow-duration={{ (0.2 * $loop->iteration).'s' }}>
                                         <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                             <div class=flex-shrink-0>
                                                 <img alt="Hot New Arrival Product" src="{{ cloudinary_url(config('services.cloudinary.root_product'). $product->images[0]->src, 90, true) }}">
@@ -140,9 +137,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                    @php
-                                        $wow += 0.2;
-                                    @endphp
                                 @endforeach
                             </div>
                         </div>
