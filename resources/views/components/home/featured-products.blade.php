@@ -29,7 +29,7 @@
                         <div class="tab-pane fade show active" id=nav-home role=tabpanel
                              aria-labelledby=nav-home-tab>
                             <div class="best_item_slider_shop_lising_page shop_item_5grid_slider slider_dib_sm nav_none_400 dots_none owl-theme owl-carousel">
-                                <x-home.products :products="$best_sellers->slice(0,5)" />
+                                <x-home.products :products="$best_sellers->take(5)" />
                             </div>
                         </div>
                         <div class="tab-pane fade" id=nav-all role=tabpanel aria-labelledby=nav-bread-tab>

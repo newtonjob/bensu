@@ -22,7 +22,7 @@
                                     </select>
                                 </div>
                             </div>
-                            @php($products = app('featured_products'))
+                            @php($products = app('featured_products')->take(5))
                             <div class="col-auto p0 pre_line">
                                 <x-site.search-bar :products="$products"/>
                             </div>
