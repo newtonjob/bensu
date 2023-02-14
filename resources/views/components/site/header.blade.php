@@ -3,7 +3,7 @@
         <div class=row>
             <div class="col-lg-2 col-xxl-2">
                 <div class=header_top_logo_home1>
-                    <div class="logo"><a class=logo href="">BENSU<span class=text-thm>.</span></a></div>
+                    <div class="logo"><a class=logo  style=font-size:32px href="">BENSU<span class=text-thm>.</span></a></div>
                 </div>
             </div>
             <div class="col-lg-5 col-xxl-6">
