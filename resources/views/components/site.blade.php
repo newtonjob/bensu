@@ -52,15 +52,15 @@
 
         .hero1 {
             background: url("{{asset('images/home/banner.png')}}") no-repeat bottom right;
-            background-size: 60% auto;
+            background-size: 63% auto;
             height: 100%;
             display: inline-block;
             width: 100%;
         }
 
         .hero3 {
-            background: #D1ECFD url("{{asset('images/home/tv.png')}}") no-repeat bottom right;
-            background-size: 45% !important;
+            background: #D1ECFD url("{{asset('images/home/tv.png')}}") no-repeat 88%;
+            background-size: 50% !important;
             position: relative;
             height: 600px;
         }
