@@ -1,7 +1,8 @@
 @foreach($products as $product)
     <div class="item ovh">
         <div class="shop_item bdrtrb1 px-2 px-sm-3 wow fadeIn" data-wow-duration=1.3s>
-            <div class="thumb pb30"><img src="{{ cloudinary_url(config('services.cloudinary.root_product'). $product->images[0]->src, 230, true) }}" alt="Furniture Product">
+            <div class="thumb pb30">
+                <img src="{{ cloudinary_url(config('services.cloudinary.root_product'). $product->images[0]->src, 230, true) }}" alt="Furniture Product">
                 <div class=thumb_info>
                     <ul class=mb0>
                         <li>
