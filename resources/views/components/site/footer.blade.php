@@ -59,7 +59,7 @@
                     <ul class=list-unstyled>
                         <li><a href="{{ url('home/account') }}">My Account</a></li>
                         <li><a href="{{ url('account#wishlist') }}">My Items</a></li>
-                        <li><a href="#">My Cart</a></li>
+                        <li><a class="cart-filter-btn" href="#">My Cart</a></li>
                         <li><a href="{{ url('shop') }}">Shop</a></li>
                     </ul>
                 </div>
@@ -83,14 +83,14 @@
                             <li class=list-inline-item>
                                 <a href="{{ site('social_links')->facebook }}"><i class="fab fa-facebook"></i></a>
                             </li>
-                            <li class=list-inline-item><a href="{{ site('social_links')->twitter }}">
-                                    <i class="fab fa-twitter"></i></a>
+                            <li class=list-inline-item>
+                                <a href="{{ site('social_links')->twitter }}"><i class="fab fa-twitter"></i></a>
                             </li>
-                            <li class=list-inline-item><a href="{{ site('social_links')->instagram }}">
-                                    <i class="fab fa-instagram"></i></a>
+                            <li class=list-inline-item>
+                                <a href="{{ site('social_links')->instagram }}"><i class="fab fa-instagram"></i></a>
                             </li>
-                            <li class=list-inline-item><a href="{{ site('social_links')->linkedin }}">
-                                    <i class="fab fa-linkedin-in"></i></a>
+                            <li class=list-inline-item>
+                                <a href="{{ site('social_links')->linkedin }}"><i class="fab fa-linkedin-in"></i></a>
                             </li>
                         </ul>
                     </div>
