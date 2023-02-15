@@ -10,12 +10,10 @@
             <div class=col-lg-6>
                 <div class="popular_listing_sliders ui_kit_tab style2">
                     <div class="nav nav-tabs mb30 justify-content-start justify-content-lg-end" role=tablist>
-                        <button class="nav-link active" id=nav-home-tab data-bs-toggle=tab
-                                data-bs-target=#nav-home role=tab aria-controls=nav-home aria-selected=true>
+                        <button class="nav-link active" id=nav-home-tab data-bs-toggle=tab data-bs-target=#nav-home role=tab aria-controls=nav-home aria-selected=true>
                             Top 5
                         </button>
-                        <button class="nav-link me-0" id=nav-bread-tab data-bs-toggle=tab
-                                data-bs-target=#nav-all role=tab aria-controls=nav-bread aria-selected=false>
+                        <button class="nav-link me-0" id=nav-bread-tab data-bs-toggle=tab data-bs-target=#nav-all role=tab aria-controls=nav-bread aria-selected=false>
                             All
                         </button>
                     </div>
@@ -48,7 +46,9 @@
         <div class=row>
             <div class=col-lg-12>
                 <div class="online_delivery text-center">
-                    <h5 class=title>Free Delivery To Your Doorstep To Selected Locations in Lagos (Navy Town, Satellite Town, Featac, Apapa, Ikeja, VI, Lekki, Ikota, VGC, Ajah, and more). T&C Apply. </h5>
+                    <h5 class=title>
+                        Free Delivery To Your Doorstep To Selected Locations in Lagos (Navy Town, Satellite Town, Featac, Apapa, Ikeja, VI, Lekki, Ikota, VGC, Ajah, and more). T&C Apply.
+                    </h5>
                 </div>
             </div>
         </div>
@@ -65,8 +65,7 @@
             <div class=col-md-7>
                 <div class="popular_listing_sliders ui_kit_tab style2">
                     <div class="nav nav-tabs mb30 justify-content-start justify-content-md-end" role=tablist>
-                        <button class="nav-link active" id=nav-narive-tab data-bs-toggle=tab
-                                data-bs-target=#nav-narive role=tab aria-controls=nav-narive aria-selected=true>
+                        <button class="nav-link active" id=nav-narive-tab data-bs-toggle=tab data-bs-target=#nav-narive role=tab aria-controls=nav-narive aria-selected=true>
                             All
                         </button>
                     </div>
@@ -100,8 +99,7 @@
             <div class=col-md-6>
                 <div class="popular_listing_sliders style2 ui_kit_tab">
                     <div class="justify-content-md-end justify-content-start mb30 nav nav-tabs" role=tablist>
-                        <button aria-controls=nav-hnat20 aria-selected=true class="nav-link active"
-                                data-bs-target=#nav-hnat20 data-bs-toggle=tab id=nav-hnat20-tab role=tab>Top 12
+                        <button aria-controls=nav-hnat20 aria-selected=true class="nav-link active" data-bs-target=#nav-hnat20 data-bs-toggle=tab id=nav-hnat20-tab role=tab>Top 12
                         </button>
                     </div>
                 </div>
@@ -111,12 +109,10 @@
             <div class=col-lg-12>
                 <div class="row popular_listing_sliders style2 ui_kit_tab">
                     <div class="col-lg-12 tab-content" id=nav-tabContent4>
-                        <div class="fade tab-pane active show" id=nav-hnat20 aria-labelledby=nav-hnat20-tab
-                             role=tabpanel>
+                        <div class="fade tab-pane active show" id=nav-hnat20 aria-labelledby=nav-hnat20-tab role=tabpanel>
                             <div class=row>
                                 @foreach($newProducts as $product)
-                                    <div class="col-lg-3 col-lg-4 col-sm-6 px-1 px-sm-0 fadeInUp wow"
-                                         data-wow-duration={{ (0.2 * $loop->iteration).'s' }}>
+                                    <div class="col-lg-3 col-lg-4 col-sm-6 px-1 px-sm-0 fadeInUp wow" data-wow-duration={{ (0.2 * $loop->iteration).'s' }}>
                                         <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                             <div class=flex-shrink-0>
                                                 <img alt="Hot New Arrival Product" src="{{ cloudinary_url(config('services.cloudinary.root_product'). $product->images[0]->src, 90, true) }}">
