@@ -47,4 +47,9 @@ class Product extends Model
     {
         return $this->belongsToMany(Order::class, OrderProduct::class)->withTimestamps();
     }
+
+    public function subCategory(): BelongsTo
+    {
+        return $this->belongsTo(SubCategory::class);
+    }
 }
