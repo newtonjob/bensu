@@ -4,7 +4,7 @@
             <div class="col-lg-2 col-xxl-2">
                 <div class=header_top_logo_home1>
                     <div class="logo">
-                        <a class=logo  style=font-size:32px href="">BENSU<span class=text-thm>.</span></a>
+                        <a class=logo  style=font-size:32px href="{{ url('home') }}">BENSU<span class=text-thm>.</span></a>
                     </div>
                 </div>
             </div>
@@ -132,18 +132,22 @@
             </div>
             <ul id=respMenu class="ace-responsive-menu menu_list_custom_code wa pl200" data-menu-style=horizontal>
                 <li class=visible_list>
-                    <a href=""><span class=title>Home</span></a>
+                    <a href="{{ url('home') }}"><span class=title>Home</span></a>
                 </li>
 
                 <li class=visible_list>
-                    <a href="{{ url('home/stores') }}"><span class=title>Our Stores</span></a>
+                    <a href="{{ url('shop') }}"><span class=title>Shop</span></a>
                 </li>
+
                 <li class=visible_list> <a href="#"><span class=title>Brands</span></a>
                     <ul>
                         @foreach (app('brands') as $brand)
                             <li><a href="{{ url("shop?brand={$brand->slug}") }}">{{ $brand->name }}</a></li>
                         @endforeach
                     </ul>
+                </li>
+                 <li class=visible_list>
+                    <a href="{{ url('home/stores') }}"><span class=title>Our Stores</span></a>
                 </li>
                 <li class=visible_list>
                     <a href="{{ url('home/about-us') }}"><span class=title>About us</span></a>
