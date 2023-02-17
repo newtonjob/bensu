@@ -6,17 +6,20 @@
                     <div class=main-title>
                         <h2>Top Categories</h2>
                     </div>
-                    <div class="main-title mb-5"><a class="title_more_btn mt10" href="{{ url('shop') }}">View
-                            All Categories</a></div>
+                    <div class="main-title mb-5">
+                        <a class="title_more_btn mt10" href="{{ url('shop') }}">View All Categories</a>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="row ovh">
             @foreach (app('categories')->take(8) as $category)
-                <div class="col-6 col-md-3 col-xl wow fadeInUp" data-wow-duration={{ (0.3 * $loop->iteration).'s' }}><a
-                        href="{{ url("shop?category={$category->slug}") }}">
+                <div class="col-6 col-md-3 col-xl wow fadeInUp" data-wow-duration={{ (0.3 * $loop->iteration).'s' }}>
+                    <a href="{{ url("shop?category={$category->slug}") }}">
                         <div class=iconbox>
-                            <div class=icon><img src="{{ cloudinary_url($category->image, ['width' => 100]) }}" alt="{{ $category->name }} Image"></div>
+                            <div class=icon>
+                                <img src="{{ cloudinary_url($category->image, ['width' => 100]) }}" alt="{{ $category->name }} Image">
+                            </div>
                             <div class=details>
                                 <h5 class=title>{{ $category->name }}</h5>
                             </div>
@@ -39,8 +42,9 @@
             </div>
             <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-duration=1s>
                 <div class="banner_one home1_style color2 mb30">
-                    <div class="thumb style1"><img class=float-end src="{{asset('images/banner/earphone.png')}}"
-                                                   alt=EarPhone></div>
+                    <div class="thumb style1">
+                        <img class=float-end src="{{asset('images/banner/earphone.png')}}" alt=EarPhone>
+                    </div>
                     <div class=details>
                         <h3 class=title>Electronic Hearing aid</h3>
                         <a href="{{ url('shop') }}" class=shop_btn>Shop Now</a>
@@ -49,8 +53,8 @@
             </div>
             <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-duration=.8s>
                 <div class="banner_one home1_style color3 mb30">
-                    <div class=thumb><img class=float-end src="{{asset('images/banner/smartdevice.png')}}"
-                                          alt=smartdevice.png>
+                    <div class=thumb>
+                        <img class=float-end src="{{asset('images/banner/smartdevice.png')}}" alt=smartdevice.png>
                     </div>
                     <div class=details>
                         <h3 class=title>Blood Pressure Meter</h3>

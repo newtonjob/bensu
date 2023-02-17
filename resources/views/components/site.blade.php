@@ -82,9 +82,7 @@
 <div class="wrapper ovh">
     <div class=preloader></div>
     <x-site.header />
-    <div class="body_content_wrapper position-relative pt30">
         {{ $slot }}
-    </div>
     <x-site.footer />
     <a class=scrollToHome href="index.html#"><i class="fas fa-angle-up"></i></a>
 </div>

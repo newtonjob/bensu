@@ -3,7 +3,9 @@
         <div class=row>
             <div class="col-lg-2 col-xxl-2">
                 <div class=header_top_logo_home1>
-                    <div class="logo"><a class=logo  style=font-size:32px href="">BENSU<span class=text-thm>.</span></a></div>
+                    <div class="logo">
+                        <a class=logo  style=font-size:32px href="{{ url('home') }}">BENSU<span class=text-thm>.</span></a>
+                    </div>
                 </div>
             </div>
             <div class="col-lg-5 col-xxl-6">
@@ -42,8 +44,8 @@
                 <div class="hm_log_fav_cart_widget justify-content-center">
                     <div class=wrapper>
                         <ul class=mb0>
-                            <li class=list-inline-item><a class="header_top_iconbox signin-filter-btn"
-                                                          href="">
+                            <li class=list-inline-item>
+                                <a class="header_top_iconbox signin-filter-btn" href="">
                                     <div class="d-block d-md-flex">
                                         <div class=icon><span class=flaticon-profile></span></div>
                                         <div class=details>
@@ -53,7 +55,8 @@
                                     </div>
                                 </a>
                             </li>
-                            <li class=list-inline-item><a class=header_top_iconbox href="{{ url('account#wishlist') }}">
+                            <li class=list-inline-item>
+                                <a class=header_top_iconbox href="{{ url('account#wishlist') }}">
                                     <div class="d-block d-md-flex">
                                         <div class=icon><span class=flaticon-heart></span><span class=badge>{{ 0 }}</span></div>
                                         <div class=details>
@@ -63,11 +66,15 @@
                                     </div>
                                 </a>
                             </li>
-                            <li class=list-inline-item><a class="header_top_iconbox cart-filter-btn"
-                                                          href="#">
+                            <li class=list-inline-item>
+                                <a class="header_top_iconbox cart-filter-btn" href="#">
                                     <div class="d-block d-md-flex">
-                                        <div class=icon><span><img src="{{asset('images/icons/flaticon-shopping-cart-white.svg')}}"
-                                                                   alt=""></span><span class=badge>2</span></div>
+                                        <div class=icon>
+                                            <span>
+                                                <img src="{{asset('images/icons/flaticon-shopping-cart-white.svg')}}" alt="">
+                                            </span>
+                                            <span class=badge>2</span>
+                                        </div>
                                         <div class=details>
                                             <p class=subtitle>$200.99</p>
                                             <h5 class=title>Total</h5>
@@ -109,7 +116,8 @@
                                         <div class=cat-title>{{ $category->name }}</div>
                                         <ul class=mb20>
                                             @foreach($category->subCategories as $subCategory)
-                                                <li><a href="{{ url("shop?sub-category={$subCategory->slug}") }}">
+                                                <li>
+                                                    <a href="{{ url("shop?sub-category={$subCategory->slug}") }}">
                                                         {{ $subCategory->name }}
                                                     </a>
                                                 </li>
@@ -124,18 +132,22 @@
             </div>
             <ul id=respMenu class="ace-responsive-menu menu_list_custom_code wa pl200" data-menu-style=horizontal>
                 <li class=visible_list>
-                    <a href=""><span class=title>Home</span></a>
+                    <a href="{{ url('home') }}"><span class=title>Home</span></a>
                 </li>
 
                 <li class=visible_list>
-                    <a href="{{ url('home/stores') }}"><span class=title>Our Stores</span></a>
+                    <a href="{{ url('shop') }}"><span class=title>Shop</span></a>
                 </li>
+
                 <li class=visible_list> <a href="#"><span class=title>Brands</span></a>
                     <ul>
                         @foreach (app('brands') as $brand)
                             <li><a href="{{ url("shop?brand={$brand->slug}") }}">{{ $brand->name }}</a></li>
                         @endforeach
                     </ul>
+                </li>
+                 <li class=visible_list>
+                    <a href="{{ url('home/stores') }}"><span class=title>Our Stores</span></a>
                 </li>
                 <li class=visible_list>
                     <a href="{{ url('home/about-us') }}"><span class=title>About us</span></a>
@@ -171,8 +183,8 @@
                         <a class="btn-fpswd float-end" href="#">Lost your password?</a>
                     </div>
                     <button type=submit class="btn btn-log btn-thm mt20">Login</button>
-                    <p class="text-center mb25 mt10">Don't have an account? <a class=signup-filter-btn
-                                                                               href="#">Create account</a>
+                    <p class="text-center mb25 mt10">
+                        Don't have an account? <a class=signup-filter-btn href="#">Create account</a>
                     </p>
                     <div class=hr_content>
                         <hr>
@@ -312,17 +324,22 @@
                 <div class=mobile_menu_widget_icons>
                     <ul class="cart mt15">
                         <li class=list-inline-item>
-                            <a class="cart_btn signin-filter-btn" href="#"><span
-                                    class="icon flaticon-profile"></span></a>
+                            <a class="cart_btn signin-filter-btn" href="#">
+                                <span class="icon flaticon-profile"></span>
+                            </a>
                         </li>
                         <li class=list-inline-item>
-                            <a class="cart_btn" href="{{ url('account#wishlist') }}"><span
-                                    class="icon flaticon-heart"></span><span class="badge bgc-thm">{{ 0 }}</span></a>
+                            <a class="cart_btn" href="{{ url('account#wishlist') }}">
+                                <span class="icon flaticon-heart"></span><span class="badge bgc-thm">{{ 0 }}</span>
+                            </a>
                         </li>
                         <li class=list-inline-item>
-                            <a class="cart_btn cart-filter-btn" href="#"><span class=icon><img
-                                        src="{{asset('images/icons/flaticon-shopping-cart-white.svg')}}" alt=""></span><span
-                                    class="badge bgc-thm">2</span></a>
+                            <a class="cart_btn cart-filter-btn" href="#">
+                                <span class=icon>
+                                    <img src="{{asset('images/icons/flaticon-shopping-cart-white.svg')}}" alt="">
+                                </span>
+                                <span class="badge bgc-thm">2</span>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -336,7 +353,8 @@
                             </div>
                             <div>
                                 <div class=advscrh_frm_btn>
-                                    <button type=submit class="btn search-btn"><span class=flaticon-search></span>
+                                    <button type=submit class="btn search-btn">
+                                        <span class=flaticon-search></span>
                                     </button>
                                 </div>
                             </div>
@@ -362,7 +380,6 @@
             </li>
             <li><a href="{{ url('home/about-us') }}">About us</a></li>
             <li><a href="{{ url('home/contact-us') }}">Contact Us</a></li>
-
             <li class="title my-3 bb1 pl20 fz20 fw500 pb-3">CATEGORIES</li>
             @foreach(app('categories') as $category)
                 <li><span>{{ $category->name }}</span>

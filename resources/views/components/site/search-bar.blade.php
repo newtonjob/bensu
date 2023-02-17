@@ -10,7 +10,9 @@
                         @foreach($products as $product)
                             <a href="{{ url("shop/product/{$product->slug}") }}">
                                 <li>
-                                    <div class=thumb><img src="{{ cloudinary_url(config('services.cloudinary.root_product'). $product->images[0]->src) }}" alt="{{ $product->name }}"></div>
+                                    <div class=thumb>
+                                        <img src="{{ cloudinary_url(config('services.cloudinary.root_product'). $product->images[0]->src) }}" alt="{{ $product->name }}">
+                                    </div>
                                     <div class=info-product>
                                         <div class=item_title>{{ $product->name }}</div>
                                         <div class=price>
