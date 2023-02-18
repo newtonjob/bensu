@@ -1,29 +1,4 @@
 <div class="body_content_wrapper position-relative">
-    <!-- Custom Shop Category List Menu -->
-    <section class="p0 bb1 overflow-hidden">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="custom_shop_category_nav_list_menu">
-              <ul class="mb0 d-flex">
-                <li><a href="page-shop-list-v6.html#">All Electronics</a></li>
-                <li><a href="page-shop-list-v6.html#">Smart TV</a></li>
-                <li><a class="active" href="page-shop-list-v6.html#">Laptops</a></li>
-                <li><a href="page-shop-list-v6.html#">Cell Phones</a></li>
-                <li><a href="page-shop-list-v6.html#">Camera & Photo</a></li>
-                <li><a href="page-shop-list-v6.html#">Portable Audio</a></li>
-                <li><a href="page-shop-list-v6.html#">Computers</a></li>
-                <li><a href="page-shop-list-v6.html#">iPad & Tablets</a></li>
-                <li><a href="page-shop-list-v6.html#">Pc Gaming</a></li>
-                <li><a href="page-shop-list-v6.html#">Smart Home</a></li>
-                <li><a href="page-shop-list-v6.html#">Headphones</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
     <!-- Inner Page Breadcrumb -->
     <section class="inner_page_breadcrumb">
       <div class="container">
