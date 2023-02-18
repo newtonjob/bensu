@@ -25,7 +25,7 @@
         </div>
     </div>
     <div class=details>
-        <div class=sub_title>{{ $product->brand?->name }}</div>
+        <div class=sub_title>{{ $product->brand?->name }} &nbsp;</div>
         <div class="title title-56">
             <a href="{{ url("shop/product/{$product->slug}")}}">{{ $product->name }}</a>
         </div>
