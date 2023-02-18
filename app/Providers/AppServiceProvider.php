@@ -9,6 +9,7 @@ use App\Models\Setting;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Pagination\Paginator;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -32,6 +33,8 @@ class AppServiceProvider extends ServiceProvider
         $this->registerMigrationMacros();
         $this->registerSiteSetting();
         $this->registerCacheableApplicationModels();
+
+        Paginator::useBootstrap();
     }
 
     public function registerMigrationMacros()
