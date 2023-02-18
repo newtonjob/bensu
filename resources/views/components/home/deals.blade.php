@@ -16,7 +16,13 @@
         <div class=row>
             <div class=col-lg-12>
                 <div class="navi_pagi_bottom_center shop_item_5grid_slider dod_slider owl-carousel owl-theme">
-                    <x-home.products :products="$discountedProducts" />
+                    @foreach($discountedProducts as $product)
+                        <div class="item ovh">
+                            <div class="shop_item bdrtrb1 px-2 px-sm-3 wow fadeIn" data-wow-duration=1.3s>
+                                <x-site.product :$product/>
+                            </div>
+                        </div>
+                    @endforeach
                 </div>
             </div>
         </div>

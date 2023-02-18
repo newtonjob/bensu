@@ -27,12 +27,24 @@
                         <div class="tab-pane fade show active" id=nav-home role=tabpanel
                              aria-labelledby=nav-home-tab>
                             <div class="best_item_slider_shop_lising_page shop_item_5grid_slider slider_dib_sm nav_none_400 dots_none owl-theme owl-carousel">
-                                <x-home.products :products="$bestSellers->take(5)" />
+                                @foreach($bestSellers->take(5) as $product)
+                                    <div class="item ovh">
+                                        <div class="shop_item bdrtrb1 px-2 px-sm-3 wow fadeIn" data-wow-duration=1.3s>
+                                            <x-site.product :$product/>
+                                        </div>
+                                    </div>
+                                @endforeach
                             </div>
                         </div>
                         <div class="tab-pane fade" id=nav-all role=tabpanel aria-labelledby=nav-bread-tab>
                             <div class="best_item_slider_shop_lising_page shop_item_5grid_slider slider_dib_sm nav_none_400 dots_none owl-theme owl-carousel">
-                                <x-home.products :products="$bestSellers->shuffle()" />
+                                @foreach($bestSellers->shuffle() as $product)
+                                    <div class="item ovh">
+                                        <div class="shop_item bdrtrb1 px-2 px-sm-3 wow fadeIn" data-wow-duration=1.3s>
+                                            <x-site.product :$product/>
+                                        </div>
+                                    </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
@@ -79,7 +91,13 @@
                         <div class="tab-pane fade show active" id=nav-narive role=tabpanel
                              aria-labelledby=nav-narive-tab>
                             <div class="best_item_slider_shop_lising_page shop_item_5grid_slider slider_dib_sm nav_none_400 dots_none owl-theme owl-carousel">
-                                <x-home.products :products="app('featured_products')" />
+                                @foreach(app('featured_products') as $product)
+                                    <div class="item ovh">
+                                        <div class="shop_item bdrtrb1 px-2 px-sm-3 wow fadeIn" data-wow-duration=1.3s>
+                                            <x-site.product :$product/>
+                                        </div>
+                                    </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
@@ -126,7 +144,13 @@
                         <div class="tab-pane fade show active" id=tv-top role=tabpanel
                              aria-labelledby=nav-home-tab>
                             <div class="best_item_slider_shop_lising_page shop_item_5grid_slider slider_dib_sm nav_none_400 dots_none owl-theme owl-carousel">
-                                <x-home.products :products="$televisionSubCategory->products" />
+                                @foreach($televisionSubCategory->products as $product)
+                                    <div class="item ovh">
+                                        <div class="shop_item bdrtrb1 px-2 px-sm-3 wow fadeIn" data-wow-duration=1.3s>
+                                            <x-site.product :$product/>
+                                        </div>
+                                    </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
