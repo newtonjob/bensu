@@ -86,6 +86,24 @@
                 </div>
             </div>
         </div>
+        <div class="banner_one_large bdrs6 mt100 px-4 px-md-0">
+            <div class=row>
+                <div class="col-lg-5 offset-lg-1 align-self-center">
+                    <div class="apple_widget_home1 mb-4 mb-lg-0">
+                        <h1 class=title>Smart TVs</h1>
+                        <p class="para mt-3 mb-4">Discover our new items. Up to <span class=fw500>25% Off !</span></p>
+                        <p></p>
+                        <a href="{{ url("shop?sub-category={$televisionSubCategory->slug}") }}" class="btn btn-thm">Shop Now</a></div>
+                </div>
+                <div class="col-lg-6 align-self-center">
+                    <div class="apple_widget_home1 animate_content text-center">
+                        <div class="thumb animate_thumb">
+                            <img style="height: 400px;" src="{{ asset('images/banner/tv2.png') }}" alt="Banner Image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 <section class="featured-product pt0 pb90">
@@ -138,24 +156,6 @@
                             <a class="mb-2 me-3 wow fadeInUp" data-wow-duration={{ 1 + (0.2 * $loop->iteration).'s' }} href="{{ url("shop?brand={$brand->slug}") }}">{{ $brand->name }}</a>
                         </div>
                     @endforeach
-                </div>
-            </div>
-        </div>
-        <div class="banner_one_large bdrs6 mt100 px-4 px-md-0">
-            <div class=row>
-                <div class="col-lg-5 offset-lg-1 align-self-center">
-                    <div class="apple_widget_home1 mb-4 mb-lg-0">
-                        <h1 class=title>Smart TVs</h1>
-                        <p class="para mt-3 mb-4">Discover our new items. Up to <span class=fw500>25% Off !</span></p>
-                        <p></p>
-                        <a href="{{ url("shop?sub-category={$televisionSubCategory->slug}") }}" class="btn btn-thm">Shop Now</a></div>
-                </div>
-                <div class="col-lg-6 align-self-center">
-                    <div class="apple_widget_home1 animate_content text-center">
-                        <div class="thumb animate_thumb">
-                            <img src="{{asset('images/banner/tv2.png')}}" alt="Banner Image">
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
