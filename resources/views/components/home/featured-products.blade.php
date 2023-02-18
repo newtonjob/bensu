@@ -90,7 +90,7 @@
             <div class=row>
                 <div class="col-lg-5 offset-lg-1 align-self-center">
                     <div class="apple_widget_home1 mb-4 mb-lg-0">
-                        <h1 class=title>Smart TVs</h1>
+                        <h1 class=title>Television Series</h1>
                         <p class="para mt-3 mb-4">Discover our new items. Up to <span class=fw500>25% Off !</span></p>
                         <p></p>
                         <a href="{{ url("shop?sub-category={$televisionSubCategory->slug}") }}" class="btn btn-thm">Shop Now</a></div>
@@ -104,50 +104,6 @@
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<section class="featured-product pt0 pb90">
-    <div class=container>
-        <div class=row>
-            <div class=col-lg-6>
-                <div class="main-title mb0-sm">
-                    <h2>Television Series</h2>
-                </div>
-            </div>
-            <div class=col-lg-6>
-                <div class="popular_listing_sliders ui_kit_tab style2">
-                    <div class="nav nav-tabs mb30 justify-content-start justify-content-lg-end" role=tablist>
-                        <button class="nav-link active" id=nav-home-tab data-bs-toggle=tab
-                                data-bs-target=#tv-top role=tab aria-controls=nav-home aria-selected=true>
-                            Top 10
-                        </button>
-                        <button class="nav-link me-0" id=nav-bread-tab data-bs-toggle=tab
-                                data-bs-target=#tv-all role=tab aria-controls=nav-bread aria-selected=false>
-                            View All
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class=row>
-            <div class=col-lg-12>
-                <div class="popular_listing_sliders row ui_kit_tab style2">
-                    <div class="tab-content col-lg-12" id=nav-tabContent>
-                        <div class="tab-pane fade show active" id=tv-top role=tabpanel
-                             aria-labelledby=nav-home-tab>
-                            <div class="best_item_slider_shop_lising_page shop_item_5grid_slider slider_dib_sm nav_none_400 dots_none owl-theme owl-carousel">
-                                <x-home.products :products="$televisionSubCategory->products->take(10)" />
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id=tv-all role=tabpanel aria-labelledby=nav-bread-tab>
-                            <div class="best_item_slider_shop_lising_page shop_item_5grid_slider slider_dib_sm nav_none_400 dots_none owl-theme owl-carousel">
-                                <x-home.products :products="$televisionSubCategory->products->slice(10)" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="row mt100">
             <div class=col-lg-12>
                 <div class="shop_item_7grid_slider slider_dib_400 dots_none nav_none shop_by_brand style2 owl-carousel owl-theme">
@@ -156,6 +112,24 @@
                             <a class="mb-2 me-3 wow fadeInUp" data-wow-duration={{ 1 + (0.2 * $loop->iteration).'s' }} href="{{ url("shop?brand={$brand->slug}") }}">{{ $brand->name }}</a>
                         </div>
                     @endforeach
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="featured-product pt0 pb90">
+    <div class=container>
+        <div class=row>
+            <div class=col-lg-12>
+                <div class="popular_listing_sliders row ui_kit_tab style2">
+                    <div class="tab-content col-lg-12" id=nav-tabContent>
+                        <div class="tab-pane fade show active" id=tv-top role=tabpanel
+                             aria-labelledby=nav-home-tab>
+                            <div class="best_item_slider_shop_lising_page shop_item_5grid_slider slider_dib_sm nav_none_400 dots_none owl-theme owl-carousel">
+                                <x-home.products :products="$televisionSubCategory->products" />
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
