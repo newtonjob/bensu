@@ -34,7 +34,7 @@ class AppServiceProvider extends ServiceProvider
         $this->registerSiteSetting();
         $this->registerCacheableApplicationModels();
 
-        Paginator::useBootstrap();
+        Paginator::useBootstrapFive();
     }
 
     public function registerMigrationMacros()
@@ -67,3 +67,4 @@ class AppServiceProvider extends ServiceProvider
         );
     }
 }
+st
