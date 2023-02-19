@@ -25,17 +25,7 @@
                                 </div>
                             </div>
                             @php($products = app('featured_products')->take(5))
-                            <div class="col-auto p0 pre_line">
-                                <x-site.search-bar :products="$products"/>
-                            </div>
-
-                            <div class="col-auto p0">
-                                <div class=advscrh_frm_btn>
-                                    <button type=submit class="btn search-btn">
-                                        <span class=flaticon-search></span>
-                                    </button>
-                                </div>
-                            </div>
+                            <x-site.search-bar :products="$products" id="search"/>
                         </div>
                     </div>
                 </div>
@@ -349,14 +339,7 @@
                     <div class="container search_form_wrapper">
                         <div class=row>
                             <div>
-                                <x-site.search-bar :products="$products" />
-                            </div>
-                            <div>
-                                <div class=advscrh_frm_btn>
-                                    <button type=submit class="btn search-btn">
-                                        <span class=flaticon-search></span>
-                                    </button>
-                                </div>
+                                <x-site.search-bar :products="$products" id="mobile_search" style="min-width: 295px;"/>
                             </div>
                         </div>
                     </div>
