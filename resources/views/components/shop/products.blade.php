@@ -91,9 +91,8 @@
                 </div>
             @endforeach
         </div>
-        <div class="max-w-6xl mx-auto mt-6 lg:mt-20 space-y-6">
-
-            <!-- {$products->links()}} -->
+        <div class="mt50">
+            {{$products->links()}}
         </div>
         <div class="row">
             <div class="col-lg-12">

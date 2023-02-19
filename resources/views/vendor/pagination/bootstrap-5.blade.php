@@ -1,5 +1,29 @@
 @if ($paginator->hasPages())
     <nav class="d-flex justify-items-center justify-content-between">
+        <!-- <div class="row">
+            <div class="col-lg-12">
+                <div class="mbp_pagination mt30 text-center">
+                    <ul class="page_navigation">
+                        <li class="page-item">
+                            <a class="page-link" href="page-shop-list-v6.html#" tabindex="-1" aria-disabled="true"> <span class="fas fa-angle-left"></span></a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="page-shop-list-v6.html#">1</a></li>
+                        <li class="page-item active" aria-current="page">
+                            <a class="page-link" href="page-shop-list-v6.html#">2 <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="page-shop-list-v6.html#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="page-shop-list-v6.html#">4</a></li>
+                        <li class="page-item"><a class="page-link" href="page-shop-list-v6.html#">5</a></li>
+                        <li class="page-item"><a class="page-link" href="page-shop-list-v6.html#">...</a></li>
+                        <li class="page-item"><a class="page-link" href="page-shop-list-v6.html#">20</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="page-shop-list-v6.html#"><span class="fas fa-angle-right"></span></a>
+                        </li>
+                    </ul>
+                    <p class="mt20 pagination_page_count text-center">1 – 20 of 300+ properties found</p>
+                </div>
+            </div>
+        </div> -->
         <div class="d-flex justify-content-between flex-fill d-sm-none">
             <ul class="pagination">
                 {{-- Previous Page Link --}}
