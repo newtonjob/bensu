@@ -3,7 +3,7 @@
             <div class="sidebar_accordion_widget">
               <div class="faq_according text-start">
                 <div class="accordion" id="accordionExample">
-                    <h4>All Category</h4>
+                    <h4>All Categories</h4>
                     <hr class="mb50">
                   @foreach(app('categories') as $category)
                   <div class="card">
