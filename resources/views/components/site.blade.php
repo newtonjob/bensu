@@ -26,11 +26,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&family=Poppins:wght@700&display=swap"
           rel=stylesheet>
     <link rel=stylesheet href="{{asset('css/responsive.css')}}">
+    <!-- stylesheets  -->
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
     <title>{{ $title ?? config('app.name') }}</title>
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('/img/logo/favicon.png') }}">
     <link rel="shortcut icon" type="image/png" sizes="16x16" href="{{ asset('/img/logo/favicon.png') }}">
-
+    <!-- Favicon for shop -->
+    <link href="images/favicon.ico" sizes="128x128" rel="shortcut icon" type="image/x-icon" />
+    <link href="images/favicon.ico" sizes="128x128" rel="shortcut icon" />
+    <!-- Apple Touch Icon -->
     <link href="{{ asset('images/apple-touch-icon-60x60.png')}}" sizes=60x60 rel=apple-touch-icon>
     <link href="{{ asset('images/apple-touch-icon-72x72.png')}}" sizes=72x72 rel=apple-touch-icon>
     <link href="{{ asset('images/apple-touch-icon-114x114.png')}}" sizes=114x114 rel=apple-touch-icon>
@@ -79,24 +84,28 @@
     </style>
 </head>
 <body>
-<div class="wrapper ovh">
-    <div class=preloader></div>
-    <x-site.header />
-        {{ $slot }}
-    <x-site.footer />
-    <a class=scrollToHome href="index.html#"><i class="fas fa-angle-up"></i></a>
-</div>
-<script src="{{asset('js/jquery-3.6.0.js')}}"></script>
-<script src="{{asset('js/jquery-migrate-3.0.0.min.js')}}"></script>
-<script src="{{asset('js/popper.min.js')}}"></script>
-<script src="{{asset('js/bootstrap.min.js')}}"></script>
-<script src="{{asset('js/bootstrap-select.min.js')}}"></script>
-<script src="{{asset('js/jquery.mmenu.all.js')}}"></script>
-<script src="{{asset('js/ace-responsive-menu.js')}}"></script>
-<script src="{{asset('js/jquery-scrolltofixed-min.js')}}"></script>
-<script src="{{asset('js/wow.min.js')}}"></script>
-<script src="{{asset('js/slider.js')}}"></script>
-<script src="{{asset('js/scrollbalance.js')}}"></script>
-<script src="{{asset('js/script.js')}}"></script>
+    <div class="wrapper ovh">
+        <div class=preloader></div>
+        <x-site.header />
+            {{ $slot }}
+        <x-site.footer />
+        <a class=scrollToHome href="index.html#"><i class="fas fa-angle-up"></i></a>
+    </div>
+    <script src="{{asset('js/jquery-3.6.0.js')}}"></script>
+    <script src="{{asset('js/jquery-migrate-3.0.0.min.js')}}"></script>
+    <script src="{{asset('js/popper.min.js')}}"></script>
+    <script src="{{asset('js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('js/bootstrap-select.min.js')}}"></script>
+    <script src="{{asset('js/jquery.mmenu.all.js')}}"></script>
+    <script src="{{asset('js/ace-responsive-menu.js')}}"></script>
+    <script src="{{asset('js/jquery-scrolltofixed-min.js')}}"></script>
+    <script src="{{asset('js/wow.min.js')}}"></script>
+    <script src="{{asset('js/slider.js')}}"></script>
+    <script src="{{asset('js/scrollbalance.js')}}"></script>
+    <script src="{{asset('js/script.js')}}"></script>
+    <!-- shop scripts -->
+    <script src="js/parallax.js"></script>
+    <script src="js/wow.min.js"></script> <script src="js/slider.js"></script>
+    <script src="js/pricing-slider.js"></script>
 </body>
 </html>
