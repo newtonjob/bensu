@@ -84,39 +84,15 @@
         </div>
         <div class="row">
             @foreach($products as $product)
-                <div class="col-6 col-lg-4 col-xl-3 p0 pl15-520">
+                <div class="col-12 col-md-6 col-lg-4 col-xl-3 p0 pl15-520">
                     <div class="shop_item bdr1 m--1">
                         <x-site.product :$product/>
                     </div>
                 </div>
             @endforeach
         </div>
-        <div class="mt50">
-            {{$products->links()}}
-        </div>
         <div class="row">
-            <div class="col-lg-12">
-                <div class="mbp_pagination mt30 text-center">
-                    <ul class="page_navigation">
-                        <li class="page-item">
-                            <a class="page-link" href="page-shop-list-v6.html#" tabindex="-1" aria-disabled="true"> <span class="fas fa-angle-left"></span></a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="page-shop-list-v6.html#">1</a></li>
-                        <li class="page-item active" aria-current="page">
-                            <a class="page-link" href="page-shop-list-v6.html#">2 <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="page-shop-list-v6.html#">3</a></li>
-                        <li class="page-item"><a class="page-link" href="page-shop-list-v6.html#">4</a></li>
-                        <li class="page-item"><a class="page-link" href="page-shop-list-v6.html#">5</a></li>
-                        <li class="page-item"><a class="page-link" href="page-shop-list-v6.html#">...</a></li>
-                        <li class="page-item"><a class="page-link" href="page-shop-list-v6.html#">20</a></li>
-                        <li class="page-item">
-                            <a class="page-link" href="page-shop-list-v6.html#"><span class="fas fa-angle-right"></span></a>
-                        </li>
-                    </ul>
-                    <p class="mt20 pagination_page_count text-center">1 – 20 of 300+ properties found</p>
-                </div>
-            </div>
+          {{ $products->links() }}
         </div>
     </div>
 </section>
