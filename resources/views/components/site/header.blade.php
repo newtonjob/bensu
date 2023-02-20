@@ -14,7 +14,7 @@
                         <div class=row>
                             <div class="col-auto pr0">
                                 <div class=actegory>
-                                    <select class=selectpicker id=selectbox_alCategory name="category">
+                                    <select class=selectpicker id=selectbox_alCategory name="category" form="search">
                                         <option value="Allcategory">All Category</option>
                                         @foreach(app('categories') as $category)
                                             <option value="{{ $category->slug }}" @selected(request('category') == $category->slug)>
