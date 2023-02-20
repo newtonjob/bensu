@@ -9,7 +9,7 @@ class ShopController extends Controller
 {
     public function __invoke()
     {
-        $products = Product::withWhereHas('images')->search()->filter()->paginate(16);
+        $products = Product::withWhereHas('images')->search()->filter()->paginate(16)->withQueryString();
 
         return view('shop', compact('products'));
     }
