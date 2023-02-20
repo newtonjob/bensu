@@ -14,14 +14,16 @@
                         <div class=row>
                             <div class="col-auto pr0">
                                 <div class=actegory>
-                                    <select class=selectpicker id=selectbox_alCategory>
-                                        <option value="Allcategory">All Category</option>
-                                        @foreach(app('categories') as $category)
-                                            <option value="{{ $category->slug }}" @selected(request('category') == $category->slug)>
-                                                {{ $category->name }}
-                                            </option>
-                                        @endforeach
-                                    </select>
+                                    <form action="{{ route('shop') }}" onChange="submit()">
+                                        <select class=selectpicker id=selectbox_alCategory name="category">
+                                            <option value="Allcategory">All Category</option>
+                                            @foreach(app('categories') as $category)
+                                                <option value="{{ $category->slug }}" @selected(request('category') == $category->slug)>
+                                                    {{ $category->name }}
+                                                </option>
+                                            @endforeach
+                                        </select>
+                                    </form>
                                 </div>
                             </div>
                             @php($products = app('featured_products')->take(5))

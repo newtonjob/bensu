@@ -9,7 +9,7 @@ class ShopController extends Controller
 {
     public function __invoke()
     {
-        $products = Product::paginate(16);
+        $products = Product::filter(request(['q', 'category', 'sub-category']))->paginate(16);
         
 
         return view('shop', compact('products'));
