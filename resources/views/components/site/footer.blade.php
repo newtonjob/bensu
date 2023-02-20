@@ -47,7 +47,7 @@
                         <ul class=list-unstyled>
                             @foreach (app('categories')->take(5) as $category)
                                 <li class="">
-                                    <a href="{{ url("shop?category={$category->slug}") }}">{{ $category->name }}</a>
+                                    <a href="{{ route('shop'). "?category={$category->slug}" }}">{{ $category->name }}</a>
                                 </li>
                             @endforeach
                         </ul>
@@ -60,7 +60,7 @@
                         <li><a href="{{ url('home/account') }}">My Account</a></li>
                         <li><a href="{{ url('account#wishlist') }}">My Items</a></li>
                         <li><a class="cart-filter-btn" href="#">My Cart</a></li>
-                        <li><a href="{{ url('shop') }}">Shop</a></li>
+                        <li><a href="{{ route('shop') }}">Shop</a></li>
                     </ul>
                 </div>
             </div>
@@ -131,7 +131,7 @@
                         <script>
                             document.write(new Date().getFullYear());
                         </script>
-                       {{ site('title') }}. All Rights Reserved.</p>
+                        <a href="{{ route('home') }}">{{ site('title') }}</a>. All Rights Reserved.</p>
                 </div>
             </div>
         </div>

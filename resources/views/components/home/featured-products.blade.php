@@ -193,13 +193,15 @@
                                                     <a href="{{ url("shop/product/{$product->slug}")}}">{{ $product->name }}</a>
                                                 </div>
                                                 <div class=price>
-                                                    ₦{{ number_format(discount($product->price, $product->discount)) }}
-                                                    <small>
-                                                        <del>{{ $product->discount ? "₦{$product->price}" : '' }}</del>
-                                                        <span class="off_tag text-thm1 badge">
-                                                            {{ $product->discount ? "-{$product->discount}%" : ''  }}
-                                                        </span>
-                                                    </small>
+                                                    ₦{{ number_format($product->price) }}
+                                                    @if($product->discount)
+                                                        <small>
+                                                            <del>₦{{ $product->getRawOriginal('price') }}</del>
+                                                            <span class="off_tag text-thm1 badge">
+                                                                -{{ $product->discount }}%
+                                                            </span>
+                                                        </small>
+                                                    @endif
                                                 </div>
                                             </div>
                                         </div>

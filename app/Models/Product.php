@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -26,6 +27,7 @@ class Product extends Model
     /**
      * Scope the query to only include discounted products.
      */
+
     public function scopeDiscounted(Builder $builder)
     {
         $builder->where('discount', '>', 0);
@@ -52,6 +54,11 @@ class Product extends Model
     public function isFeatured(): bool
     {
         return (bool) $this->featured_at;
+    }
+
+    public function price(): Attribute
+    {
+        return Attribute::get(fn ($value, $attributes) => $value * (1 - $attributes['discount'] / 100));
     }
 
     public function images(): HasMany
