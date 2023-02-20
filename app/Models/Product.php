@@ -31,24 +31,21 @@ class Product extends Model
         $builder->where('discount', '>', 0);
     }
 
-    public function scopeFilter($query, array $filters)
+    public function scopeSearch(Builder $builder)
     {
-        $query->when($filters['q'] ?? false, fn($query, $search) =>           
-            $query->where('name', 'like', '%' . $search . '%')
-                ->orWhere('description', 'like', '%' . $search . '%')
-                ->orWhere('model_no', 'like', '%' . $search . '%')
-            );
+        $keyword = request()->str('q')->squish(); // Todo: Prepare keyword for better results.
 
-        $query->when($filters['category'] ?? false, fn($query, $category) =>           
-            $query->whereHas('category', fn ($query) => 
-                $query->where('categories.slug', $category)
-            )
-        );
+        if ($keyword->isNotEmpty()) {
+            $builder->whereFullText(['name', 'tags'], $keyword.'*', ['mode' => 'boolean']);
+        }
+    }
 
-        $query->when($filters['sub-category'] ?? false, fn($query, $subCategory) =>           
-            $query->whereHas('subCategory', fn ($query) => 
-                $query->where('sub_categories.slug', $subCategory)
-            )
+    public function scopeFilter(Builder $builder)
+    {
+        $builder->when(request('category'),
+            fn ($builder, $category) => $builder->whereRelation('subCategory.category', 'slug', $category)
+        )->when(request('sub-category'),
+            fn ($builder, $subCategory) => $builder->whereRelation('subCategory', 'slug', $subCategory)
         );
     }
 
@@ -75,15 +72,5 @@ class Product extends Model
     public function subCategory(): BelongsTo
     {
         return $this->belongsTo(SubCategory::class);
-    }
-
-    public function category(): HasOneThrough
-    {
-        return $this->hasOneThrough(Category::class, SubCategory::class,
-        'category_id', // Foreign key on the subcategories table...
-        'id', // Foreign key on the categories table...
-        'sub_category_id', // Local key on the products table...
-        'id' // Local key on the subCategories table...
-        );
     }
 }

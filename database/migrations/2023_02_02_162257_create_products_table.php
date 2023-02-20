@@ -33,6 +33,8 @@ return new class extends Migration
             $table->authors();
             $table->timestamps();
             $table->softDeletes();
+
+            $table->fullText(['name', 'tags']);
         });
     }
 

@@ -1,6 +1,6 @@
 <div>
     <div class="thumb pb30">
-        <img src="{{ $product->images->first()->src }}" alt="Furniture Product">
+        <img src="{{ $product->images->first()?->src }}" alt="Furniture Product">
         <div class=thumb_info>
             <ul class=mb0>
                 <li>

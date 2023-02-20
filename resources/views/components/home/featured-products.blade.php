@@ -186,7 +186,7 @@
                                     <div class="col-lg-3 col-lg-4 col-sm-6 px-1 px-sm-0 fadeInUp wow" data-wow-duration={{ (0.2 * $loop->iteration).'s' }}>
                                         <div class="align-items-center bdr1 d-flex shop_item tiny_style">
                                             <div class=flex-shrink-0>
-                                                <img alt="Hot New Arrival Product" src="{{ $product->images->first()->src }}">
+                                                <img alt="Hot New Arrival Product" src="{{ $product->images->first()?->src }}">
                                             </div>
                                             <div class="flex-grow-1 ms-3">
                                                 <div class="mb-2 title">

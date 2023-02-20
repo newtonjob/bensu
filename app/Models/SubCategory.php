@@ -19,16 +19,11 @@ class SubCategory extends Model
 
     public function brands(): HasManyThrough
     {
-        return $this->hasManyThrough(Brand::class, Product::class,
-        'sub_category_id', // Foreign key on the products table
-        'id', // Local key on the subcategories table
-        'id', // Local key on the products table
-        'brand_id');
+        return $this->hasManyThrough(Brand::class, Product::class, secondKey: 'id', secondLocalKey: 'brand_id');
     }
 
     public function category(): BelongsTo
     {
         return $this->belongsTo(Category::class);
     }
-
 }
