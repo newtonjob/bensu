@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -53,7 +54,14 @@ class Product extends Model
     {
         return (bool) $this->featured_at;
     }
-
+//    public function price(): Attribute
+//    {
+//        return Attribute::get(function ($value) {
+//            $discount_amount = $value * $discount / 100;
+//
+//            return $value - $discount_amount;
+//        });
+//    }
     public function images(): HasMany
     {
         return $this->hasMany(Image::class);

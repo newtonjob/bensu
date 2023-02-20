@@ -4,7 +4,7 @@
             <div class="col-lg-2 col-xxl-2">
                 <div class=header_top_logo_home1>
                     <div class="logo">
-                        <a class=logo  style=font-size:32px href="{{ url('home') }}">BENSU<span class=text-thm>.</span></a>
+                        <a class=logo  style=font-size:32px href="{{ route('home') }}">BENSU<span class=text-thm>.</span></a>
                     </div>
                 </div>
             </div>
@@ -15,7 +15,7 @@
                             <div class="col-auto pr0">
                                 <div class=actegory>
                                     <select class=selectpicker id=selectbox_alCategory name="category" form="search">
-                                        <option value="Allcategory">All Category</option>
+                                        <option value="">All Category</option>
                                         @foreach(app('categories') as $category)
                                             <option value="{{ $category->slug }}" @selected(request('category') == $category->slug)>
                                                 {{ $category->name }}
@@ -98,7 +98,7 @@
                     <ul class=menu>
                         @foreach(app('categories') as $category)
                             <li>
-                                <a class=dropdown href="{{ url("shop?category={$category->slug}")}}">
+                                <a class=dropdown href="{{ route('shop')."?category={$category->slug}" }}">
                                     <span class=menu-title>{{ $category->name }}</span>
                                 </a>
                                 <div class=drop-menu>
@@ -107,7 +107,7 @@
                                         <ul class=mb20>
                                             @foreach($category->subCategories as $subCategory)
                                                 <li>
-                                                    <a href="{{ url("shop?sub-category={$subCategory->slug}") }}">
+                                                    <a href="{{ route('shop')."?sub-category={$subCategory->slug}" }}">
                                                         {{ $subCategory->name }}
                                                     </a>
                                                 </li>
@@ -122,17 +122,17 @@
             </div>
             <ul id=respMenu class="ace-responsive-menu menu_list_custom_code wa pl200" data-menu-style=horizontal>
                 <li class=visible_list>
-                    <a href="{{ url('home') }}"><span class=title>Home</span></a>
+                    <a href="{{ route('home') }}"><span class=title>Home</span></a>
                 </li>
 
                 <li class=visible_list>
-                    <a href="{{ url('shop') }}"><span class=title>Shop</span></a>
+                    <a href="{{ route('shop') }}"><span class=title>Shop</span></a>
                 </li>
 
                 <li class=visible_list> <a href="#"><span class=title>Brands</span></a>
                     <ul>
                         @foreach (app('brands') as $brand)
-                            <li><a href="{{ url("shop?brand={$brand->slug}") }}">{{ $brand->name }}</a></li>
+                            <li><a href="{{ route('shop')."?brand={$brand->slug}" }}">{{ $brand->name }}</a></li>
                         @endforeach
                     </ul>
                 </li>
@@ -208,11 +208,13 @@
                                     <p>Apple MacBook Pro with Apple M1 Chip</p>
                                     <div class="cart_btn home_page_sidebar mt10">
                                         <div class="quantity-block home_page_sidebar">
-                                            <button class="quantity-arrow-minus home_page_sidebar"><img
-                                                    src="{{asset('images/icons/minus.svg')}}" alt=""></button>
+                                            <button class="quantity-arrow-minus home_page_sidebar">
+                                                <img src="{{asset('images/icons/minus.svg')}}" alt="">
+                                            </button>
                                             <input class="quantity-num home_page_sidebar" type=number value=3>
-                                            <button class="quantity-arrow-plus home_page_sidebar"><span
-                                                    class=flaticon-close></span></button>
+                                            <button class="quantity-arrow-plus home_page_sidebar">
+                                                <span class=flaticon-close></span>
+                                            </button>
                                         </div>
                                         <span class="home_page_sidebar price">$3.399</span>
                                     </div>
@@ -309,7 +311,7 @@
             <div class=menu_and_widgets>
                 <div class="mobile_menu_bar float-start">
                     <a class=menubar href="#menu"><span></span></a>
-                    <a class=mobile_logo href="">BENSU<span class=text-thm>.</span></a>
+                    <a class=mobile_logo href="{{ route('home') }}">BENSU<span class=text-thm>.</span></a>
                 </div>
                 <div class=mobile_menu_widget_icons>
                     <ul class="cart mt15">
@@ -352,12 +354,12 @@
     </div>
     <nav id=menu class=stylehome1>
         <ul>
-            <li><a href="{{route('home')}}">Home</a></li>
+            <li><a href="{{ route('home') }}">Home</a></li>
             <li><a href="{{ url('home/stores') }}">Our Stores</a></li>
             <li><span>Brands</span>
                 <ul>
                     @foreach (app('brands') as $brand)
-                        <li><a href="{{ url("shop?brand={$brand->slug}") }}">{{ $brand->name }}</a></li>
+                        <li><a href="{{ route('shop'). "?brand={$brand->slug}" }}">{{ $brand->name }}</a></li>
                     @endforeach
                 </ul>
             </li>
@@ -368,7 +370,7 @@
                 <li><span>{{ $category->name }}</span>
                     <ul>
                         @foreach($category->subCategories as $subCategory)
-                            <li><a href="{{ url("shop?sub-category={$subCategory->slug}") }}">
+                            <li><a href="{{ route('shop'). "?sub-category={$subCategory->slug}" }}">
                                     {{ $subCategory->name }}
                                 </a>
                             </li>

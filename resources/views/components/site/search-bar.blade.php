@@ -4,8 +4,7 @@
         <form id="{{ $id }}" action="{{ url('shop') }}" class=form-search accept-charset=utf-8>
             <div class="box-search">
                 <input class="form_control" name=q placeholder="Search products…" aria-label="search"
-                    value="{{ request('q') }}" minlength="2" style="{{ $style }}"
-                >
+                    value="{{ request('q') }}" minlength="2" style="{{ $style }}">
                 <div class=search-suggestions>
                     <div class=box-suggestions>
                         <ul>
