@@ -18,7 +18,7 @@
                                             <div class=item_title>{{ $product->name }}</div>
                                             <div class=price>
                                                 <span class=sale>
-                                                    ₦{{ number_format(discount($product->price, $product->discount)) }}
+                                                    ₦{{ number_format($product->price) }}
                                                 </span>
                                             </div>
                                         </div>

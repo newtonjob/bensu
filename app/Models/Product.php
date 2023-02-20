@@ -27,6 +27,7 @@ class Product extends Model
     /**
      * Scope the query to only include discounted products.
      */
+
     public function scopeDiscounted(Builder $builder)
     {
         $builder->where('discount', '>', 0);
@@ -54,10 +55,12 @@ class Product extends Model
     {
         return (bool) $this->featured_at;
     }
+
     public function price(): Attribute
     {
-        return Attribute::get(fn ($value, $attributes) => $value - $value * $attributes['discount'] / 100);
+        return Attribute::get(fn ($value, $attributes) => $value * (1 - $attributes['discount'] / 100));
     }
+
     public function images(): HasMany
     {
         return $this->hasMany(Image::class);

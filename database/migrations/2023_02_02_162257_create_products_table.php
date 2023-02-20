@@ -24,7 +24,7 @@ return new class extends Migration
             $table->float('cost_price', 10)->nullable();
             $table->float('price', 10)->nullable();
             $table->enum('currency', ['ngn', 'usd'])->default('ngn');
-            $table->integer('discount')->default(0);
+            $table->unsignedFloat('discount')->default(0);
             $table->string('model_no')->nullable()->unique();
             $table->string('serial_no')->nullable()->unique();
             $table->timestamp('featured_at')->nullable();
