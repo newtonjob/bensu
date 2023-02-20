@@ -54,14 +54,10 @@ class Product extends Model
     {
         return (bool) $this->featured_at;
     }
-//    public function price(): Attribute
-//    {
-//        return Attribute::get(function ($value) {
-//            $discount_amount = $value * $discount / 100;
-//
-//            return $value - $discount_amount;
-//        });
-//    }
+    public function price(): Attribute
+    {
+        return Attribute::get(fn ($value, $attributes) => $value - $value * $attributes['discount'] / 100);
+    }
     public function images(): HasMany
     {
         return $this->hasMany(Image::class);
