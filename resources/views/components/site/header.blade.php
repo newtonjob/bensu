@@ -24,7 +24,7 @@
                                     </select>
                                 </div>
                             </div>
-                            @php($products = app('featured_products')->take(5))
+                            @php($products = app('featured_products')->shuffle()->take(5))
                             <x-site.search-bar :products="$products" id="search"/>
                         </div>
                     </div>

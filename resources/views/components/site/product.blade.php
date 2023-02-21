@@ -1,5 +1,10 @@
 <div>
     <div class="thumb pb30">
+        @if($product->discount)
+            <h3 class="badge" style="background-color: #f5c34b; color: black; padding: 10px; position: absolute; left: 20px;" >
+                -{{ $product->discount }}%
+            </h3>
+        @endif
         <img src="{{ $product->images->first()->src }}" alt="Furniture Product">
         <div class=thumb_info>
             <ul class=mb0>
@@ -35,9 +40,6 @@
                 @if($product->discount)
                     <small>
                         <del>₦{{number_format($product->getRawOriginal('price'))}}</del>
-                        <span class="off_tag text-thm1 badge">
-                            -{{ $product->discount }}%
-                        </span>
                     </small>
                 @endif
             </div>
