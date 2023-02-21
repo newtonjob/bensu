@@ -12,7 +12,7 @@
     <meta property="og:title" content="{{ $title ?? '' }}"/>
     <meta property="og:description" content="{{ $description ?? '' }}"/>
     <meta property="og:image" content="{{ $image ?? '' }}"/>
-    <title></title>
+    <title>{{ $title ?? config('app.name') }}</title>
     <meta property="og:locale" content="en_US"/>
     <!--Bensu favicon-->
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('/img/logo/favicon.png') }}">
