@@ -14,10 +14,10 @@
     <meta property="og:image" content="{{ $image ?? '' }}"/>
     <title></title>
     <meta property="og:locale" content="en_US"/>
-
+    <!--Bensu favicon-->
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('/img/logo/favicon.png') }}">
+    <link rel="shortcut icon" type="image/png" sizes="16x16" href="{{ asset('/img/logo/favicon.png') }}">
     <link rel="canonical" href="index.html"/>
-    <link rel="shortcut icon" href="{{ asset('admin/media/logos/favicon.ico') }}"/>
-
     <!--begin::Fonts(mandatory for all pages)-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700"/><!--end::Fonts-->
 
