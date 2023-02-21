@@ -92,7 +92,7 @@
             @endforeach
         </div>
         <div class="row">
-          {{ $products->links() }}
+          {{ $products->withQueryString()->links() }}
         </div>
     </div>
 </section>
