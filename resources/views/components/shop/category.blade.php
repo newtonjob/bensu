@@ -9,8 +9,8 @@
                   <div class="card">
                     <div class="card-header">
                       <h4>
-                        <button class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#{{ $category->slug }}" aria-expanded="true" aria-controls="{{ $category->slug }}">
-                          {{ $category->name }}
+                        <button class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#{{ $category->slug }}" aria-expanded="true" aria-controls="{{ $category->slug }}" title="{{ $category->name }}">
+                            {{ strlen($category->name) > 18 ? substr($category->name, 0, 14).'...' : $category->name }}
                         </button>
                       </h4>
                     </div>
@@ -19,7 +19,11 @@
                         <div class="left_sidebar_department_widgets">
                           <ul class="list-unstyled ps-0">
                             @foreach($category->subCategories as $subCategory)
-                              <li class="container"><a href="{{ route('shop'). '?sub-category='. $subCategory->slug }}" class="child_list">{{ $subCategory->name }}</a></li>
+                              <li class="container">
+                                  <a href="{{ route('shop'). '?sub-category='. $subCategory->slug }}" class="child_list" title="{{ $subCategory->name }}">
+                                      {{ strlen($subCategory->name) > 17 ? substr($subCategory->name, 0, 14).'...' : $subCategory->name }}
+                                  </a>
+                              </li>
                             @endforeach
                           </ul>
                         </div>
