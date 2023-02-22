@@ -10,12 +10,12 @@
                     </div>
                 </div>
                 <div class="col-sm-6 col-lg-3">
-                    <div class="aboutus_thumb">
-                        <img class="img-fluid w100" src="{{ asset('images/about/2.jpg') }}" alt="About2 Image">
-                    </div>
-                    <div class="aboutus_thumb">
-                        <img class="img-fluid w100" src="{{ asset('images/about/3.jpg') }}" alt="About3 Image">
-                    </div>
+                        <div class="aboutus_thumb">
+                            <img class="img-fluid w100" src="{{ asset('images/resource/about17.jpg') }}" alt="About2 Image">
+                        </div>
+                        <div class="aboutus_thumb">
+                            <img class="img-fluid w100" src="{{ asset('images/resource/about10.jpg') }}" alt="About3 Image">
+                        </div>
                 </div>
                 <div class="col-sm-6 col-lg-3">
                     <div class="aboutus_thumb">
@@ -24,10 +24,10 @@
                 </div>
                 <div class="col-sm-6 col-lg-3">
                     <div class="aboutus_thumb">
-                        <img class="img-fluid w100" src="{{ asset('images/about/5.jpg') }}" alt="About5 Image">
+                        <img class="img-fluid w100" src="{{ asset('images/resource/about15.jpg') }}" alt="About5 Image">
                     </div>
                     <div class="aboutus_thumb">
-                        <img class="img-fluid w100" src="{{ asset('images/about/6.jpg') }}" alt="About6 Image">
+                        <img class="img-fluid w100" src="{{ asset('images/resource/about14.jpg') }}" alt="About6 Image">
                     </div>
                 </div>
             </div>
