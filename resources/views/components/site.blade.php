@@ -108,5 +108,8 @@
     <script src="{{ asset('js/wow.min.js') }}"></script>
     <script src="{{ asset('js/slider.js') }}"></script>
     <script src="{{ asset('js/pricing-slider.js') }}"></script>
+
+    <!-- about scripts -->
+    <script src="{{ asset('js/jquery.counterup.js') }}"></script>
 </body>
 </html>

@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
-    public function __invoke(Request $request)
+    public function index()
     {
         $discountedProducts = Product::discounted()->withWhereHas('images')->get();
         $newProducts        = Product::latest()->withWhereHas('images')->take(12)->get();
@@ -20,4 +20,5 @@ class HomeController extends Controller
 
         return view('home', compact('discountedProducts', 'bestSellers', 'newProducts', 'televisionSubCategory'));
     }
+
 }
