@@ -80,4 +80,9 @@ class Product extends Model
     {
         return $this->belongsTo(SubCategory::class);
     }
+
+    public function stocks(): HasMany
+    {
+        return $this->hasMany(Stock::class);
+    }
 }

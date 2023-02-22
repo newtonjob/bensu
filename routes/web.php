@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ShopController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
@@ -15,7 +16,7 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::get('/home/about-us', [HomeController::class, 'about'])->name('about-us');
+Route::get('/home', HomeController::class)->name('home');
 Route::get('/shop', ShopController::class)->name('shop');
 Route::get('/dashboard', DashboardController::class)->name('dashboard');
+Route::resource('products', ProductController::class)->only('index', 'create');
