@@ -5,7 +5,7 @@
                 -{{ $product->discount }}%
             </h3>
         @endif
-        <img src="{{ $product->images->first()->src }}" alt="Furniture Product">
+        <img src="{{ $product->images->first()->src }}" alt="{{ $product->name }} Product">
         <div class=thumb_info>
             <ul class=mb0>
                 <li>
