@@ -122,11 +122,15 @@
             </div>
             <ul id=respMenu class="ace-responsive-menu menu_list_custom_code wa pl200" data-menu-style=horizontal>
                 <li class=visible_list>
-                    <a href="{{ route('home') }}"><span class=title>Home</span></a>
+                    <a href="{{ route('home') }}" style="{{ request()->route()->named('home') ? 'color: #f5c34b' : '' }}">
+                        <span class=title>Home</span>
+                    </a>
                 </li>
 
                 <li class=visible_list>
-                    <a href="{{ route('shop') }}"><span class=title>Shop</span></a>
+                    <a href="{{ route('shop') }}" style="{{ request()->route()->named('shop') ? 'color: #f5c34b' : '' }}">
+                        <span class=title>Shop</span>
+                    </a>
                 </li>
 
                 <li class=visible_list> <a href="#"><span class=title>Brands</span></a>
@@ -140,7 +144,9 @@
                     <a href="{{ url('home/stores') }}"><span class=title>Our Stores</span></a>
                 </li>
                 <li class=visible_list>
-                    <a href="{{ url('home/about-us') }}"><span class=title>About us</span></a>
+                    <a href="{{ url('home/about-us') }}" style="{{ request()->route()->named('about-us') ? 'color: #f5c34b' : '' }}">
+                        <span class=title>About us</span>
+                    </a>
                 </li>
                 <li class=visible_list>
                     <a href="{{ url('home/contact-us') }}"><span class=title>Contact Us</span></a>
