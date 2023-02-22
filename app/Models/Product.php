@@ -48,6 +48,8 @@ class Product extends Model
             fn ($builder, $category) => $builder->whereRelation('subCategory.category', 'slug', $category)
         )->when(request('sub-category'),
             fn ($builder, $subCategory) => $builder->whereRelation('subCategory', 'slug', $subCategory)
+        )->when(request('brand'),
+            fn ($builder, $brand) => $builder->whereRelation('brand', 'slug', $brand)
         );
     }
 
