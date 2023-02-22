@@ -16,7 +16,8 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/home', HomeController::class)->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::view('/home/about-us', 'about-us')->name('about-us');
 Route::get('/shop', ShopController::class)->name('shop');
 Route::get('/dashboard', DashboardController::class)->name('dashboard');
 Route::resource('products', ProductController::class)->only('index', 'create');
