@@ -1,5 +1,5 @@
 <x-site>
-    <x-site.breadcrumbs />
+    <x-site.breadcrumbs title="about-us"/>
     <!-- About Us & Team -->
     <section class="our-team pt0 pb40">
         <div class="container">
