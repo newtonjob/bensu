@@ -149,7 +149,9 @@
                     </a>
                 </li>
                 <li class=visible_list>
-                    <a href="{{ url('home/contact-us') }}"><span class=title>Contact Us</span></a>
+                    <a href="{{ url('home/contact-us') }}" style="{{ request()->route()->named('contact-us') ? 'color: #f5c34b' : '' }}">
+                        <span class=title>Contact Us</span>
+                    </a>
                 </li>
             </ul>
         </div>
