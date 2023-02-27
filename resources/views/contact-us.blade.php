@@ -85,51 +85,11 @@
                     </div>
                 </div>
             </div>
-            <div class="row pt20 bdrt1">
-                <div class="col-sm-6 col-xl-3">
-                    <div class="icon_boxes">
-                        <div class="icon">
-                            <span class="flaticon-fast-delivery"></span>
-                        </div>
-                        <div class="details">
-                            <h5 class="title">Free Shipping</h5>
-                            <p class="para">Free Shipping for orders over $200</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-xl-3">
-                    <div class="icon_boxes">
-                        <div class="icon">
-                            <span class="flaticon-shield"></span>
-                        </div>
-                        <div class="details">
-                            <h5 class="title">Money Guarantee</h5>
-                            <p class="para">Within 30 days for an exchange.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-xl-3">
-                    <div class="icon_boxes">
-                        <div class="icon">
-                            <span class="flaticon-headphones"></span>
-                        </div>
-                        <div class="details">
-                            <h5 class="title">Online Support</h5>
-                            <p class="para">24 hours a day, 7 days a week</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-xl-3">
-                    <div class="icon_boxes">
-                        <div class="icon">
-                            <span class="flaticon-credit-card"></span>
-                        </div>
-                        <div class="details">
-                            <h5 class="title">Flexible Payment</h5>
-                            <p class="para">Pay with Multiple Credit Cards</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="row ovh pt30 bdrt1">
+                <x-home.feature title="Free Shipping" paragraph="Free delivery on special locations" icon="fast-delivery" transition="1.0s"/>
+                <x-home.feature title="100% Money Guarantee" paragraph="You have 30 days to return" icon="shield" transition="1.2s" />
+                <x-home.feature title="Online Support" paragraph="Contact Us 24 hours everyday" icon="headphones" transition="1.4s" />
+                <x-home.feature title="Flexible & Secure Payment" paragraph="We ensure Secure payments with multiple credit cards" icon="credit-card" transition="1.6s" />
             </div>
         </div>
     </section>
