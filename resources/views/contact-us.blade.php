@@ -1,7 +1,7 @@
 <x-site>
     <x-site.breadcrumbs title="Contact-us"/>
     <!-- Our Contact -->
-    <section class="our-contact pt0 pb30">
+    <section class="our-contact pt0 pb0">
         <div class="container">
             <div class="row">
                 <div class="col-xl-10 m-auto pt0">
@@ -85,7 +85,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row pt55 bdrt1">
+            <div class="row pt20 bdrt1">
                 <div class="col-sm-6 col-xl-3">
                     <div class="icon_boxes">
                         <div class="icon">
