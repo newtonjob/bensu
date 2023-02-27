@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Models\Brand;
 use App\Models\Category;
+use App\Models\Location;
 use App\Models\Product;
 use App\Models\Setting;
 use Illuminate\Database\Schema\Blueprint;
@@ -56,6 +57,10 @@ class AppServiceProvider extends ServiceProvider
     {
         $this->app->bind('categories',
             fn () => Category::latest('relevance')->withWhereHas('subCategories')->get() // Todo: Cache forever
+        );
+
+        $this->app->bind('locations',
+            fn () => Location::whereNotNull('featured_at')->get() // Todo: Cache forever
         );
 
         $this->app->bind('featured_products',
