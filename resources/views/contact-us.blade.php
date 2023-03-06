@@ -14,7 +14,7 @@
                             You may simply initiate a live chat conversation with any of our available agents by clicking on the live chat icon at the bottom-right corner of this page,<br>or simple give us a call through any of our phone numbers as indicated at the bottom of this page.
                         </p>
                         <p>
-                            You may also reach us via whatsApp by clicking on the whatsApp Icon at the bottom-left corner of this page.
+                            You may also reach us via WhatsApp by clicking on the WhatsApp Icon at the bottom-left corner of this page.
                         </p>
                     </div>
                     <div class="main-title">
