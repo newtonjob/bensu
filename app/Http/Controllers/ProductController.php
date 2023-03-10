@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Brand;
+use App\Models\Location;
 use App\Models\Product;
 use App\Models\SubCategory;
 
@@ -19,7 +20,8 @@ class ProductController extends Controller
     {
         $subCategories  = SubCategory::all();
         $brands         = Brand::all();
+        $locations      = Location::all();
 
-        return view('products.create', compact('subCategories', 'brands'));
+        return view('products.create', compact('subCategories', 'brands', 'locations'));
     }
 }
