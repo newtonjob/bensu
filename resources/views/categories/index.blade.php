@@ -67,7 +67,7 @@
                             <!--begin::Card toolbar-->
                             <div class="card-toolbar">
                                 <!--begin::Add customer-->
-                                <a href="add-category.html" class="btn btn-primary">Add Category</a>
+                                <a href="{{ route('categories.create') }}" class="btn btn-primary">Add Category</a>
                                 <!--end::Add customer-->
                             </div>
                             <!--end::Card toolbar-->
