@@ -24,7 +24,7 @@
                                     </div>
                                     <button type=submit class="btn btn-log btn-thm mt20">Login</button>
                                     <p class="text-center mb25 mt10">
-                                        Don't have an account? <a class=signup-filter-btn href="">Create account</a>
+                                        Don't have an account? <a href="{{ route('register') }}">Create account</a>
                                     </p>
                                     <div class=hr_content>
                                         <hr>
