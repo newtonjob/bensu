@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ShopController;
@@ -23,3 +24,4 @@ Route::view('/home/stores', 'stores')->name('stores');
 Route::get('/shop', ShopController::class)->name('shop');
 Route::get('/dashboard', DashboardController::class)->name('dashboard');
 Route::resource('products', ProductController::class)->only('index', 'create');
+Route::post('/login',       [AuthController::class, 'login'])->name('login');

@@ -166,7 +166,7 @@
     <div class=hsidebar-content>
         <div class="log_reg_form sidebar_area">
             <div class=login_form>
-                <form action="">
+                <form action="{{ route('login') }}" method="POST" class="x-submit" data-then="reload">
                     <div class="mb-2 mr-sm-2">
                         <label for="email" class=form-label>Email</label>
                         <input id="email" name="email" type="email" class=form-control placeholder="Enter email address..." required>
@@ -292,8 +292,8 @@
                         <input name="username" id="username" class=form-control required>
                     </div>
                     <div class=form-group>
-                        <label for="email-address" class=form-label>Your Email</label>
-                        <input id="email-address" type=email class=form-control required>
+                        <label for="email_address" class=form-label>Your Email</label>
+                        <input id="email_address" type=email class=form-control required>
                     </div>
                     <div class=form-group>
                         <label for="gender" class=form-label>Gender</label>
