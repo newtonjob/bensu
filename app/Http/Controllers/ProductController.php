@@ -11,7 +11,7 @@ class ProductController extends Controller
 {
     public function index()
     {
-        $products = Product::with('images')->withSum('stocks', 'quantity')->paginate(40);
+        $products = Product::with('images')->withSum('stocks', 'quantity')->filter()->paginate(40);
 
         return view('products.index', compact('products'));
     }

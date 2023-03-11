@@ -192,7 +192,13 @@
     <script src="{{ asset('admin/js/custom/apps/ecommerce/catalog/products.js') }}"></script>
     <!--end::Custom Javascript-->
     <!--begin::Custom Javascript(used for products.create view only)-->
-        <script src="{{ asset('admin/js/custom/apps/ecommerce/catalog/save-product.js') }}"></script>
+    <script src="{{ asset('admin/js/custom/apps/ecommerce/catalog/save-product.js') }}"></script>
+    <!--end::Custom Javascript-->
+    <!--begin::Custom Javascript(used for categories.create view only)-->
+    <script src="{{ asset('admin/js/custom/apps/ecommerce/catalog/save-category.js') }}"></script>
+    <!--end::Custom Javascript-->
+    <!--begin::Custom Javascript(used for categories.index view only)-->
+    <script src="{{ asset('admin/js/custom/apps/ecommerce/catalog/categories.js') }}"></script>
     <!--end::Custom Javascript-->
 
     <!--end::Javascript-->
