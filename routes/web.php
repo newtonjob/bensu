@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ShopController;
@@ -27,3 +28,4 @@ Route::view('/home/stores', 'stores')->name('stores');
 Route::get('/shop', ShopController::class)->name('shop');
 Route::get('/dashboard', DashboardController::class)->name('dashboard');
 Route::resource('products', ProductController::class)->only('index', 'create');
+Route::resource('categories', CategoryController::class)->only('index', 'create');
