@@ -166,7 +166,7 @@
     <div class=hsidebar-content>
         <div class="log_reg_form sidebar_area">
             <div class=login_form>
-                <form action="{{ route('login') }}" method="POST" class="x-submit" data-then="reload">
+                <form action="{{ route('api.login') }}" method="POST" class="x-submit" data-then="reload">
                     <div class="mb-2 mr-sm-2">
                         <label for="email" class=form-label>Email</label>
                         <input id="email" name="email" type="email" class=form-control placeholder="Enter email address..." required>

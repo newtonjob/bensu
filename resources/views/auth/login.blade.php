@@ -8,7 +8,7 @@
                         <div class="log_reg_form mt70-992">
                             <h2 class="title">Sign-In</h2>
                             <div class="login_form">
-                                <form action="{{ route('login') }}" method="POST" class="x-submit" data-then="reload">
+                                <form action="{{ route('api.login') }}" method="POST" class="x-submit" data-then="reload">
                                     <div class="mb-2 mr-sm-2">
                                         <label for="email" class=form-label>Email</label>
                                         <input id="email" name="email" type="email" class=form-control placeholder="Enter email address..." required>
