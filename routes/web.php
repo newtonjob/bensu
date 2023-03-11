@@ -17,6 +17,10 @@ use App\Http\Controllers\HomeController;
 |
 */
 
+Route::middleware('guest')->group(function () {
+    Route::view('/login',       'auth.login')->name('login');
+    Route::view('/register',    'auth.register')->name('register');
+});
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::view('/home/about-us', 'about-us')->name('about-us');
 Route::view('/home/contact-us', 'contact-us')->name('contact-us');

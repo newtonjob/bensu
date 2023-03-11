@@ -12,6 +12,7 @@
     <meta property="og:title" content="{{ $title ?? '' }}" />
     <meta property="og:description" content="{{ $description ?? '' }}" />
     <meta property="og:image" content="{{ $image ?? '' }}" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel=stylesheet href="{{ asset('css/bootstrap.min.css') }}">
     <link rel=stylesheet href="{{ asset('css/ace-responsive-menu.css') }}">
     <link rel=stylesheet href="{{ asset('css/menu.css') }}">
@@ -111,5 +112,9 @@
 
     <!-- about scripts -->
     <script src="{{ asset('js/jquery.counterup.js') }}"></script>
+
+    <script src="{{ asset("js/bootstrap-notify.js") }}"></script>
+    <script src="{{ asset("js/sweetalert.min.js") }}"></script>
+    <script src="{{ asset("js/request.js") }}"></script>
 </body>
 </html>

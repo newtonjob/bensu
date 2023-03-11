@@ -14,7 +14,7 @@
                             You may simply initiate a live chat conversation with any of our available agents by clicking on the live chat icon at the bottom-right corner of this page,<br>or simple give us a call through any of our phone numbers as indicated at the bottom of this page.
                         </p>
                         <p>
-                            You may also reach us via whatsApp by clicking on the whatsApp Icon at the bottom-left corner of this page.
+                            You may also reach us via WhatsApp by clicking on the WhatsApp Icon at the bottom-left corner of this page.
                         </p>
                     </div>
                     <div class="main-title">
@@ -58,78 +58,11 @@
                     </div>
                 </div>
             </div>
-            <div class="row mt60 pt55 bdrt1">
-                <div class="col-lg-6">
-                    <div class="main-title">
-                        <h2 class="mtitle">Our Locations</h2>
-                        <p>We have {{ count(app('locations')) }} different location from where you can purchase any of our products from.</p>
-                        <p>If you are choosing the pickup option for your order, you can pickup from any of our locations closest to you.</p>
-                        <p>See below, a list of our store locations.</p>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="row">
-                        @foreach(app('locations') as $location)
-                            <div class="col-md-6">
-                                <div class="location_lists">
-                                    <div class="wrapper">
-                                        <h4 class="title">{{ $location->name }}</h4>
-                                        <ul>
-                                            <li><a href="#">{{ $location->address }}</a></li>
-                                        </ul>
-                                        <a href="#" class="locate_map_btn">See Map</a>
-                                    </div>
-                                </div>
-                            </div>
-                        @endforeach
-                    </div>
-                </div>
-            </div>
-            <div class="row pt20 bdrt1">
-                <div class="col-sm-6 col-xl-3">
-                    <div class="icon_boxes">
-                        <div class="icon">
-                            <span class="flaticon-fast-delivery"></span>
-                        </div>
-                        <div class="details">
-                            <h5 class="title">Free Shipping</h5>
-                            <p class="para">Free Shipping for orders over $200</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-xl-3">
-                    <div class="icon_boxes">
-                        <div class="icon">
-                            <span class="flaticon-shield"></span>
-                        </div>
-                        <div class="details">
-                            <h5 class="title">Money Guarantee</h5>
-                            <p class="para">Within 30 days for an exchange.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-xl-3">
-                    <div class="icon_boxes">
-                        <div class="icon">
-                            <span class="flaticon-headphones"></span>
-                        </div>
-                        <div class="details">
-                            <h5 class="title">Online Support</h5>
-                            <p class="para">24 hours a day, 7 days a week</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-xl-3">
-                    <div class="icon_boxes">
-                        <div class="icon">
-                            <span class="flaticon-credit-card"></span>
-                        </div>
-                        <div class="details">
-                            <h5 class="title">Flexible Payment</h5>
-                            <p class="para">Pay with Multiple Credit Cards</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="row ovh pt30 bdrt1">
+                <x-home.feature title="Free Shipping" paragraph="Free delivery on special locations" icon="fast-delivery" transition="1.0s"/>
+                <x-home.feature title="100% Money Guarantee" paragraph="You have 30 days to return" icon="shield" transition="1.2s" />
+                <x-home.feature title="Online Support" paragraph="Contact Us 24 hours everyday" icon="headphones" transition="1.4s" />
+                <x-home.feature title="Flexible & Secure Payment" paragraph="We ensure Secure payments with multiple credit cards" icon="credit-card" transition="1.6s" />
             </div>
         </div>
     </section>

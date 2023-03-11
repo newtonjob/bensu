@@ -166,23 +166,23 @@
     <div class=hsidebar-content>
         <div class="log_reg_form sidebar_area">
             <div class=login_form>
-                <form action=#>
+                <form action="{{ route('login') }}" method="POST" class="x-submit" data-then="reload">
                     <div class="mb-2 mr-sm-2">
-                        <label class=form-label>Username or email address</label>
-                        <input class=form-control placeholder="Ali Tufan">
+                        <label for="email" class=form-label>Email</label>
+                        <input id="email" name="email" type="email" class=form-control placeholder="Enter email address..." required>
                     </div>
                     <div class="form-group mb5">
-                        <label class=form-label>Password</label>
-                        <input type=password class=form-control placeholder=Password>
+                        <label for="password" class=form-label>Password</label>
+                        <input id="password" name="password" type=password class=form-control placeholder="Enter Password..." required>
                     </div>
                     <div class="custom-control custom-checkbox">
-                        <input type=checkbox class=custom-control-input id=exampleCheck3>
-                        <label class=custom-control-label for=exampleCheck3>Remember me</label>
+                        <input type=checkbox class=custom-control-input id=remember>
+                        <label class=custom-control-label for=remember>Remember me</label>
                         <a class="btn-fpswd float-end" href="#">Lost your password?</a>
                     </div>
                     <button type=submit class="btn btn-log btn-thm mt20">Login</button>
                     <p class="text-center mb25 mt10">
-                        Don't have an account? <a class=signup-filter-btn href="#">Create account</a>
+                        Don't have an account? <a class=signup-filter-btn href="">Create account</a>
                     </p>
                     <div class=hr_content>
                         <hr>
@@ -280,23 +280,38 @@
             <div class=sign_up_form>
                 <form action=#>
                     <div class=form-group>
-                        <label class=form-label>Your Name</label>
-                        <input class=form-control placeholder="Ali Tufan">
+                        <label for="first_name" class=form-label>First Name</label>
+                        <input name="first_name" id="first_name" class=form-control required>
                     </div>
                     <div class=form-group>
-                        <label class=form-label>Username</label>
-                        <input class=form-control placeholder=alitfn>
+                        <label for="last_name" class=form-label>Last Name</label>
+                        <input name="last_name" id="last_name" class=form-control required>
                     </div>
                     <div class=form-group>
-                        <label class=form-label>Your Email</label>
-                        <input type=email class=form-control placeholder=creativelayers088@gmail.com>
+                        <label for="username" class=form-label>Username</label>
+                        <input name="username" id="username" class=form-control required>
+                    </div>
+                    <div class=form-group>
+                        <label for="email_address" class=form-label>Your Email</label>
+                        <input id="email_address" type=email class=form-control required>
+                    </div>
+                    <div class=form-group>
+                        <label for="gender" class=form-label>Gender</label>
+                        <select class="form-control" name="gender" id="gender" required>
+                            <option value="M">male</option>
+                            <option value="F">female</option>
+                        </select>
                     </div>
                     <div class="form-group mb20">
-                        <label class=form-label>Password</label>
-                        <input type=password class=form-control placeholder=******************>
+                        <label for="pass_word" class=form-label>Password</label>
+                        <input id="pass_word" type=password class=form-control required>
+                    </div>
+                    <div class="form-group mb20">
+                        <label for="password_confirmation" class=form-label>Confirm Password</label>
+                        <input id="password_confirmation" type=password class=form-control required>
                     </div>
                     <button type=submit class="btn btn-signup btn-thm">Create Account</button>
-                    <p class="text-center mb25 mt10">Already have an account? <a href="">Sign in</a>
+                    <p class="text-center mb25 mt10">Already have an account? <a href="{{ url('login') }}">Sign in</a>
                     </p>
                     <div class=hr_content>
                         <hr>
