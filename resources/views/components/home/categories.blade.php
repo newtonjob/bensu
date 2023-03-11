@@ -18,7 +18,7 @@
                     <a href="{{ url("shop?category={$category->slug}") }}">
                         <div class=iconbox>
                             <div class=icon>
-                                <img src="{{ cloudinary_url($category->image, ['width' => 100]) }}" alt="{{ $category->name }} Image">
+                                <img class="w-75" src="{{ cloudinary_url($category->image, 200) }}" alt="{{ $category->name }} Image">
                             </div>
                             <div class=details>
                                 <h5 class=title>{{ $category->name }}</h5>
