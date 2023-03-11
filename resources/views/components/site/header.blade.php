@@ -176,7 +176,7 @@
                         <input id="password" name="password" type=password class=form-control placeholder="Enter Password..." required>
                     </div>
                     <div class="custom-control custom-checkbox">
-                        <input type=checkbox class=custom-control-input id=remember>
+                        <input type=checkbox name="remember" class=custom-control-input id=remember>
                         <label class=custom-control-label for=remember>Remember me</label>
                         <a class="btn-fpswd float-end" href="#">Lost your password?</a>
                     </div>
