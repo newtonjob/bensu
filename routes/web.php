@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ShopController;
 use Illuminate\Support\Facades\Route;
@@ -25,5 +26,10 @@ Route::view('/home/about-us', 'about-us')->name('about-us');
 Route::view('/home/contact-us', 'contact-us')->name('contact-us');
 Route::view('/home/stores', 'stores')->name('stores');
 Route::get('/shop', ShopController::class)->name('shop');
-Route::get('/dashboard', DashboardController::class)->name('dashboard');
-Route::resource('products', ProductController::class)->only('index', 'create');
+Route::middleware('auth')->group(function () {
+    Route::get('/dashboard', DashboardController::class)->name('dashboard');
+    Route::resource('products', ProductController::class)->only('index', 'create');
+    Route::get('/logout',  LogoutController::class)->name('logout');
+});
+
+
