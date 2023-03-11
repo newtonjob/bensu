@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Brand;
+use App\Models\Location;
 use App\Models\Product;
+use App\Models\SubCategory;
 
 class ProductController extends Controller
 {
@@ -15,6 +18,10 @@ class ProductController extends Controller
 
     public function create()
     {
-        return view('products.create');
+        $subCategories  = SubCategory::all();
+        $brands         = Brand::all();
+        $locations      = Location::all();
+
+        return view('products.create', compact('subCategories', 'brands', 'locations'));
     }
 }

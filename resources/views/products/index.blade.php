@@ -107,7 +107,12 @@
                                                     <!--end::Thumbnail-->
                                                     <div class="ms-5">
                                                         <!--begin::Title-->
-                                                        <a href="edit-product.html" class="text-gray-800 text-hover-primary fs-5 fw-bold" data-kt-ecommerce-product-filter="product_name">{{ $product->name }}</a>
+                                                        <a href="edit-product.html" class="text-gray-800 text-hover-primary fs-5 fw-bold" data-kt-ecommerce-product-filter="product_name">
+                                                            {{ $product->name }}
+                                                            @if($product->featured_at)
+                                                                <div class="badge badge-light-success">Featured</div>
+                                                            @endif
+                                                        </a>
                                                         <!--end::Title-->
                                                     </div>
                                                 </div>
