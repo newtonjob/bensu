@@ -34,17 +34,31 @@
                 <div class="hm_log_fav_cart_widget justify-content-center">
                     <div class=wrapper>
                         <ul class=mb0>
-                            <li class=list-inline-item>
-                                <a class="header_top_iconbox signin-filter-btn" href="">
-                                    <div class="d-block d-md-flex">
-                                        <div class=icon><span class=flaticon-profile></span></div>
-                                        <div class=details>
-                                            <p class=subtitle>Sign In</p>
-                                            <h5 class=title>Account</h5>
+                            @auth()
+                                <li class=list-inline-item>
+                                    <a class="header_top_iconbox" href="{{ route('dashboard') }}">
+                                        <div class="d-block d-md-flex">
+                                            <div class=icon><span class=flaticon-profile></span></div>
+                                            <div class=details>
+                                                <p class=subtitle>{{ auth()->user()->first_name  }}</p>
+                                                <h5 class=title>{{ auth()->user()->last_name  }}</h5>
+                                            </div>
                                         </div>
-                                    </div>
-                                </a>
-                            </li>
+                                    </a>
+                                </li>
+                            @else
+                                <li class=list-inline-item>
+                                    <a class="header_top_iconbox signin-filter-btn" href="">
+                                        <div class="d-block d-md-flex">
+                                            <div class=icon><span class=flaticon-profile></span></div>
+                                            <div class=details>
+                                                <p class=subtitle>Sign In</p>
+                                                <h5 class=title>Account</h5>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            @endauth
                             <li class=list-inline-item>
                                 <a class=header_top_iconbox href="{{ url('account#wishlist') }}">
                                     <div class="d-block d-md-flex">
@@ -158,47 +172,107 @@
     </nav>
 </header>
 <div class=hiddenbar-body-ovelay></div>
-<div class=signin-hidden-sbar>
-    <div class=hsidebar-header>
-        <div class=sidebar-close-icon><span class=flaticon-close></span></div>
-        <h4 class=title>Sign-In</h4>
-    </div>
-    <div class=hsidebar-content>
-        <div class="log_reg_form sidebar_area">
-            <div class=login_form>
-                <form action="{{ route('api.login') }}" method="POST" class="x-submit" data-then="reload">
-                    <div class="mb-2 mr-sm-2">
-                        <label for="email" class=form-label>Email</label>
-                        <input id="email" name="email" type="email" class=form-control placeholder="Enter email address..." required>
-                    </div>
-                    <div class="form-group mb5">
-                        <label for="password" class=form-label>Password</label>
-                        <input id="password" name="password" type=password class=form-control placeholder="Enter Password..." required>
-                    </div>
-                    <div class="custom-control custom-checkbox">
-                        <input type=checkbox name="remember" class=custom-control-input id=remember>
-                        <label class=custom-control-label for=remember>Remember me</label>
-                        <a class="btn-fpswd float-end" href="#">Lost your password?</a>
-                    </div>
-                    <button type=submit class="btn btn-log btn-thm mt20">Login</button>
-                    <p class="text-center mb25 mt10">
-                        Don't have an account? <a class=signup-filter-btn href="">Create account</a>
-                    </p>
-                    <div class=hr_content>
-                        <hr>
-                        <span class=hr_top_text>or</span>
-                    </div>
-                    <ul class="login_with_social text-center mt30 mb0">
-                        <li class=list-inline-item><a href="#"><i class="fab fa-facebook"></i></a></li>
-                        <li class=list-inline-item><a href="#"><i class="fab fa-google"></i></a></li>
-                        <li class=list-inline-item><a href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li class=list-inline-item><a href="#"><i class="fab fa-apple"></i></a></li>
-                    </ul>
-                </form>
+@auth()
+    <div class=signin-hidden-sbar>
+        <div class=hsidebar-header>
+            <div class=sidebar-close-icon><span class=flaticon-close></span></div>
+            <h4 class=title>Sign-In</h4>
+        </div>
+        <div class=hsidebar-content>
+            <div class="log_reg_form sidebar_area">
+                <div class=login_form>
+                    <form action="{{ route('api.login') }}" method="POST" class="x-submit" data-then="reload">
+                        <div class="mb-2 mr-sm-2">
+                            <label for="email" class=form-label>Email</label>
+                            <input id="email" name="email" type="email" class=form-control placeholder="Enter email address..." required>
+                        </div>
+                        <div class="form-group mb5">
+                            <label for="password" class=form-label>Password</label>
+                            <input id="password" name="password" type=password class=form-control placeholder="Enter Password..." required>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type=checkbox name="remember" class=custom-control-input id=remember>
+                            <label class=custom-control-label for=remember>Remember me</label>
+                            <a class="btn-fpswd float-end" href="#">Lost your password?</a>
+                        </div>
+                        <button type=submit class="btn btn-log btn-thm mt20">Login</button>
+                        <p class="text-center mb25 mt10">
+                            Don't have an account? <a class=signup-filter-btn href="">Create account</a>
+                        </p>
+                        <div class=hr_content>
+                            <hr>
+                            <span class=hr_top_text>or</span>
+                        </div>
+                        <ul class="login_with_social text-center mt30 mb0">
+                            <li class=list-inline-item><a href="#"><i class="fab fa-facebook"></i></a></li>
+                            <li class=list-inline-item><a href="#"><i class="fab fa-google"></i></a></li>
+                            <li class=list-inline-item><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li class=list-inline-item><a href="#"><i class="fab fa-apple"></i></a></li>
+                        </ul>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
+    <div class=signup-hidden-sbar>
+        <div class=hsidebar-header>
+            <div class=sidebar-close-icon><span class=flaticon-close></span></div>
+            <h4 class=title>Create Your Account</h4>
+        </div>
+        <div class=hsidebar-content>
+            <div class="log_reg_form sidebar_area">
+                <div class=sign_up_form>
+                    <form action=#>
+                        <div class=form-group>
+                            <label for="first_name" class=form-label>First Name</label>
+                            <input name="first_name" id="first_name" class=form-control required>
+                        </div>
+                        <div class=form-group>
+                            <label for="last_name" class=form-label>Last Name</label>
+                            <input name="last_name" id="last_name" class=form-control required>
+                        </div>
+                        <div class=form-group>
+                            <label for="username" class=form-label>Username</label>
+                            <input name="username" id="username" class=form-control required>
+                        </div>
+                        <div class=form-group>
+                            <label for="email_address" class=form-label>Your Email</label>
+                            <input id="email_address" type=email class=form-control required>
+                        </div>
+                        <div class=form-group>
+                            <label for="gender" class=form-label>Gender</label>
+                            <select class="form-control" name="gender" id="gender" required>
+                                <option value="M">male</option>
+                                <option value="F">female</option>
+                            </select>
+                        </div>
+                        <div class="form-group mb20">
+                            <label for="pass_word" class=form-label>Password</label>
+                            <input id="pass_word" type=password class=form-control required>
+                        </div>
+                        <div class="form-group mb20">
+                            <label for="password_confirmation" class=form-label>Confirm Password</label>
+                            <input id="password_confirmation" type=password class=form-control required>
+                        </div>
+                        <button type=submit class="btn btn-signup btn-thm">Create Account</button>
+                        <p class="text-center mb25 mt10">Already have an account? <a href="{{ url('login') }}">Sign in</a>
+                        </p>
+                        <div class=hr_content>
+                            <hr>
+                            <span class=hr_top_text>or</span>
+                        </div>
+                        <ul class="login_with_social text-center mt30 mb0">
+                            <li class=list-inline-item><a href="#"><i class="fab fa-facebook"></i></a></li>
+                            <li class=list-inline-item><a href="#"><i class="fab fa-google"></i></a></li>
+                            <li class=list-inline-item><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li class=list-inline-item><a href="#"><i class="fab fa-apple"></i></a></li>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+@endauth
 <div class=cart-hidden-sbar>
     <div class=hsidebar-header>
         <div class=sidebar-close-icon><span class=flaticon-close></span></div>
@@ -270,64 +344,6 @@
         </div>
     </div>
 </div>
-<div class=signup-hidden-sbar>
-    <div class=hsidebar-header>
-        <div class=sidebar-close-icon><span class=flaticon-close></span></div>
-        <h4 class=title>Create Your Account</h4>
-    </div>
-    <div class=hsidebar-content>
-        <div class="log_reg_form sidebar_area">
-            <div class=sign_up_form>
-                <form action=#>
-                    <div class=form-group>
-                        <label for="first_name" class=form-label>First Name</label>
-                        <input name="first_name" id="first_name" class=form-control required>
-                    </div>
-                    <div class=form-group>
-                        <label for="last_name" class=form-label>Last Name</label>
-                        <input name="last_name" id="last_name" class=form-control required>
-                    </div>
-                    <div class=form-group>
-                        <label for="username" class=form-label>Username</label>
-                        <input name="username" id="username" class=form-control required>
-                    </div>
-                    <div class=form-group>
-                        <label for="email_address" class=form-label>Your Email</label>
-                        <input id="email_address" type=email class=form-control required>
-                    </div>
-                    <div class=form-group>
-                        <label for="gender" class=form-label>Gender</label>
-                        <select class="form-control" name="gender" id="gender" required>
-                            <option value="M">male</option>
-                            <option value="F">female</option>
-                        </select>
-                    </div>
-                    <div class="form-group mb20">
-                        <label for="pass_word" class=form-label>Password</label>
-                        <input id="pass_word" type=password class=form-control required>
-                    </div>
-                    <div class="form-group mb20">
-                        <label for="password_confirmation" class=form-label>Confirm Password</label>
-                        <input id="password_confirmation" type=password class=form-control required>
-                    </div>
-                    <button type=submit class="btn btn-signup btn-thm">Create Account</button>
-                    <p class="text-center mb25 mt10">Already have an account? <a href="{{ url('login') }}">Sign in</a>
-                    </p>
-                    <div class=hr_content>
-                        <hr>
-                        <span class=hr_top_text>or</span>
-                    </div>
-                    <ul class="login_with_social text-center mt30 mb0">
-                        <li class=list-inline-item><a href="#"><i class="fab fa-facebook"></i></a></li>
-                        <li class=list-inline-item><a href="#"><i class="fab fa-google"></i></a></li>
-                        <li class=list-inline-item><a href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li class=list-inline-item><a href="#"><i class="fab fa-apple"></i></a></li>
-                    </ul>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
 <div id=page class=stylehome1>
     <div class=mobile-menu>
         <div class="header stylehome1  dark_blue">
@@ -338,11 +354,19 @@
                 </div>
                 <div class=mobile_menu_widget_icons>
                     <ul class="cart mt15">
-                        <li class=list-inline-item>
-                            <a class="cart_btn signin-filter-btn" href="#">
-                                <span class="icon flaticon-profile"></span>
-                            </a>
-                        </li>
+                        @auth()
+                            <li class=list-inline-item>
+                                <a class="cart_btn" href="{{ route('dashboard') }}">
+                                    <span class="icon flaticon-profile"></span>
+                                </a>
+                            </li>
+                        @else
+                            <li class=list-inline-item>
+                                <a class="cart_btn signin-filter-btn" href="#">
+                                    <span class="icon flaticon-profile"></span>
+                                </a>
+                            </li>
+                        @endauth
                         <li class=list-inline-item>
                             <a class="cart_btn" href="{{ url('account#wishlist') }}">
                                 <span class="icon flaticon-heart"></span><span class="badge bgc-thm">{{ 0 }}</span>
