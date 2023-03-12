@@ -17,6 +17,6 @@ class AuthController extends Controller
 
         session()->regenerate();
 
-        return Response::api('Welcome back...');
+        return Response::api(['message' => 'Welcome back...', 'data' => ['redirect' => route('dashboard')]]);
     }
 }
