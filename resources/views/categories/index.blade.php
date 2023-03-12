@@ -112,9 +112,7 @@
                                             </td>
                                             <!--end::Category--->
                                             <!--begin::Type--->
-                                            <td>
-                                                <i>TO DO</i>
-                                            </td>
+                                            <td>{{ $category->products_count }}</td>
                                             <!--end::Type--->
                                             <!--begin::Action--->
                                             <td>
