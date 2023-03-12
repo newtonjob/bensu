@@ -48,7 +48,7 @@
                                 </li>
                             @else
                                 <li class=list-inline-item>
-                                    <a class="header_top_iconbox signin-filter-btn" href="">
+                                    <a class="header_top_iconbox signin-filter-btn" href="#">
                                         <div class="d-block d-md-flex">
                                             <div class=icon><span class=flaticon-profile></span></div>
                                             <div class=details>
@@ -172,7 +172,7 @@
     </nav>
 </header>
 <div class=hiddenbar-body-ovelay></div>
-@auth()
+@unless(auth()->check())
     <div class=signin-hidden-sbar>
         <div class=hsidebar-header>
             <div class=sidebar-close-icon><span class=flaticon-close></span></div>
@@ -272,7 +272,7 @@
             </div>
         </div>
     </div>
-@endauth
+@endunless
 <div class=cart-hidden-sbar>
     <div class=hsidebar-header>
         <div class=sidebar-close-icon><span class=flaticon-close></span></div>
