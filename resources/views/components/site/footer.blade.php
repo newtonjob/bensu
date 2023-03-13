@@ -57,7 +57,7 @@
                 <div class=footer_qlink_widget>
                     <h4>Information</h4>
                     <ul class=list-unstyled>
-                        <li><a href="{{ url('home/account') }}">My Account</a></li>
+                        <li><a href="{{ route('dashboard') }}">My Account</a></li>
                         <li><a href="{{ url('account#wishlist') }}">My Items</a></li>
                         <li><a class="cart-filter-btn" href="#">My Cart</a></li>
                         <li><a href="{{ route('shop') }}">Shop</a></li>
@@ -68,10 +68,10 @@
                 <div class=footer_qlink_widget>
                     <h4>Our Services</h4>
                     <ul class=list-unstyled>
-                        <li><a href="{{ url('home/about-us') }}">About us</a></li>
-                        <li><a href="{{ url('home/contact-us') }}">Contact Us</a></li>
+                        <li><a href="{{ route('about-us') }}">About us</a></li>
+                        <li><a href="{{ route('contact-us') }}">Contact Us</a></li>
                         <li><a href="#">Refund</a></li>
-                        <li><a href="{{ url('home/privacy-policy') }}">Privacy Policy</a></li>
+                        <li><a href="{{ url('privacy-policy') }}">Privacy Policy</a></li>
                     </ul>
                 </div>
             </div>
