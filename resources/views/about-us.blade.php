@@ -129,7 +129,7 @@
                                 </div>
                                 <div class="details">
                                     <h4 class="title">Money Guarantee</h4>
-                                    <p class="para">Within 30 days for an exchange.</p>
+                                    <p class="para">You have 30 days to return.</p>
                                 </div>
                             </div>
                         </div>
@@ -140,7 +140,7 @@
                                 </div>
                                 <div class="details">
                                     <h4 class="title">Online Support</h4>
-                                    <p class="para">24 hours a day, 7 days a week</p>
+                                    <p class="para">Contact Us 24 hours everyday.</p>
                                 </div>
                             </div>
                         </div>
@@ -151,7 +151,7 @@
                                 </div>
                                 <div class="details">
                                     <h4 class="title">Flexible Payment</h4>
-                                    <p class="para">Pay with Multiple Credit Cards</p>
+                                    <p class="para">We ensure Secure payments with multiple credit cards.</p>
                                 </div>
                             </div>
                         </div>

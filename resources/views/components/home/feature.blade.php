@@ -4,7 +4,7 @@
         <div class=icon><span class={{ "flaticon-{$icon}" }}></span></div>
         <div class=details>
             <h5 class=title>{{ $title }}</h5>
-            <p class=para>{{ $paragraph }}</p>
+            <p class=para>{{ $paragraph }}.</p>
         </div>
     </div>
 </div>
