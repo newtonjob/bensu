@@ -131,7 +131,7 @@
                                         </div>
                                         <!--end::Input-->
                                         <!--begin::Description-->
-                                        <div class="text-muted fs-7">Specify how relevant the category should be in the site</div>
+                                        <div class="text-muted fs-7">Set the category relevance for better visibility in the site</div>
                                         <!--end::Description-->
                                     </div>
                                     <!--end::Input group-->
