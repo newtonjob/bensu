@@ -5,6 +5,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ShopController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 /*
@@ -30,6 +31,7 @@ Route::middleware('guest')->group(function () {
 });
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', DashboardController::class)->name('dashboard');
+    Route::resource('users', UserController::class)->except('edit');
     Route::resource('products', ProductController::class)->only('index', 'create');
     Route::resource('categories', CategoryController::class)->only('index', 'create');
     Route::get('/logout',  LogoutController::class)->name('logout');
