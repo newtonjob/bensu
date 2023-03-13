@@ -1,5 +1,5 @@
 <x-site>
-    <x-site.breadcrumbs title="Contact us"/>
+    <x-site.breadcrumbs title="Contact Us"/>
     <!-- Our Contact -->
     <section class="our-contact pt0 pb0">
         <div class="container">

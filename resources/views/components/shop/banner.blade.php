@@ -1,5 +1,5 @@
 <div class="body_content_wrapper position-relative">
-    <x-site.breadcrumbs title="shop"/>
+    <x-site.breadcrumbs title="Shop"/>
     <!-- Listing Grid View -->
     <section class="our-listing pt0">
       <div class="container">
