@@ -7,9 +7,9 @@
                 <div class="col-lg-6">
                     <div class="main-title">
                         <h2 class="mtitle">Our Locations</h2>
-                        <p>We have {{ count(app('locations')) }} different location from where you can purchase any of our products from.</p>
+                        <p>We have {{ count(app('locations')) }} different locations where you can purchase any of our products from.</p>
                         <p>If you are choosing the pickup option for your order, you can pickup from any of our locations closest to you.</p>
-                        <p>See below, a list of our store locations.</p>
+                        <p>Here's a list of our store locations.</p>
                     </div>
                 </div>
                 <div class="col-lg-6">
