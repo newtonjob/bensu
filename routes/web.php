@@ -31,7 +31,7 @@ Route::middleware('guest')->group(function () {
 });
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', DashboardController::class)->name('dashboard');
-    Route::resource('users', UserController::class)->except('edit');
+    Route::resource('users', UserController::class)->only('index', 'show');
     Route::resource('products', ProductController::class)->only('index', 'create');
     Route::resource('categories', CategoryController::class)->only('index', 'create');
     Route::get('/logout',  LogoutController::class)->name('logout');
