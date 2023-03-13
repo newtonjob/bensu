@@ -124,17 +124,14 @@
                                 <div class="card-body pt-0">
                                     <!--begin::Input group-->
                                     <div class="fv-row">
-                                        <!--begin::Label-->
-                                        <label class="form-label">Mark as featured</label>
-                                        <!--end::Label-->
-                                        <!--begin::Input-->
                                         <div class="form-check form-check-custom form-check-solid mb-2">
-                                            <input class="form-check-input" type="checkbox" value="" id="featured" name="featured_at"/>
-                                            <label class="form-check-label" for="featured">Yes</label>
+                                            <!--begin::Input-->
+                                            <input type="number" name="relevance" class="form-control mb-2" placeholder="Relevance" value="" />
+                                            <!--end::Input-->
                                         </div>
                                         <!--end::Input-->
                                         <!--begin::Description-->
-                                        <div class="text-muted fs-7">Allow category to be displayed in the featured section of the site</div>
+                                        <div class="text-muted fs-7">Set the category relevance for better visibility in the site</div>
                                         <!--end::Description-->
                                     </div>
                                     <!--end::Input group-->
@@ -171,15 +168,18 @@
                                     </div>
                                     <!--end::Input group-->
                                     <!--begin::Input group-->
-                                    <div>
+                                    <div class="fv-row">
                                         <!--begin::Label-->
-                                        <label class="form-label">Description</label>
+                                        <label class="form-label">Mark as featured</label>
                                         <!--end::Label-->
-                                        <!--begin::Editor-->
-                                        <div id="kt_ecommerce_add_category_description" name="kt_ecommerce_add_category_description" class="min-h-200px mb-2"></div>
-                                        <!--end::Editor-->
+                                        <!--begin::Input-->
+                                        <div class="form-check form-check-custom form-check-solid mb-2">
+                                            <input class="form-check-input" type="checkbox" value="" id="featured" name="featured_at"/>
+                                            <label class="form-check-label" for="featured">Yes</label>
+                                        </div>
+                                        <!--end::Input-->
                                         <!--begin::Description-->
-                                        <div class="text-muted fs-7">Set a description to the category for better visibility.</div>
+                                        <div class="text-muted fs-7">Allow category to be displayed in the featured section of the site</div>
                                         <!--end::Description-->
                                     </div>
                                     <!--end::Input group-->
@@ -187,6 +187,71 @@
                                 <!--end::Card header-->
                             </div>
                             <!--end::General options-->
+                            <!--begin::Automation-->
+                            <div class="card card-flush py-4">
+                                <!--begin::Card header-->
+                                <div class="card-header">
+                                    <div class="card-title">
+                                        <h2>Sub Categories</h2>
+                                    </div>
+                                </div>
+                                <!--end::Card header-->
+                                <!--begin::Card body-->
+                                <div class="card-body pt-0">
+                                    <!--begin::Input group-->
+                                    <div>
+                                        <!--begin::Label-->
+                                        <label class="form-label">Add Category Sub Categories</label>
+                                        <!--end::Label-->
+                                        <!--begin::Repeater-->
+                                        <div id="kt_ecommerce_add_category_conditions">
+                                            <!--begin::Form group-->
+                                            <div class="form-group">
+                                                <div data-repeater-list="kt_ecommerce_add_category_conditions" class="d-flex flex-column gap-3">
+                                                    <div data-repeater-item class="form-group d-flex flex-wrap align-items-center gap-5">
+                                                        <!--begin::Input-->
+                                                        <input type="text" class="form-control mw-100 w-lg-50 w-75" name="new_sub_category" placeholder="Sub Category Name" />
+                                                        <!--end::Input-->
+                                                        <!--begin::Button-->
+                                                        <button type="button" data-repeater-delete class="btn btn-sm btn-icon btn-light-danger">
+                                                            <!--begin::Svg Icon | path: icons/duotune/arrows/arr088.svg-->
+                                                            <span class="svg-icon svg-icon-2">
+                                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <rect opacity="0.5" x="7.05025" y="15.5356" width="12" height="2" rx="1" transform="rotate(-45 7.05025 15.5356)" fill="currentColor"/>
+                                                                    <rect x="8.46447" y="7.05029" width="12" height="2" rx="1" transform="rotate(45 8.46447 7.05029)" fill="currentColor"/>
+                                                                </svg>
+                                                            </span>
+                                                            <!--end::Svg Icon-->
+                                                        </button>
+                                                        <!--end::Button-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--end::Form group-->
+                                            <!--begin::Form group-->
+                                            <div class="form-group mt-5">
+                                                <!--begin::Button-->
+                                                <button type="button" data-repeater-create class="btn btn-sm btn-light-primary">
+                                                    <!--begin::Svg Icon | path: icons/duotune/arrows/arr087.svg-->
+                                                    <span class="svg-icon svg-icon-2">
+                                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <rect opacity="0.5" x="11" y="18" width="12" height="2" rx="1" transform="rotate(-90 11 18)" fill="currentColor"/>
+                                                            <rect x="6" y="11" width="12" height="2" rx="1" fill="currentColor"/>
+                                                        </svg>
+                                                    </span>
+                                                    <!--end::Svg Icon--> Add another sub category
+                                                </button>
+                                                <!--end::Button-->
+                                            </div>
+                                            <!--end::Form group-->
+                                        </div>
+                                        <!--end::Repeater-->
+                                    </div>
+                                    <!--end::Input group-->
+                                </div>
+                                <!--end::Card header-->
+                            </div>
+                            <!--end::Automation-->
                             <div class="d-flex justify-content-end">
                                 <!--begin::Button-->
                                 <a href="products.html" id="kt_ecommerce_add_product_cancel" class="btn btn-light me-5">

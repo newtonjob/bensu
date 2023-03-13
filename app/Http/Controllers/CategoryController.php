@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Product;
 use App\Models\SubCategory;
 use Illuminate\Http\Request;
 
@@ -10,10 +11,9 @@ class CategoryController extends Controller
 {
     public function index()
     {
-        $categories     = Category::all();
-        $subCategories  = SubCategory::all();
+        $categories     = Category::withCount('products')->get();
 
-        return view('categories.index', compact('categories', 'subCategories'));
+        return view('categories.index', compact('categories'));
     }
 
     public function create()
