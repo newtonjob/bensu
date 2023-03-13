@@ -237,7 +237,7 @@
                         </div>
                         <div class=form-group>
                             <label for="email_address" class=form-label>Your Email</label>
-                            <input id="email_address" type=email class=form-control required>
+                            <input id="email_address" name="email" type=email class=form-control required>
                         </div>
                         <div class=form-group>
                             <label for="gender" class=form-label>Gender</label>
@@ -248,11 +248,11 @@
                         </div>
                         <div class="form-group mb20">
                             <label for="pass_word" class=form-label>Password</label>
-                            <input id="pass_word" type=password class=form-control required>
+                            <input id="pass_word" name="password" type=password class=form-control required>
                         </div>
                         <div class="form-group mb20">
                             <label for="password_confirmation" class=form-label>Confirm Password</label>
-                            <input id="password_confirmation" type=password class=form-control required>
+                            <input id="password_confirmation" name="password_confirmation" type=password class=form-control required>
                         </div>
                         <button type=submit class="btn btn-signup btn-thm">Create Account</button>
                         <p class="text-center mb25 mt10">Already have an account? <a href="{{ url('login') }}">Sign in</a>

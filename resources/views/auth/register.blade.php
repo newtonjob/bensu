@@ -10,35 +10,35 @@
                             <div class="sign_up_form">
                                 <form action=#>
                                     <div class=form-group>
-                                        <label for="first_name" class=form-label>First Name</label>
-                                        <input name="first_name" id="first_name" class=form-control required>
+                                        <label for="firstname" class=form-label>First Name</label>
+                                        <input name="first_name" id="firstname" class=form-control required>
                                     </div>
                                     <div class=form-group>
-                                        <label for="last_name" class=form-label>Last Name</label>
-                                        <input name="last_name" id="last_name" class=form-control required>
+                                        <label for="lastname" class=form-label>Last Name</label>
+                                        <input name="last_name" id="lastname" class=form-control required>
                                     </div>
                                     <div class=form-group>
-                                        <label for="username" class=form-label>Username</label>
-                                        <input name="username" id="username" class=form-control required>
+                                        <label for="user_name" class=form-label>Username</label>
+                                        <input name="username" id="user_name" class=form-control required>
                                     </div>
                                     <div class=form-group>
-                                        <label for="email_address" class=form-label>Your Email</label>
-                                        <input id="email_address" type=email class=form-control required>
+                                        <label for="e_mail" class=form-label>Your Email</label>
+                                        <input id="e_mail" name="email" type=email class=form-control required>
                                     </div>
                                     <div class=form-group>
-                                        <label for="gender" class=form-label>Gender</label>
-                                        <select class="form-control" name="gender" id="gender" required>
+                                        <label for="_gender" class=form-label>Gender</label>
+                                        <select class="form-control" name="gender" id="_gender" required>
                                             <option value="M">male</option>
                                             <option value="F">female</option>
                                         </select>
                                     </div>
                                     <div class="form-group mb20">
-                                        <label for="pass_word" class=form-label>Password</label>
-                                        <input id="pass_word" type=password class=form-control required>
+                                        <label for="_password" class=form-label>Password</label>
+                                        <input id="_password" name="password" type=password class=form-control required>
                                     </div>
                                     <div class="form-group mb20">
-                                        <label for="password_confirmation" class=form-label>Confirm Password</label>
-                                        <input id="password_confirmation" type=password class=form-control required>
+                                        <label for="pass_word_confirmation" class=form-label>Confirm Password</label>
+                                        <input id="pass_word_confirmation" name="password_confirmation" type=password class=form-control required>
                                     </div>
                                     <button type=submit class="btn btn-signup btn-thm">Create Account</button>
                                     <p class="text-center mb25 mt10">Already have an account? <a href="{{ route('login') }}">Sign in</a>

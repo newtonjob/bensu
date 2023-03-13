@@ -10,16 +10,16 @@
                             <div class="login_form">
                                 <form action="{{ route('api.login') }}" method="POST" class="x-submit" data-then="reload">
                                     <div class="mb-2 mr-sm-2">
-                                        <label for="email" class=form-label>Email</label>
-                                        <input id="email" name="email" type="email" class=form-control placeholder="Enter email address..." required>
+                                        <label for="e_mail" class=form-label>Email</label>
+                                        <input id="e_mail" name="email" type="email" class=form-control placeholder="Enter email address..." required>
                                     </div>
                                     <div class="form-group mb5">
-                                        <label for="password" class=form-label>Password</label>
-                                        <input id="password" name="password" type=password class=form-control placeholder="Enter Password..." required>
+                                        <label for="_password" class=form-label>Password</label>
+                                        <input id="_password" name="password" type=password class=form-control placeholder="Enter Password..." required>
                                     </div>
                                     <div class="custom-control custom-checkbox">
-                                        <input type=checkbox name="remember" class=custom-control-input id=remember>
-                                        <label class=custom-control-label for=remember>Remember me</label>
+                                        <input type=checkbox name="remember" class=custom-control-input id=remember_me>
+                                        <label class=custom-control-label for=remember_me>Remember me</label>
                                         <a class="btn-fpswd float-end" href="#">Lost your password?</a>
                                     </div>
                                     <button type=submit class="btn btn-log btn-thm mt20">Login</button>
